@@ -1,0 +1,49 @@
+---
+title: Approval
+sidebar_position: 5
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Aprovação formal do PR (pares + especialista/Tech Lead quando necessário). Gate final antes do merge.
+
+## Entradas
+- PR revisado
+
+## Saídas
+- PR aprovado conforme política
+
+## Papéis
+- **Peer reviewers (R)** — aprovação de pares
+- **Especialista/Tech Lead (A/R)** — aprovação quando exigido
+- **Mediador (C)** — garante cumprimento da política
+
+## Atividades
+1. Aprovar PR por pares.
+2. Obter aprovação do especialista/Tech Lead quando exigido pela política.
+
+## Critérios de Entrada
+- Checklist de revisão concluído; comentários resolvidos; CI/CD verde
+
+## Critérios de Saída
+- Aprovação mínima atingida; política satisfeita
+
+## Checklist
+<Checklist
+  storageKey="phase-approval-v1"
+  sections={[
+    {
+      id: 'gate',
+      title: 'Gate de Aprovação',
+      icon: '🔑',
+      items: [
+        { id: 'comments', label: 'Todos os comentários resolvidos' },
+        { id: 'ci', label: 'CI/CD verde (build, testes, análise estática, security)' },
+        { id: 'min', label: 'Aprovação mínima atingida (ex.: 2 revisores para módulos críticos)' },
+        { id: 'spec', label: 'Especialista aprovou quando exigido' },
+        { id: 'rules', label: 'Branch protection rules ativas e cumpridas' },
+      ],
+    },
+  ]}
+/>

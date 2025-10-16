@@ -1,0 +1,10 @@
+{
+  "label": "Artifacts",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "Artifacts",
+    "description": "Artefatos que apoiam o processo de merge: evidências, registros e padrões que garantem rastreabilidade, qualidade e governança.",
+    "slug": "/artifacts"
+  }
+}

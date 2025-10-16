@@ -1,0 +1,35 @@
+/* GRID DE CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cardLink { display: block; padding: 1rem; text-decoration: none; color: inherit; }
+.card:hover { transform: translateY(-2px); box-shadow: var(--ifm-global-shadow-md); }
+.cardTitle { margin: .25rem 0 .25rem; font-weight: 800; }
+.cardDesc { margin: 0; opacity: .92; }
+.emoji { font-size: 1.9rem; }
+
+/* BOX DE RELACIONAMENTOS */
+.relBox {
+  border: 1px dashed var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: .75rem 1rem;
+  background: var(--ifm-background-color);
+  margin-bottom: .5rem;
+}
+.relHeader { font-weight: 800; margin-bottom: .35rem; }
+.relList { margin: 0; }
+
+/* dark mode */
+html[data-theme='dark'] .card {
+  background: var(--ifm-background-color);
+}

@@ -1,0 +1,41 @@
+---
+id: code-review
+title: Code Review – Checklist
+slug: /templates/code-review
+sidebar_position: 30
+description: Checklist estático para revisão por pares no MergeTrace.
+---
+
+<p>
+  <a
+    className="button button--primary"
+    href="/downloads/template/code-review-checklist.docx"
+    download
+    target="_self"
+    rel="noopener"
+  >
+    IMPRESSÃO
+  </a>
+</p>
+
+# Code Review – Checklist
+
+> **Propósito:** Garantir qualidade com revisão por pares + checklists + automações.  
+> **Required Artifacts:** PR aberto com template  
+> **Produced Artifacts:** Comentários e aprovações de review
+
+## Checklist do Revisor
+
+### Qualidade
+- [ ] Compila e passa em testes (unit/integration)
+- [ ] Estilo/convenções seguidos; naming claro; duplicações mínimas
+- [ ] Documentação/README atualizados quando necessário
+
+### Segurança & Cobertura
+- [ ] Sem secrets expostos; dependências seguras
+- [ ] Cobertura mínima atendida (ex.: 70–80%)
+
+### Processo
+- [ ] Gates automáticos habilitados (Sonar/linters/cobertura/security)
+- [ ] Comentários relevantes resolvidos antes da aprovação final
+- [ ] SLA respeitado (revisão até 1 dia útil)

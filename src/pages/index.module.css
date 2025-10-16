@@ -1,0 +1,47 @@
+/* HERO com cor sólida (claro e escuro) */
+.heroBanner {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-hero-text-color, #fff);
+  padding: 3rem 0 2rem;
+}
+
+/* Dark mode também sólido (sem gradiente) */
+html[data-theme='dark'] .heroBanner {
+  background: #1e6f54; /* ajuste se quiser outro tom */
+}
+
+/* Centraliza conteúdo do hero */
+.heroInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* (opcional) voltar tipografia ao padrão do tema */
+.title { font-size: unset; font-weight: unset; letter-spacing: unset; }
+.subtitle { margin: .5rem 0 1rem; max-width: none; opacity: 1; }
+
+/* Botões: responsivo, sem inline styles */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;           /* substitui marginLeft */
+  justify-content: center;
+}
+
+/* Se não estiver usando as “pílulas”, pode remover as regras abaixo.
+   Se quiser manter, deixe-as ativas. */
+.pill {
+  border-radius: 999px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+.pill:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+.pill:focus-visible {
+  outline: 3px solid var(--ifm-color-emphasis-300);
+  outline-offset: 2px;
+}

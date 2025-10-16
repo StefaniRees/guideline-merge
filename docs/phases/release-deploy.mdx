@@ -1,0 +1,56 @@
+---
+title: Release / Deploy
+sidebar_position: 7
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Promover a versão integrada; comunicar mudanças; monitorar o sistema.
+
+## Entradas
+- CI/CD de release configurado
+
+## Saídas
+- Release implantada; Release Notes publicados; evidências de monitoramento
+
+## Papéis
+- **Dev/DevOps (A/R)** — pipeline e deploy
+- **Mediador (C)** — valida comunicação e evidências
+
+## Atividades
+1. Gerar Release Notes (preferência automática via commits/PRs).
+2. Realizar deploy via pipeline (sem passos manuais críticos).
+3. Monitorar pós-deploy (observabilidade/alertas).
+
+## Critérios de Entrada
+- Merge concluído; artefatos prontos
+
+## Critérios de Saída
+- Sistema estável; stakeholders informados
+
+## Checklist
+<Checklist
+  storageKey="phase-release-v1"
+  sections={[
+    {
+      id: 'release',
+      title: 'Release',
+      icon: '📦',
+      items: [
+        { id: 'notes', label: 'Release Notes gerados e publicados' },
+        { id: 'pipeline', label: 'Deploy via pipeline (automação)' },
+        { id: 'observa', label: 'Observabilidade/alertas habilitados; janela ativa' },
+      ],
+    },
+    {
+      id: 'comms',
+      title: 'Comunicação & Pós',
+      icon: '📣',
+      items: [
+        { id: 'stake', label: 'Release comunicada aos stakeholders' },
+        { id: 'inc', label: 'Sem incidentes pós-deploy confirmados' },
+      ],
+    },
+  ]}
+/>

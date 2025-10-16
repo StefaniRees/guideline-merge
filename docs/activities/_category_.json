@@ -1,0 +1,10 @@
+{
+  "label": "Activities",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Activities",
+    "description":"Conjunto estruturado de atividades que compõem o processo de merge de software. Cada atividade é definida por objetivos claros, entradas, saídas e atores responsáveis, assegurando rastreabilidade, padronização e análise sistemática das práticas realizadas ao longo do ciclo de integração.",
+    "slug": "/activities"
+  }
+}

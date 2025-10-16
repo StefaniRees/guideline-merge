@@ -1,0 +1,56 @@
+---
+title: Desenvolvimento
+sidebar_position: 2
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Implementar mudanças com commits pequenos/frequentes, sincronizando com a principal e validando localmente antes do PR.
+
+## Entradas
+- Branch de Atividade ativa
+
+## Saídas
+- Histórico de commits padronizados
+- Branch atualizada
+
+## Papéis
+- **Desenvolvedor (A/R)** — implementação e sincronização
+- **Mediador (C)** — apoio quando necessário
+
+## Atividades
+1. Implementar mudanças com commits **atômicos**.
+2. Sincronizar branch com `main` regularmente (merge/rebase).
+3. Executar lint e testes locais (unit/integration básicos).
+
+## Critérios de Entrada
+- Branch criada e escopo definido
+
+## Critérios de Saída
+- Testes e lint verdes; branch atualizada sem conflitos pendentes
+
+## Checklist
+<Checklist
+  storageKey="phase-desenvolvimento-v1"
+  sections={[
+    {
+      id: 'impl',
+      title: 'Implementação',
+      icon: '🧪',
+      items: [
+        { id: 'atomic', label: 'Commits pequenos e atômicos (1 mudança lógica)' },
+        { id: 'conv', label: 'Conventional Commits + ID do ticket' },
+      ],
+    },
+    {
+      id: 'qual',
+      title: 'Qualidade',
+      icon: '✅',
+      items: [
+        { id: 'lint', label: 'Lint e testes locais passaram' },
+        { id: 'sync', label: 'Branch sincronizada com main' },
+      ],
+    },
+  ]}
+/>

@@ -1,0 +1,104 @@
+---
+id: disciplines
+title: Disciplines
+slug: /welcome/disciplines
+sidebar_position: 7
+description: Conjunto de disciplinas que organizam as atividades do processo MergeTrace, promovendo rastreabilidade, qualidade e governança leve.
+---
+
+import {
+  ExpandableProvider,
+  ExpandableSection,
+  ExpandAllControls
+} from '@site/src/components/Intro';
+import RelationshipList from '@site/src/components/IntroModern/RelationshipList';
+
+# MergeTrace Disciplines
+
+As **disciplinas do MergeTrace** agrupam as atividades e papéis que compartilham um mesmo foco técnico ou colaborativo.  
+Elas permitem compreender o processo de merge de forma estruturada, promovendo rastreabilidade, reuso de práticas e evolução contínua da qualidade.
+
+<ExpandableProvider>
+  <div style={{display:'flex',justifyContent:'flex-end',marginBottom:'.5rem'}}>
+    <ExpandAllControls />
+  </div>
+
+  <ExpandableSection title="Relationships" defaultOpen>
+    <RelationshipList
+      items={[
+        {label: 'Activities', to: '/docs/activities'},
+        {label: 'Roles', to: '/docs/welcome/roles'},
+        {label: 'Guidelines', to: '/docs/guidelines'},
+        {label: 'Work Products', to: '/docs/welcome/work-products'},
+      ]}
+    />
+  </ExpandableSection>
+
+  <ExpandableSection title="Main Description" defaultOpen>
+    <p>
+      No contexto do <strong>MergeTrace</strong>, uma <em>disciplina</em> representa um conjunto de atividades,
+      práticas e artefatos que contribuem para um objetivo específico dentro do ciclo de integração.
+      Em vez de seguir uma abordagem linear (como em modelos waterfall), as disciplinas operam de forma
+      <strong>colaborativa, iterativa e contínua</strong>, conectando desenvolvedores, revisores, QA e mediadores
+      em torno de metas comuns.
+    </p>
+
+    <p>
+      Essa estrutura facilita a compreensão do processo e favorece a <strong>governança leve</strong>,
+      pois organiza o trabalho em áreas de preocupação recorrentes. Cada disciplina define <em>formas padrão</em> de
+      colaboração e pode ser representada por fluxos de referência, usados para educar e alinhar o time sobre as melhores práticas.
+    </p>
+  </ExpandableSection>
+
+  <ExpandableSection title="MergeTrace Disciplines" defaultOpen>
+    <ul>
+      <li>
+        <strong>1. Coding:</strong> implementação de mudanças, criação de branches, commits e correções rápidas.
+        Foco em clareza de código, atomicidade de commits e rastreabilidade entre issues e PRs.
+      </li>
+      <li>
+        <strong>2. Code Review:</strong> revisão técnica e semântica das alterações. Envolve feedback colaborativo,
+        identificação de riscos e aplicação de padrões definidos nas guidelines.
+      </li>
+      <li>
+        <strong>3. QA & Test Automation:</strong> validação contínua dos merges através de testes automatizados,
+        garantindo que as builds se mantenham estáveis e o sistema livre de regressões.
+      </li>
+      <li>
+        <strong>4. CI/CD:</strong> integração e entrega contínuas, conectando pipelines, artefatos e *quality gates*.
+        Essa disciplina assegura rastreabilidade total entre builds, merges e deploys.
+      </li>
+      <li>
+        <strong>5. Governance & Traceability:</strong> monitoramento de conformidade, documentação leve,
+        registro de decisões e aprendizado contínuo baseado em dados.
+      </li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Why Use Disciplines?">
+    <p>
+      Assim como no OpenUP, as disciplinas do MergeTrace não são compartimentos isolados.
+      Elas se sobrepõem e interagem constantemente durante o ciclo de vida do merge.
+      O objetivo é criar uma estrutura de trabalho previsível e reprodutível, sem limitar a flexibilidade da equipe.
+    </p>
+
+    <p>
+      Cada disciplina pode ser representada por um <strong>workflow de referência</strong>,
+      que ilustra as atividades típicas executadas em conjunto, as dependências entre papéis e os artefatos gerados.
+      Esses fluxos servem como guias educacionais e templates para o aprimoramento contínuo do processo.
+    </p>
+  </ExpandableSection>
+
+  <ExpandableSection title="Visualization Example">
+    <div style={{textAlign:'center', margin:'2rem 0'}}>
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Software_development_disciplines.svg"
+        alt="MergeTrace Disciplines Diagram"
+        width="600"
+      />
+      <p style={{fontStyle:'italic', fontSize:'0.9rem', marginTop:'0.5rem'}}>
+        Disciplinas do MergeTrace e suas interações ao longo do ciclo de integração.
+      </p>
+    </div>
+  </ExpandableSection>
+</ExpandableProvider>

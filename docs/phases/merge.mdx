@@ -1,0 +1,56 @@
+---
+title: Merge
+sidebar_position: 6
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Integrar a branch na `main`/master somente após PR aprovado e checks “verdes”. Conflitos resolvidos preferencialmente de forma colaborativa.
+
+## Entradas
+- PR aprovado; branch sincronizada com `main`
+
+## Saídas
+- Merge commit/squash executado
+- Build de integração pós-merge (smoke)
+
+## Papéis
+- **Mediador (A/R)** — coordena merge e resolução de conflitos
+- **Desenvolvedores (R)** — apoiam resolução quando necessário
+
+## Atividades
+1. Resolver conflitos de merge (colaborativo quando crítico).
+2. Executar build pós-merge (smoke).
+
+## Critérios de Entrada
+- Aprovação formal; CI verde
+
+## Critérios de Saída
+- Smoke pós-merge ok; integração auditada e rastreável
+
+## Checklist
+<Checklist
+  storageKey="phase-merge-v1"
+  sections={[
+    {
+      id: 'antes',
+      title: 'Antes do Merge',
+      icon: '⏳',
+      items: [
+        { id: 'sync', label: 'Branch atualizada imediatamente antes do merge' },
+        { id: 'conflicts', label: 'Conflitos verificados e resolvidos (call se crítico)' },
+      ],
+    },
+    {
+      id: 'apos',
+      title: 'Após o Merge',
+      icon: '🚀',
+      items: [
+        { id: 'smoke', label: 'Build pós-merge (smoke) executado' },
+        { id: 'audit', label: 'Mudanças sensíveis auditadas' },
+        { id: 'trace', label: 'Rastreabilidade ticket ↔ PR ↔ merge garantida' },
+      ],
+    },
+  ]}
+/>

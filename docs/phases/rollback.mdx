@@ -1,0 +1,56 @@
+---
+title: Rollback
+sidebar_position: 8
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Reversão rápida e segura quando o release causar falhas; preferencialmente suportada por feature flags e scripts de rollback.
+
+## Entradas
+- Plano de rollback; versão/commit anterior ou flags disponíveis
+
+## Saídas
+- Sistema revertido; pós-mortem curto registrado
+
+## Papéis
+- **Dev/DevOps (A/R)** — executa rollback
+- **Mediador (C)** — coordena comunicação e registro
+
+## Atividades
+1. Escolher caminho: revert commit, voltar versão ou desligar flag.
+2. Executar rollback e verificar estabilidade.
+3. Registrar causa/impacto/correção e atualizar histórico.
+
+## Critérios de Entrada
+- Incidente/risco identificado; janela para rollback
+
+## Critérios de Saída
+- Sistema estável; comunicação e registro concluídos
+
+## Checklist
+<Checklist
+  storageKey="phase-rollback-v1"
+  sections={[
+    {
+      id: 'exec',
+      title: 'Execução',
+      icon: '⏪',
+      items: [
+        { id: 'path', label: 'Caminho escolhido (revert/versão/flag)' },
+        { id: 'do', label: 'Rollback executado e validado' },
+      ],
+    },
+    {
+      id: 'reg',
+      title: 'Registro & Prevenção',
+      icon: '📝',
+      items: [
+        { id: 'post', label: 'Pós-mortem curto registrado; histórico atualizado' },
+        { id: 'comm', label: 'Comunicação coordenada (stakeholders/suporte)' },
+        { id: 'preven', label: 'Ações preventivas definidas (tests, gates, flags)' },
+      ],
+    },
+  ]}
+/>

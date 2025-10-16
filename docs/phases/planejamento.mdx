@@ -1,0 +1,53 @@
+---
+title: Planejamento
+sidebar_position: 1
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Preparar condições para um merge seguro: definir branch, escopo e convenções; reduzir risco de conflitos com atualização contínua.
+
+## Entradas (Required Artifacts)
+- Ticket/issue definido e priorizado
+- Convenção de branch e commits estabelecida
+
+## Saídas (Produced Artifacts)
+- Branch de Atividade criada e rastreada
+- Riscos de conflito mapeados
+- Plano de sincronização definido
+
+## Papéis 
+- **Desenvolvedor (A/R)** — cria branch, define plano de sync, realiza commits padronizados
+- **Mediador (C/R)** — valida convenções e sinaliza riscos
+- **Equipe (I)** — informada
+
+## Atividades
+1. Criar branch curta a partir de `main`/homologação (feature/, bugfix/, hotfix/).
+2. Definir escopo e responsáveis.
+3. Atualizar frequentemente a branch com a principal (merge/rebase periódico).
+4. Realizar commits padronizados (pré-PR).
+
+## Critérios de Entrada
+- Ticket priorizado; acesso ao repositório
+
+## Critérios de Saída (Gate)
+- Branch válida + riscos documentados + plano de sync registrado
+
+## Checklist
+<Checklist
+  storageKey="phase-planejamento-v1"
+  sections={[
+    {
+      id: 'valid',
+      title: 'Validação',
+      icon: '🧭',
+      items: [
+        { id: 'branch', label: 'Branch criada com prefixo e ID do ticket' },
+        { id: 'sync', label: 'Plano de sincronização definido' },
+        { id: 'risks', label: 'Áreas/módulos sensíveis mapeados' },
+        { id: 'mediador', label: 'Convenções validadas pelo mediador' },
+      ],
+    },
+  ]}
+/>

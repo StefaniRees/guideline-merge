@@ -1,0 +1,170 @@
+---
+id: work-products
+title: Work Products
+slug: /welcome/work-products
+sidebar_position: 8
+description: Artefatos rastreáveis do MergeTrace — o que são, onde vivem e como se conectam a fases, papéis e atividades.
+---
+
+import {
+  ExpandableProvider,
+  ExpandableSection,
+  ExpandAllControls
+} from '@site/src/components/Intro';
+import RelationshipList from '@site/src/components/IntroModern/RelationshipList';
+
+# Work Products (Artefatos)
+
+No MergeTrace, os **Work Products** são os artefatos que tornam cada mudança **verificável e rastreável** — de **issue ⇄ PR ⇄ build ⇄ testes ⇄ release**.  
+
+
+<ExpandableProvider>
+  <div style={{display:'flex', justifyContent:'flex-end', marginBottom: '.5rem'}}>
+    <ExpandAllControls />
+  </div>
+
+  <ExpandableSection title="Categorias" defaultOpen>
+    <RelationshipList
+      items={[
+        {label: 'Desenvolvimento', to: '#desenvolvimento'},
+        {label: 'Qualidade (QA)', to: '#qa'},
+        {label: 'CI / CD', to: '#ci-cd'},
+        {label: 'Governança & Release', to: '#governanca'}
+      ]}
+    />
+  </ExpandableSection>
+
+  <ExpandableSection title="Descrição Geral" defaultOpen>
+    <p>
+      Cada artefato tem uma <strong>fonte de verdade</strong> (sistema), responsáveis e relações explícitas com os demais itens do fluxo.
+      Isso viabiliza auditoria leve, métricas e melhoria contínua.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Artefato</th>
+          <th>Fonte de Verdade</th>
+          <th>Responsáveis</th>
+          <th>Relações Principais</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pull Request (PR)</td>
+          <td>GitHub / GitLab / Azure Repos</td>
+          <td>Developer A/B, Reviewer</td>
+          <td>Issue/Ticket; Commits; Build; Relatório de QA; Release Notes</td>
+        </tr>
+        <tr>
+          <td>Branch de Atividade</td>
+          <td>VCS</td>
+          <td>Developer A/B</td>
+          <td>Commits; PR; Histórico de Conflitos</td>
+        </tr>
+        <tr>
+          <td>Commits Padronizados</td>
+          <td>VCS</td>
+          <td>Developer A/B</td>
+          <td>PR; Build; Code Review</td>
+        </tr>
+        <tr>
+          <td>Relatório de Build/CI</td>
+          <td>CI (Actions, Pipelines, etc.)</td>
+          <td>CI/CD</td>
+          <td>PR/Commit; Relatório de QA; Deployment</td>
+        </tr>
+        <tr>
+          <td>Relatório de QA</td>
+          <td>CI / Test Runner</td>
+          <td>QA, Dev, CI</td>
+          <td>Build; Cobertura; Quality Gates</td>
+        </tr>
+        <tr>
+          <td>Feature Flag</td>
+          <td>Plataforma de Flags</td>
+          <td>Dev, PO</td>
+          <td>Deployment; Mitigação de Risco / Canary</td>
+        </tr>
+        <tr>
+          <td>Histórico de Conflitos</td>
+          <td>VCS / CI</td>
+          <td>Integrator, Mediador</td>
+          <td>PR; Commits; Build</td>
+        </tr>
+        <tr>
+          <td>Release Notes</td>
+          <td>Repo / Portal</td>
+          <td>Release Manager</td>
+          <td>PRs; Issues; Builds</td>
+        </tr>
+        <tr>
+          <td>Checklist de Revisão</td>
+          <td>Docs / Repo</td>
+          <td>Reviewer, Mediador</td>
+          <td>PR; Política de PR; Critérios de Aceite</td>
+        </tr>
+      </tbody>
+    </table>
+  </ExpandableSection>
+
+  <ExpandableSection title="Desenvolvimento" id="desenvolvimento" defaultOpen>
+    <ul>
+      <li><strong>Branch de Atividade</strong> — convenções de nome e isolamento de escopo.</li>
+      <li><strong>Commits Padronizados</strong> — mensagens semânticas e referência à issue.</li>
+      <li><strong>Pull Request (PR)</strong> — descrição, checklist, critérios de aceite, revisões e aprovações.</li>
+      <li><strong>Checklist de Revisão</strong> — guia objetivo para aprovação e registro de pendências.</li>
+      <li><strong>Histórico de Conflitos</strong> — trilha de resolução e decisões aplicadas.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Qualidade (QA)" id="qa">
+    <ul>
+      <li><strong>Relatório de QA</strong> — resultados por build; falhas e flakiness mapeados.</li>
+      <li><strong>Cobertura</strong> — cobertura mínima por módulo/regra de qualidade.</li>
+      <li><strong>Critérios de Aceite</strong> — objetivos e verificáveis, referenciados no PR.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="CI / CD" id="ci-cd">
+    <ul>
+      <li><strong>Relatório de Build/CI</strong> — logs, artefatos, tempos; relação PR/Commit e QA.</li>
+      <li><strong>Deployment</strong> — ambientes, janelas de mudança e rollback comprovado.</li>
+      <li><strong>Feature Flag</strong> — toggles, dark launch e canary.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Governança & Release" id="governanca">
+    <ul>
+      <li><strong>Release Notes</strong> — dif e impactos agregados por release.</li>
+      <li><strong>Política de PR</strong> — regras de branch, aprovação e bloqueios.</li>
+      <li><strong>Evidências de Compliance</strong> — registros mínimos para auditoria leve.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Links rápidos">
+    <RelationshipList
+      items={[
+        // Activities (PT-BR)
+        {label: 'Abrir Pull Request', to: '/docs/activities/abrir-pull-request'},
+        {label: 'Executar Build e Testes (CI/CD)', to: '/docs/activities/executar-build-testes'},
+        {label: 'Code Review', to: '/docs/activities/code-review'},
+        {label: 'Criar Branch', to: '/docs/activities/criar-branch'},
+        {label: 'Merge Final', to: '/docs/activities/merge-final'},
+        {label: 'Validar em Homologação (QA)', to: '/docs/activities/validar-homologacao'},
+        {label: 'Resolver Conflitos de Merge', to: '/docs/activities/resolver-conflitos'},
+
+        // Artifacts (PT-BR)
+        {label: 'Branch de Atividade', to: '/docs/artifacts/branch-de-atividade'},
+        {label: 'Checklist de Revisão', to: '/docs/artifacts/checklist-de-revisao'},
+        {label: 'Commits Padronizados', to: '/docs/artifacts/commits-padronizados'},
+        {label: 'Feature Flag', to: '/docs/artifacts/feature-flag'},
+        {label: 'Histórico de Conflitos', to: '/docs/artifacts/historico-de-conflitos'},
+        {label: 'Pull Request (PR)', to: '/docs/artifacts/pull-request'},
+        {label: 'Relatório de Build/CI', to: '/docs/artifacts/relatorio-build-ci'},
+        {label: 'Relatório de QA', to: '/docs/artifacts/relatorio-qa'},
+        {label: 'Release Notes', to: '/docs/artifacts/release-notes'},
+      ]}
+    />
+  </ExpandableSection>
+</ExpandableProvider>

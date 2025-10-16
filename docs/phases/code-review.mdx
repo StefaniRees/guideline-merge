@@ -1,0 +1,67 @@
+---
+title: Code Review
+sidebar_position: 4
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Revisão por pares com checklist (estilo, testes, segurança, impacto). Comentários resolvidos antes da aprovação.
+
+## Entradas
+- PR aberto com template
+
+## Saídas
+- Comentários e aprovações de review
+- Checklist de revisão concluído
+
+## Papéis
+- **Mediador (A/R)** — conduz revisão e qualidade
+- **Revisores (R)** — análise técnica
+
+## Atividades
+1. Revisar código (1–2 revisores).
+2. Rodar checks automáticos (Sonar/linters/cobertura).
+3. Tratar comentários e solicitar nova revisão quando necessário.
+
+## Critérios de Entrada
+- PR com template completo; CI executável
+
+## Critérios de Saída
+- Comentários resolvidos; quality gates verdes
+
+## Checklist
+<Checklist
+  storageKey="phase-cr-v1"
+  sections={[
+    {
+      id: 'qualidade',
+      title: 'Qualidade',
+      icon: '✅',
+      items: [
+        { id: 'tests', label: 'Compila e passa testes (unit/integration)' },
+        { id: 'estilo', label: 'Estilo/convenções e naming adequados; duplicações mínimas' },
+        { id: 'docs', label: 'Docs/README atualizados quando necessário' },
+      ],
+    },
+    {
+      id: 'seguranca',
+      title: 'Segurança & Cobertura',
+      icon: '🔒',
+      items: [
+        { id: 'secrets', label: 'Sem secrets expostos; dependências seguras' },
+        { id: 'coverage', label: 'Cobertura mínima atendida (ex.: 70–80%)' },
+      ],
+    },
+    {
+      id: 'processo',
+      title: 'Processo',
+      icon: '🧭',
+      items: [
+        { id: 'gates', label: 'Gates automáticos habilitados (Sonar/linters/cobertura/security)' },
+        { id: 'comments', label: 'Comentários resolvidos antes da aprovação' },
+        { id: 'sla', label: 'SLA: revisão em até 1 dia útil' },
+      ],
+    },
+  ]}
+/>

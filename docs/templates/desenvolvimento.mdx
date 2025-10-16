@@ -1,0 +1,35 @@
+---
+id: desenvolvimento
+title: Desenvolvimento – Checklist
+slug: /templates/desenvolvimento
+sidebar_position: 25
+description: Checklist estático para implementação e acompanhamento no MergeTrace.
+---
+
+<p>
+  <a
+    className="button button--primary"
+    href="/downloads/template/desenvolvimento-checklist.docx"
+    download
+    target="_self"
+    rel="noopener"
+  >
+    IMPRESSÃO
+  </a>
+</p>
+
+# Desenvolvimento – Checklist
+
+> **Propósito:** Implementar com commits pequenos e frequentes, sincronizando com a principal e validando localmente.  
+> **Required Artifacts:** Branch de Atividade ativa  
+> **Produced Artifacts:** Histórico de commits padronizados, Branch atualizada
+
+## Checklist – Implementação
+- [ ] Fazer commits pequenos e atômicos (uma mudança lógica)
+- [ ] Usar **Conventional Commits** + ID do ticket
+- [ ] Sincronizar com **main** regularmente (merge/rebase) para evitar conflitos tardios
+- [ ] Executar **lint** e **testes locais** antes de abrir PR
+
+## Checklist – Acompanhamento
+- [ ] Acompanhar **cadência de sync**; intervir se a branch ficar longa
+- [ ] Checar **padrão e qualidade** das mensagens de commit (ver Template: Commit Message Convention)

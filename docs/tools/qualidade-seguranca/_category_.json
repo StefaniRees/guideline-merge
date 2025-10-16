@@ -1,0 +1,8 @@
+{
+  "label": "Qualidade de Código & Segurança",
+  "link": {
+    "type": "generated-index",
+    "title": "Ferramentas de Qualidade e Segurança",
+    "description": "Ferramentas para análise estática, code smells, cobertura de testes e segurança."
+  }
+}

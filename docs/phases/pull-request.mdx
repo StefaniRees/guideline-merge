@@ -1,0 +1,66 @@
+---
+title: Pull Request (PR)
+sidebar_position: 3
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Abrir PR padronizado com objetivo, impacto e testes. Preferir PRs pequenos para revisão eficiente; uso de templates obrigatório.
+
+## Entradas
+- Branch pronta e sincronizada
+
+## Saídas
+- PR aberto com template e checklist preenchido
+
+## Papéis
+- **Desenvolvedor (A/R)** — abre PR e preenche template
+- **Mediador (C/R)** — valida padronização quando necessário
+
+## Atividades
+1. Abrir PR com **template oficial** (contexto, mudanças, impacto/risco, testes, checklist).
+2. Preencher checklist de PR.
+3. Vincular ticket/issue ao PR.
+4. Marcar arquivos sensíveis/áreas críticas.
+5. Selecionar revisores (≥1; ≥2 se crítico).
+
+## Critérios de Entrada
+- Branch atualizada; testes e lint locais ok
+
+## Critérios de Saída
+- Template seguido; revisores definidos; ticket vinculado
+
+## Checklist
+<Checklist
+  storageKey="phase-pr-v1"
+  sections={[
+    {
+      id: 'escopo',
+      title: 'Escopo & Tamanho',
+      icon: '🧭',
+      items: [
+        { id: 'pequeno', label: 'PR pequeno/coeso (preferência ≤ ~400 LOC)' },
+        { id: 'sync', label: 'Sincronizado com main/homolog' },
+      ],
+    },
+    {
+      id: 'conteudo',
+      title: 'Template & Conteúdo',
+      icon: '📝',
+      items: [
+        { id: 'template', label: 'Template preenchido (contexto, mudanças, impacto/risco, testes, checklist)' },
+        { id: 'ticket', label: 'Ticket/issue vinculado' },
+        { id: 'sensivel', label: 'Arquivos sensíveis/áreas críticas sinalizados' },
+      ],
+    },
+    {
+      id: 'revisores',
+      title: 'Revisores',
+      icon: '👥',
+      items: [
+        { id: 'rev', label: 'Revisores definidos (≥1; ≥2 se crítico)' },
+      ],
+    },
+  ]}
+/>

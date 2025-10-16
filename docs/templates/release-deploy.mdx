@@ -1,0 +1,60 @@
+---
+id: release-deploy
+title: Release/Deploy – Checklist
+slug: /templates/release-deploy
+sidebar_position: 28
+description: Checklist estático para promover versões com comunicação e monitoramento no MergeTrace.
+---
+
+<p>
+  <a
+    className="button button--primary"
+    href="/downloads/template/release-deploy-checklist.docx"
+    download
+    target="_self"
+    rel="noopener"
+  >
+    IMPRESSÃO
+  </a>
+</p>
+
+# Release/Deploy – Checklist
+
+> **Propósito:** Promover a versão integrada, comunicar mudanças e monitorar.  
+
+## Boas práticas de Release/Deploy
+
+### Release
+- [ ] **Release Notes** gerados (preferência automática via commits/PRs)
+- [ ] Versão/tag criada conforme política (semântico ou equivalente)
+- [ ] Artefatos assinados/imutáveis quando aplicável
+- [ ] Aprovações e janelas de mudança confirmadas
+
+### Deploy (via pipeline)
+- [ ] **Deploy via pipeline** (sem passos manuais críticos)
+- [ ] Estratégia de rollout definida: canary/blue-green/flag
+- [ ] Plano de **rollback** testado e documentado
+- [ ] Variáveis/segredos revisados para o ambiente de destino
+
+### Observabilidade & Monitoramento
+- [ ] **Observabilidade/alertas** habilitados (logs, métricas, traces)
+- [ ] **Janela de monitoramento** ativa pós-deploy
+- [ ] Painéis (dashboards) atualizados com novos indicadores
+- [ ] Limiares de alerta revisados para a nova versão
+
+### Comunicação & Pós
+- [ ] **Stakeholders comunicados** (escopo, impactos, risco e janela)
+- [ ] Times de apoio avisados (Suporte/CS/Marketing se aplicável)
+- [ ] **Sem incidentes pós-deploy** confirmados
+- [ ] Tarefas de **cleanup** (flags antigas, migrações temporárias) planejadas
+
+## Sinais de alerta (adiar release/deploy)
+- [ ] Falta de rollback testado ou dependência crítica não validada
+- [ ] Gaps de observabilidade/alerta para partes sensíveis
+- [ ] Mudanças de contrato/DB sem migração segura
+- [ ] Release notes incompletos ou comunicação pendente
+
+## Rastreabilidade
+- [ ] Tag/versão ↔ PRs/commits ↔ builds ↔ ambiente de destino
+- [ ] Incidentes/alertas vinculados à versão (quando houver)
+- [ ] Release notes publicados e acessíveis

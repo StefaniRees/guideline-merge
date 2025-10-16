@@ -1,0 +1,122 @@
+---
+id: micro-increments
+title: Micro-Increments
+slug: /welcome/micro-increments
+sidebar_position: 4
+description: Unidade mínima de valor no MergeTrace: PRs pequenos, rastreáveis e validados por quality gates, definidos a partir de entrevistas com especialistas.
+---
+
+import {
+  ExpandableProvider,
+  ExpandableSection,
+  ExpandAllControls
+} from '@site/src/components/Intro';
+import RelationshipList from '@site/src/components/IntroModern/RelationshipList';
+
+# Micro-Increments
+
+No MergeTrace, um **micro-increment** é a menor unidade de valor visível e rastreável.  
+Geralmente resulta em um **PR pequeno**, com contexto e evidências, que passa por **quality gates** e deixa rastro em *issue ⇄ PR ⇄ build ⇄ testes ⇄ release*.  
+Este conceito foi consolidado a partir de entrevistas com especialistas.
+
+<ExpandableProvider>
+  <div style={{display:'flex', justifyContent:'flex-end', marginBottom: '.5rem'}}>
+    <ExpandAllControls />
+  </div>
+
+  <ExpandableSection title="Relacionamentos" defaultOpen>
+    <RelationshipList
+      items={[
+        {label: 'Iteration Lifecycle', to: './iteration-lifecycle'},
+        {label: 'Roles (Dev A/B, Mediador)', to: './roles'},
+        {label: 'Work Products', to: './work-products'},
+        {label: 'Core Principles', to: './core-principles'},
+      ]}
+    />
+  </ExpandableSection>
+
+  <ExpandableSection title="Descrição Geral" defaultOpen>
+    <p>
+      Micro-increments reduzem risco e aceleram feedback. Em vez de grandes lotes, o time entrega pequenas mudanças
+      testáveis, que podem ser aceitas ou ajustadas rapidamente. Cada micro-increment deve ser: pequeno, com contexto,
+      com evidências e com próximo passo claro.
+    </p>
+    <ul>
+      <li><strong>Escopo enxuto:</strong> um problema por PR (idealmente pequeno).</li>
+      <li><strong>Rastreável:</strong> PR vinculado à issue, com links para build e testes.</li>
+      <li><strong>Verificável:</strong> quality gates automatizados (build, testes, cobertura, análise estática).</li>
+      <li><strong>Colaborativo:</strong> handoff claro entre Developer A → Developer B → Mediador quando necessário.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Exemplos típicos" defaultOpen>
+    <ul>
+      <li><strong>Feature atrás de flag:</strong> pequena mudança protegida por feature flag, com testes e schema atualizados.</li>
+      <li><strong>Correção com teste:</strong> bugfix acompanhado de teste que comprova a não-regressão.</li>
+      <li><strong>Infra de CI:</strong> ajuste de pipeline (paralelização, cache) para reduzir tempo de build.</li>
+      <li><strong>Refatoração localizada:</strong> extração de função/módulo mantendo ou ampliando cobertura.</li>
+      <li><strong>ADR curto:</strong> registrar decisão técnica relevante e referenciar no PR.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Template de Micro-Increment (checklist no PR)" defaultOpen>
+    <ul>
+      <li><strong>Contexto:</strong> issue/ticket, motivação e impacto esperado.</li>
+      <li><strong>Escopo:</strong> o que mudou e o que não mudou (API/DB/UX?).</li>
+      <li><strong>Evidências:</strong> build ok, testes passando, cobertura dentro do limiar, análise estática sem críticos.</li>
+      <li><strong>Riscos e mitigação:</strong> feature flag, canary, rollback disponível.</li>
+      <li><strong>Handoff:</strong> próximo passo (review do Dev B, validação de QA, mediação).</li>
+      <li><strong>Links:</strong> PR, commits, ADR/decisão, pipeline e artefatos.</li>
+    </ul>
+
+    <pre><code>
+Exemplo (PR):
+
+Contexto: #1234 – Ajuste de arredondamento no Checkout
+Escopo: Função calcTotal(); sem mudança de API pública
+Evidências: Build #9087 ok | Testes ok | Cobertura 82% | Sem críticos na análise estática
+Riscos: Impacto em relatório financeiro; protegido por flag pricing_rounding_v2
+Próximo passo (handoff): Review do Developer B e execução de casos manuais (QA)
+Links: PR #5678 | ADR-010 | Pipeline https://...
+    </code></pre>
+  </ExpandableSection>
+
+  <ExpandableSection title="Critérios de Aceite e Quality Gates">
+    <ul>
+      <li>Build verde e testes passando (unitários/integração/end-to-end conforme o caso).</li>
+      <li>Cobertura mínima por módulo e ausência de problemas críticos na análise estática.</li>
+      <li>Revisão obrigatória e comentários resolvidos.</li>
+      <li>Template de PR completo com checklist e evidências anexadas.</li>
+      <li>Rastro completo: issue ⇄ PR ⇄ build ⇄ testes ⇄ release/flag.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Papéis no micro-increment (Dev A/B + Mediador)">
+    <ul>
+      <li><strong>Developer A:</strong> implementa e abre PR com contexto e evidências.</li>
+      <li><strong>Developer B:</strong> revisa, complementa integração e resolve conflitos de média complexidade.</li>
+      <li><strong>Mediador:</strong> facilita decisões, arbitra conflitos complexos e garante aderência às guidelines.</li>
+    </ul>
+    <p>Cada passagem é um handoff rastreável (comentários, aprovações, logs de build e MergeLog).</p>
+  </ExpandableSection>
+
+  <ExpandableSection title="Anti-padrões a evitar">
+    <ul>
+      <li>PRs grandes e multifoco.</li>
+      <li>Ausência de evidências (build/testes/cobertura).</li>
+      <li>Handoff implícito (sem próximo passo claro e sem registro).</li>
+      <li>Acúmulo de feature flags sem plano de remoção.</li>
+    </ul>
+  </ExpandableSection>
+
+  <ExpandableSection title="Métricas orientadas a micro-increments">
+    <ul>
+      <li>Lead time de PR e tempo de review.</li>
+      <li>Tamanho médio de PR e taxa de retrabalho.</li>
+      <li>Falhas por build e cobertura.</li>
+      <li>Conflitos por PR e tempo para resolver.</li>
+    </ul>
+    <p>Use essas métricas para retrospectivas leves e melhorias contínuas a cada iteração.</p>
+  </ExpandableSection>
+
+</ExpandableProvider>

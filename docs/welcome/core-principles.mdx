@@ -1,0 +1,102 @@
+---
+id: core-principles
+title: Core Principles
+slug: /welcome/core-principles
+sidebar_position: 2
+description: Quatro princípios fundamentais do processo MergeTrace que orientam decisões, papéis e qualidade.
+---
+
+import {
+  ExpandableProvider,
+  ExpandableSection,
+  ExpandAllControls
+} from '@site/src/components/Intro';
+import RelationshipList from '@site/src/components/IntroModern/RelationshipList';
+import CardGrid from '@site/src/components/IntroModern/CardGrid';
+
+# Core Principles – MergeTrace
+
+Os **Core Principles** do MergeTrace fornecem a base para interpretar papéis, artefatos e tarefas do processo de *software merge*.  
+Eles ajudam a equilibrar valor, reduzir riscos e promover melhoria contínua em ambientes colaborativos.
+
+<ExpandableProvider>
+  <div style={{display:'flex',justifyContent:'flex-end',marginBottom:'.5rem'}}>
+    <ExpandAllControls />
+  </div>
+
+  <ExpandableSection title="Relationships" defaultOpen>
+    <RelationshipList
+      items={[
+        {label: 'Políticas de PR', to: '/guides/pull-requests'},
+        {label: 'Critérios de Aceite', to: '/guides/acceptance-criteria'},
+        {label: 'Ontologia MergeTrace', to: '/ontology/overview'},
+        {label: 'Checklist de Riscos', to: '/checklists/risk'},
+        {label: 'Métricas de Merge', to: '/metrics/merge'},
+        {label: 'Retrospectiva de Processo', to: '/rituals/retrospective'},
+      ]}
+    />
+  </ExpandableSection>
+
+  <ExpandableSection title="Main Description" defaultOpen>
+    <p>
+      O MergeTrace é baseado em quatro princípios que se reforçam mutuamente.  
+      Eles conectam decisões técnicas e de processo com a entrega de valor, promovendo
+      colaboração, rastreabilidade e aprendizado contínuo.
+    </p>
+
+    <CardGrid
+      cards={[
+        {
+          title: 'Balancear prioridades e maximizar valor',
+          description: 'Práticas que equilibram velocidade, qualidade e valor entregue aos stakeholders.',
+          to: '/guides/pull-requests',
+          emoji: '⚖️'
+        },
+        {
+          title: 'Colaborar para alinhar interesses e entendimento',
+          description: 'Criação de ambiente colaborativo e compartilhamento de conhecimento.',
+          to: '/guides/acceptance-criteria',
+          emoji: '🤝'
+        },
+        {
+          title: 'Focar na arquitetura para reduzir riscos',
+          description: 'Antecipar decisões arquiteturais e riscos técnicos no início do processo.',
+          to: '/ontology/overview',
+          emoji: '🏛️'
+        },
+        {
+          title: 'Evoluir continuamente com feedback e métricas',
+          description: 'Aprender com dados e retrospectivas, promovendo melhorias incrementais.',
+          to: '/metrics/merge',
+          emoji: '📈'
+        },
+      ]}
+    />
+  </ExpandableSection>
+
+  <ExpandableSection title="Detailed Principles">
+    <h3>1) Balancear prioridades para maximizar valor</h3>
+    <p>
+      Envolve práticas que ajudam o time a equilibrar qualidade, prazos e satisfação dos stakeholders.  
+      Utiliza políticas claras de PR, revisões efetivas e métricas de entrega para direcionar o foco.
+    </p>
+
+    <h3>2) Colaborar para alinhar interesses e entendimento</h3>
+    <p>
+      Estimula um ambiente saudável de colaboração, com revisões transparentes e feedback contínuo.  
+      A comunicação clara reduz retrabalho e melhora a coesão do time durante o merge.
+    </p>
+
+    <h3>3) Focar na arquitetura para minimizar riscos</h3>
+    <p>
+      Antecipar decisões arquiteturais evita problemas estruturais e conflitos de código tardios.  
+      Envolve definir contratos, padrões de branch e estratégias de integração antes da codificação.
+    </p>
+
+    <h3>4) Evoluir continuamente com feedback e melhoria</h3>
+    <p>
+      Reforça o uso de métricas, análise de dados e retrospectivas para aprimorar processos e práticas.  
+      As melhorias são incrementais, sustentadas e guiadas por evidências reais do fluxo de merge.
+    </p>
+  </ExpandableSection>
+</ExpandableProvider>
