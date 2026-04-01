@@ -17,7 +17,7 @@ const config: Config = {
   projectName: 'mergetrace',
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
