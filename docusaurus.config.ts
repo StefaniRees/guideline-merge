@@ -12,7 +12,7 @@ const config: Config = {
   },
 
   url: 'https://stefanirees.github.io',
-  baseUrl: '/mergetrace/',
+  baseUrl: '/guideline-merge/',
   organizationName: 'StefaniRees',
   projectName: 'mergetrace',
   deploymentBranch: 'gh-pages',
