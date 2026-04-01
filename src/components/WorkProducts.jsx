@@ -14,7 +14,7 @@ const categories = [
     artifacts: [
       {
         name: 'Branch de Atividade',
-        href: '/mergetrace/docs/artifacts/branch-atividade',
+        href: '/guideline-merge/docs/artifacts/branch-atividade',
         source: 'VCS',
         roles: ['Developer A', 'Developer B'],
         relations: ['Commits Padronizados', 'Pull Request', 'Histórico de Conflitos'],
@@ -22,7 +22,7 @@ const categories = [
       },
       {
         name: 'Commits Padronizados',
-        href: '/mergetrace/docs/artifacts/commits-padronizados',
+        href: '/guideline-merge/docs/artifacts/commits-padronizados',
         source: 'VCS',
         roles: ['Developer A', 'Developer B'],
         relations: ['Pull Request', 'Relatório de Build/CI', 'Code Review'],
@@ -30,7 +30,7 @@ const categories = [
       },
       {
         name: 'Pull Request (PR)',
-        href: '/mergetrace/docs/artifacts/pull-request',
+        href: '/guideline-merge/docs/artifacts/pull-request',
         source: 'GitHub / GitLab / Azure Repos',
         roles: ['Developer A', 'Developer B', 'Mediador'],
         relations: ['Checklist de Revisão', 'Relatório de Build/CI', 'Registro de Decisão'],
@@ -38,7 +38,7 @@ const categories = [
       },
       {
         name: 'Checklist de Revisão',
-        href: '/mergetrace/docs/artifacts/checklist-revisao',
+        href: '/guideline-merge/docs/artifacts/checklist-revisao',
         source: 'Docs / Repositório',
         roles: ['Mediador', 'Developer B'],
         relations: ['Pull Request', 'Approval Policy', 'Registro de Decisão'],
@@ -46,7 +46,7 @@ const categories = [
       },
       {
         name: 'Histórico de Conflitos',
-        href: '/mergetrace/docs/artifacts/historico-conflitos',
+        href: '/guideline-merge/docs/artifacts/historico-conflitos',
         source: 'VCS / CI',
         roles: ['Developer A', 'Developer B', 'Mediador'],
         relations: ['Pull Request', 'Commits', 'Registro de Decisão'],
@@ -67,7 +67,7 @@ const categories = [
     artifacts: [
       {
         name: 'Relatório de QA',
-        href: '/mergetrace/docs/artifacts/relatorio-qa',
+        href: '/guideline-merge/docs/artifacts/relatorio-qa',
         source: 'CI / Test Runner',
         roles: ['Developer A', 'Developer B'],
         relations: ['Relatório de Build/CI', 'Quality Gates', 'Pull Request'],
@@ -75,7 +75,7 @@ const categories = [
       },
       {
         name: 'Relatório de Build/CI',
-        href: '/mergetrace/docs/artifacts/relatorio-build-ci',
+        href: '/guideline-merge/docs/artifacts/relatorio-build-ci',
         source: 'CI (Actions, Pipelines)',
         roles: ['Pipeline automático'],
         relations: ['Pull Request', 'Relatório de QA', 'Deploy'],
@@ -95,7 +95,7 @@ const categories = [
     artifacts: [
       {
         name: 'Feature Flag',
-        href: '/mergetrace/docs/artifacts/feature-flag',
+        href: '/guideline-merge/docs/artifacts/feature-flag',
         source: 'Plataforma de Flags',
         roles: ['Developer A', 'Developer B', 'Mediador'],
         relations: ['Deploy', 'Rollback Strategy', 'Release Notes'],
@@ -116,7 +116,7 @@ const categories = [
     artifacts: [
       {
         name: 'Registro de Decisão',
-        href: '/mergetrace/docs/artifacts/registro-decisao',
+        href: '/guideline-merge/docs/artifacts/registro-decisao',
         source: 'PRs / Issues / Comentários',
         roles: ['Mediador', 'Developer A', 'Developer B'],
         relations: ['Pull Request', 'Code Review', 'Histórico de Conflitos'],
@@ -124,7 +124,7 @@ const categories = [
       },
       {
         name: 'Release Notes',
-        href: '/mergetrace/docs/artifacts/release-notes',
+        href: '/guideline-merge/docs/artifacts/release-notes',
         source: 'Repositório / Portal',
         roles: ['Mediador'],
         relations: ['PRs', 'Issues', 'Builds'],
@@ -135,9 +135,9 @@ const categories = [
 ];
 
 const roleColors = {
-  'Developer A':      { color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/mergetrace/docs/roles/developer-principal' },
-  'Developer B':      { color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB', href: '/mergetrace/docs/roles/developer-integrador' },
-  'Mediador':         { color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC', href: '/mergetrace/docs/roles/mediador' },
+  'Developer A':      { color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/guideline-merge/docs/roles/developer-principal' },
+  'Developer B':      { color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB', href: '/guideline-merge/docs/roles/developer-integrador' },
+  'Mediador':         { color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC', href: '/guideline-merge/docs/roles/mediador' },
   'Pipeline automático': { color: '#6b7280', bg: '#f3f4f6', border: '#e5e7eb', href: null },
 };
 
@@ -269,7 +269,7 @@ export default function WorkProducts() {
       }}>
         <p style={{ fontSize: '14px', color: '#374151', lineHeight: 1.7, margin: 0 }}>
           No MergeTrace, os <strong>Work Products</strong> são os{' '}
-          <Link to="/mergetrace/docs/artifacts" style={{ color: '#1D9E75', fontWeight: 600 }}>artefatos rastreáveis</Link>{' '}
+          <Link to="/guideline-merge/docs/artifacts" style={{ color: '#1D9E75', fontWeight: 600 }}>artefatos rastreáveis</Link>{' '}
           que tornam cada mudança <strong>verificável e auditável</strong> — de issue ⇄ PR ⇄ build ⇄ testes ⇄ release.
           Cada artefato tem uma fonte de verdade, responsáveis explícitos e relações com os demais elementos do fluxo,
           viabilizando governança leve, métricas e melhoria contínua. Clique em cada artefato para ver detalhes.
@@ -279,10 +279,10 @@ export default function WorkProducts() {
       {/* Resumo em números */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', marginBottom: '32px' }}>
         {[
-          { n: '10', label: 'Artefatos', href: '/mergetrace/docs/artifacts', color: '#1D9E75', bg: '#E1F5EE' },
-          { n: '8', label: 'Atividades', href: '/mergetrace/docs/activities', color: '#378ADD', bg: '#E6F1FB' },
-          { n: '3', label: 'Papéis', href: '/mergetrace/docs/roles', color: '#7F77DD', bg: '#EEEDFE' },
-          { n: '11', label: 'Quality Gates', href: '/mergetrace/docs/guidelines', color: '#BA7517', bg: '#FAEEDA' },
+          { n: '10', label: 'Artefatos', href: '/guideline-merge/docs/artifacts', color: '#1D9E75', bg: '#E1F5EE' },
+          { n: '8', label: 'Atividades', href: '/guideline-merge/docs/activities', color: '#378ADD', bg: '#E6F1FB' },
+          { n: '3', label: 'Papéis', href: '/guideline-merge/docs/roles', color: '#7F77DD', bg: '#EEEDFE' },
+          { n: '11', label: 'Quality Gates', href: '/guideline-merge/docs/guidelines', color: '#BA7517', bg: '#FAEEDA' },
         ].map((s, i) => (
           <Link key={i} to={s.href} style={{ textDecoration: 'none' }}>
             <div style={{
@@ -325,7 +325,7 @@ export default function WorkProducts() {
           Os artefatos operacionalizam os princípios de simplicidade, transparência e rastreabilidade do MergeTrace.
           Eles viabilizam mecanismos de explicabilidade e auditoria — apontados pelos especialistas (P1–P8)
           como essenciais para mitigar riscos entre equipes, apoiar{' '}
-          <Link to="/mergetrace/docs/welcome/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>colaboração técnica</Link>{' '}
+          <Link to="/guideline-merge/docs/welcome/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>colaboração técnica</Link>{' '}
           e permitir análise posterior de incidentes e decisões.
         </p>
       </div>

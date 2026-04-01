@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 
 const stats = [
-  { n: '8', label: 'Fases operacionais', href: '/mergetrace/docs/phases', color: '#1D9E75', bg: '#E1F5EE' },
-  { n: '3', label: 'Papéis colaborativos', href: '/mergetrace/docs/roles', color: '#7F77DD', bg: '#EEEDFE' },
-  { n: '11', label: 'Quality Gates', href: '/mergetrace/docs/guidelines', color: '#BA7517', bg: '#FAEEDA' },
-  { n: '10', label: 'Artefatos rastreáveis', href: '/mergetrace/docs/artifacts', color: '#993556', bg: '#FBEAF0' },
+  { n: '8', label: 'Fases operacionais', href: '/guideline-merge/docs/phases', color: '#1D9E75', bg: '#E1F5EE' },
+  { n: '3', label: 'Papéis colaborativos', href: '/guideline-merge/docs/roles', color: '#7F77DD', bg: '#EEEDFE' },
+  { n: '11', label: 'Quality Gates', href: '/guideline-merge/docs/guidelines', color: '#BA7517', bg: '#FAEEDA' },
+  { n: '10', label: 'Artefatos rastreáveis', href: '/guideline-merge/docs/artifacts', color: '#993556', bg: '#FBEAF0' },
 ];
 
 const welcomePages = [
   {
     title: 'Introdução ao MergeTrace',
     desc: 'Visão geral do guideline, sua origem empírica e os atalhos visuais para começar.',
-    href: '/mergetrace/docs/welcome/introduction',
+    href: '/guideline-merge/docs/welcome/introduction',
     color: '#1D9E75', bg: '#E1F5EE', border: '#9FE1CB',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -24,7 +24,7 @@ const welcomePages = [
   {
     title: 'Getting Started',
     desc: 'Estrutura do guideline e quatro passos para começar a aplicar o MergeTrace.',
-    href: '/mergetrace/docs/welcome/getting-started',
+    href: '/guideline-merge/docs/welcome/getting-started',
     color: '#639922', bg: '#EAF3DE', border: '#97C459',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -36,7 +36,7 @@ const welcomePages = [
   {
     title: 'Core Principles',
     desc: 'Quatro princípios fundamentais que orientam decisões, papéis e qualidade no fluxo de merge.',
-    href: '/mergetrace/docs/welcome/core-principles',
+    href: '/guideline-merge/docs/welcome/core-principles',
     color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -48,7 +48,7 @@ const welcomePages = [
   {
     title: 'Iteration Lifecycle',
     desc: 'Ciclo de vida da iteração com roteiro de 6 etapas, quality gates e métricas.',
-    href: '/mergetrace/docs/welcome/iteration-lifecycle',
+    href: '/guideline-merge/docs/welcome/iteration-lifecycle',
     color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -60,7 +60,7 @@ const welcomePages = [
   {
     title: 'Micro-Increments',
     desc: 'A menor unidade de valor rastreável — PRs pequenos com contexto e quality gates.',
-    href: '/mergetrace/docs/welcome/micro-increments',
+    href: '/guideline-merge/docs/welcome/micro-increments',
     color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -72,7 +72,7 @@ const welcomePages = [
   {
     title: 'Project Lifecycle',
     desc: '4 fases do ciclo de vida do projeto (Inception → Transition) e sua relação com as fases operacionais.',
-    href: '/mergetrace/docs/welcome/project-lifecycle',
+    href: '/guideline-merge/docs/welcome/project-lifecycle',
     color: '#993556', bg: '#FBEAF0', border: '#ED93B1',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -83,7 +83,7 @@ const welcomePages = [
   {
     title: 'Roles',
     desc: 'Developer A, Developer B e Mediador — responsabilidades, artefatos e relação com o OpenUP.',
-    href: '/mergetrace/docs/welcome/roles',
+    href: '/guideline-merge/docs/welcome/roles',
     color: '#0F6E56', bg: '#E1F5EE', border: '#9FE1CB',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -96,7 +96,7 @@ const welcomePages = [
   {
     title: 'Disciplines',
     desc: '5 disciplinas que organizam atividades e papéis por foco técnico ou colaborativo.',
-    href: '/mergetrace/docs/welcome/disciplines',
+    href: '/guideline-merge/docs/welcome/disciplines',
     color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -109,7 +109,7 @@ const welcomePages = [
   {
     title: 'Work Products',
     desc: '10 artefatos rastreáveis que conectam fases, papéis, atividades e decisões do fluxo.',
-    href: '/mergetrace/docs/welcome/work-products',
+    href: '/guideline-merge/docs/welcome/work-products',
     color: '#534AB7', bg: '#EEEDFE', border: '#AFA9EC',
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -156,13 +156,13 @@ export default function WelcomeOverview() {
             <p style={{ fontSize: '14px', color: '#374151', lineHeight: 1.7, margin: '0 0 16px' }}>
               O <strong>MergeTrace</strong> é um guideline operacional para merge de software,
               construído a partir de evidências empíricas. Estrutura{' '}
-              <Link to="/mergetrace/docs/phases" style={{ color: '#1D9E75', fontWeight: 600 }}>fases</Link>,{' '}
-              <Link to="/mergetrace/docs/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>papéis</Link>,{' '}
-              <Link to="/mergetrace/docs/activities" style={{ color: '#1D9E75', fontWeight: 600 }}>atividades</Link> e{' '}
-              <Link to="/mergetrace/docs/artifacts" style={{ color: '#1D9E75', fontWeight: 600 }}>artefatos</Link> para
+              <Link to="/guideline-merge/docs/phases" style={{ color: '#1D9E75', fontWeight: 600 }}>fases</Link>,{' '}
+              <Link to="/guideline-merge/docs/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>papéis</Link>,{' '}
+              <Link to="/guideline-merge/docs/activities" style={{ color: '#1D9E75', fontWeight: 600 }}>atividades</Link> e{' '}
+              <Link to="/guideline-merge/docs/artifacts" style={{ color: '#1D9E75', fontWeight: 600 }}>artefatos</Link> para
               reduzir riscos, padronizar decisões e tornar a rastreabilidade explícita e extensível a diferentes estratégias de merge.
             </p>
-            <Link to="/mergetrace/docs/welcome/getting-started" style={{
+            <Link to="/guideline-merge/docs/welcome/getting-started" style={{
               display: 'inline-flex', alignItems: 'center', gap: '6px',
               background: '#1D9E75', color: '#fff', textDecoration: 'none',
               fontSize: '13px', fontWeight: 700, padding: '8px 18px',

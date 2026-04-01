@@ -9,7 +9,7 @@ const templates = [
     phase: 'Planejamento',
     phaseColor: '#639922',
     description: 'Alinhar escopo, riscos e dependências antes do desenvolvimento. Garante que branch, convenções e sincronização estejam definidos.',
-    href: '/mergetrace/docs/templates/planejamento',
+    href: '/guideline-merge/docs/templates/planejamento',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
   {
@@ -19,7 +19,7 @@ const templates = [
     phase: 'Desenvolvimento',
     phaseColor: '#639922',
     description: 'Orientar boas práticas de implementação com commits atômicos, sincronização frequente e testes locais.',
-    href: '/mergetrace/docs/templates/desenvolvimento',
+    href: '/guideline-merge/docs/templates/desenvolvimento',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
   {
@@ -29,7 +29,7 @@ const templates = [
     phase: 'Pull Request',
     phaseColor: '#378ADD',
     description: 'Estruturar a descrição do PR com contexto, impacto, riscos e evidências antes de solicitar revisão.',
-    href: '/mergetrace/docs/templates/pull-request',
+    href: '/guideline-merge/docs/templates/pull-request',
     sections: ['Pré-condições', 'Execução', 'Quality Gates'],
   },
   {
@@ -39,7 +39,7 @@ const templates = [
     phase: 'Code Review',
     phaseColor: '#BA7517',
     description: 'Estabelecer critérios objetivos de revisão técnica, contemplando estilo, impacto, testes e segurança.',
-    href: '/mergetrace/docs/templates/code-review',
+    href: '/guideline-merge/docs/templates/code-review',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
   {
@@ -49,7 +49,7 @@ const templates = [
     phase: 'Approval',
     phaseColor: '#BA7517',
     description: 'Formalizar critérios de aprovação do PR, incluindo validações de CI/CD e aprovações mínimas necessárias.',
-    href: '/mergetrace/docs/templates/approval',
+    href: '/guideline-merge/docs/templates/approval',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
   {
@@ -59,7 +59,7 @@ const templates = [
     phase: 'Merge',
     phaseColor: '#7F77DD',
     description: 'Garantir integração segura e rastreável na branch principal, com resolução de conflitos documentada.',
-    href: '/mergetrace/docs/templates/merge',
+    href: '/guideline-merge/docs/templates/merge',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
   {
@@ -69,7 +69,7 @@ const templates = [
     phase: 'Release/Deploy',
     phaseColor: '#993556',
     description: 'Padronizar liberação e registro de evidências de build, deploy e monitoramento em produção.',
-    href: '/mergetrace/docs/templates/release-deploy',
+    href: '/guideline-merge/docs/templates/release-deploy',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
   {
@@ -79,20 +79,20 @@ const templates = [
     phase: 'Rollback',
     phaseColor: '#993556',
     description: 'Orientar reversões preservando histórico, contexto e rastreabilidade do incidente.',
-    href: '/mergetrace/docs/templates/rollback',
+    href: '/guideline-merge/docs/templates/rollback',
     sections: ['Pré-condições', 'Execução', 'Quality Gate'],
   },
 ];
 
 const PHASE_META = {
-  'Planejamento':    { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/mergetrace/docs/phases/planejamento' },
-  'Desenvolvimento': { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/mergetrace/docs/phases/desenvolvimento' },
-  'Pull Request':    { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/mergetrace/docs/phases/pull-request' },
-  'Code Review':     { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/mergetrace/docs/phases/code-review' },
-  'Approval':        { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/mergetrace/docs/phases/approval' },
-  'Merge':           { bg: '#EEEDFE', color: '#3C3489', border: '#AFA9EC', href: '/mergetrace/docs/phases/merge' },
-  'Release/Deploy':  { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/mergetrace/docs/phases/release-deploy' },
-  'Rollback':        { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/mergetrace/docs/phases/rollback' },
+  'Planejamento':    { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/guideline-merge/docs/phases/planejamento' },
+  'Desenvolvimento': { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/guideline-merge/docs/phases/desenvolvimento' },
+  'Pull Request':    { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/guideline-merge/docs/phases/pull-request' },
+  'Code Review':     { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/guideline-merge/docs/phases/code-review' },
+  'Approval':        { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/guideline-merge/docs/phases/approval' },
+  'Merge':           { bg: '#EEEDFE', color: '#3C3489', border: '#AFA9EC', href: '/guideline-merge/docs/phases/merge' },
+  'Release/Deploy':  { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/guideline-merge/docs/phases/release-deploy' },
+  'Rollback':        { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/guideline-merge/docs/phases/rollback' },
 };
 
 const GROUPS = [

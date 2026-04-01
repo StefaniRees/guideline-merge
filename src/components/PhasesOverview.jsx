@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 const phases = [
   {
     id: 'P1', title: 'Planejamento', color: '#639922',
-    href: '/mergetrace/docs/phases/planejamento',
+    href: '/guideline-merge/docs/phases/planejamento',
     obj: 'Preparar o contexto para um merge seguro, antecipando riscos e alinhando escopo, convenções e sincronização.',
     artifacts: 'Ticket priorizado; convenções de branches e commits; plano de sincronização.',
     roles: ['Developer A', 'Developer B', 'Mediador'],
@@ -12,7 +12,7 @@ const phases = [
   },
   {
     id: 'P2', title: 'Desenvolvimento', color: '#639922',
-    href: '/mergetrace/docs/phases/desenvolvimento',
+    href: '/guideline-merge/docs/phases/desenvolvimento',
     obj: 'Implementar mudanças com commits pequenos e atômicos. Sincronizar frequentemente com a main e executar testes locais.',
     artifacts: 'Histórico de commits padronizados; branch atualizada; evidências de testes locais.',
     roles: ['Developer A', 'Developer B'],
@@ -20,7 +20,7 @@ const phases = [
   },
   {
     id: 'P3', title: 'Pull Request', color: '#378ADD',
-    href: '/mergetrace/docs/phases/pull-request',
+    href: '/guideline-merge/docs/phases/pull-request',
     obj: 'Criar PR com contexto, impacto, riscos e evidências. Utilizar template e checklist obrigatórios.',
     artifacts: 'PR com template; checklist preenchido; ticket vinculado; diffs de código.',
     roles: ['Developer A', 'Developer B'],
@@ -28,7 +28,7 @@ const phases = [
   },
   {
     id: 'P4', title: 'Code Review', color: '#BA7517',
-    href: '/mergetrace/docs/phases/code-review',
+    href: '/guideline-merge/docs/phases/code-review',
     obj: 'Revisar PR com checklist técnico e colaborativo. Garantir resolução completa dos comentários. Validar em homologação (QA).',
     artifacts: 'Comentários de revisão; checklist concluído; registros de decisões técnicas; relatório de QA.',
     roles: ['Mediador', 'Developer A', 'Developer B'],
@@ -36,7 +36,7 @@ const phases = [
   },
   {
     id: 'P5', title: 'Approval', color: '#BA7517',
-    href: '/mergetrace/docs/phases/approval',
+    href: '/guideline-merge/docs/phases/approval',
     obj: 'Executar pipeline automático para validar build e qualidade. Autorizar formalmente a integração.',
     artifacts: 'Registro de aprovação; PR em estado aprovado.',
     roles: ['Mediador'],
@@ -44,7 +44,7 @@ const phases = [
   },
   {
     id: 'P6', title: 'Merge', color: '#7F77DD',
-    href: '/mergetrace/docs/phases/merge',
+    href: '/guideline-merge/docs/phases/merge',
     obj: 'Identificar e resolver conflitos entre branch e main. Registrar causas, decisões e histórico de resolução. Integrar branch na main/release após aprovações.',
     artifacts: 'Merge commit ou squash; build de integração; histórico de conflitos; registro de decisão.',
     roles: ['Mediador', 'Developer A', 'Developer B'],
@@ -52,7 +52,7 @@ const phases = [
   },
   {
     id: 'P7', title: 'Release / Deploy', color: '#993556',
-    href: '/mergetrace/docs/phases/release-deploy',
+    href: '/guideline-merge/docs/phases/release-deploy',
     obj: 'Gerar Release Notes e disponibilizar a versão integrada. Monitorar comportamento em produção.',
     artifacts: 'Release implantada; release notes; logs de deploy e monitoramento.',
     roles: ['Developer A', 'Developer B', 'Mediador'],
@@ -60,7 +60,7 @@ const phases = [
   },
   {
     id: 'P8', title: 'Rollback', color: '#993556',
-    href: '/mergetrace/docs/phases/rollback',
+    href: '/guideline-merge/docs/phases/rollback',
     obj: 'Reverter a integração de forma controlada e documentada quando problemas críticos são detectados em produção.',
     artifacts: 'Plano de rollback; commit ou versão anterior; registro de incidente.',
     roles: ['Developer A', 'Developer B', 'Mediador'],
@@ -81,9 +81,9 @@ const roleColor = {
 };
 
 const roleHref = {
-  'Developer A': '/mergetrace/docs/roles/developer-principal',
-  'Developer B': '/mergetrace/docs/roles/developer-integrador',
-  'Mediador':    '/mergetrace/docs/roles/mediador',
+  'Developer A': '/guideline-merge/docs/roles/developer-principal',
+  'Developer B': '/guideline-merge/docs/roles/developer-integrador',
+  'Mediador':    '/guideline-merge/docs/roles/mediador',
 };
 
 const wbsRows = [
@@ -98,16 +98,16 @@ const wbsRows = [
 ];
 
 const workProducts = [
-  { artifact: 'Branch de atividade; ticket priorizado; plano de sincronização', artifactHref: '/mergetrace/docs/artifacts/branch-atividade', phaseId: 'P1', byList: ['Developer A', 'Developer B', 'Mediador'] },
-  { artifact: 'Commits padronizados; branch atualizada; evidências de testes locais', artifactHref: '/mergetrace/docs/artifacts/commits-padronizados', phaseId: 'P2', byList: ['Developer A', 'Developer B'] },
-  { artifact: 'Pull Request (template + checklist preenchido)', artifactHref: '/mergetrace/docs/artifacts/pull-request', phaseId: 'P3', byList: ['Developer A', 'Developer B'] },
-  { artifact: 'Relatório de Build/CI; Relatório de Qualidade', artifactHref: '/mergetrace/docs/artifacts/relatorio-build-ci', phaseId: 'P3', byList: [], byLabel: 'Pipeline automático' },
-  { artifact: 'Checklist de revisão concluído; registros de decisões técnicas', artifactHref: '/mergetrace/docs/artifacts/checklist-revisao', phaseId: 'P4', byList: ['Mediador'] },
-  { artifact: 'Relatório de QA', artifactHref: '/mergetrace/docs/artifacts/relatorio-qa', phaseId: 'P4', byList: ['Developer A', 'Developer B'] },
-  { artifact: 'Registro de decisão; PR em estado aprovado', artifactHref: '/mergetrace/docs/artifacts/registro-decisao', phaseId: 'P5', byList: ['Mediador'] },
-  { artifact: 'Histórico de conflitos; merge commit', artifactHref: '/mergetrace/docs/artifacts/historico-conflitos', phaseId: 'P6', byList: ['Developer A', 'Developer B', 'Mediador'] },
-  { artifact: 'Release Notes; release implantada', artifactHref: '/mergetrace/docs/artifacts/release-notes', phaseId: 'P7', byList: ['Developer A', 'Developer B', 'Mediador'] },
-  { artifact: 'Feature Flag (ativação controlada)', artifactHref: '/mergetrace/docs/artifacts/feature-flag', phaseId: 'P7', byList: ['Developer A', 'Developer B', 'Mediador'] },
+  { artifact: 'Branch de atividade; ticket priorizado; plano de sincronização', artifactHref: '/guideline-merge/docs/artifacts/branch-atividade', phaseId: 'P1', byList: ['Developer A', 'Developer B', 'Mediador'] },
+  { artifact: 'Commits padronizados; branch atualizada; evidências de testes locais', artifactHref: '/guideline-merge/docs/artifacts/commits-padronizados', phaseId: 'P2', byList: ['Developer A', 'Developer B'] },
+  { artifact: 'Pull Request (template + checklist preenchido)', artifactHref: '/guideline-merge/docs/artifacts/pull-request', phaseId: 'P3', byList: ['Developer A', 'Developer B'] },
+  { artifact: 'Relatório de Build/CI; Relatório de Qualidade', artifactHref: '/guideline-merge/docs/artifacts/relatorio-build-ci', phaseId: 'P3', byList: [], byLabel: 'Pipeline automático' },
+  { artifact: 'Checklist de revisão concluído; registros de decisões técnicas', artifactHref: '/guideline-merge/docs/artifacts/checklist-revisao', phaseId: 'P4', byList: ['Mediador'] },
+  { artifact: 'Relatório de QA', artifactHref: '/guideline-merge/docs/artifacts/relatorio-qa', phaseId: 'P4', byList: ['Developer A', 'Developer B'] },
+  { artifact: 'Registro de decisão; PR em estado aprovado', artifactHref: '/guideline-merge/docs/artifacts/registro-decisao', phaseId: 'P5', byList: ['Mediador'] },
+  { artifact: 'Histórico de conflitos; merge commit', artifactHref: '/guideline-merge/docs/artifacts/historico-conflitos', phaseId: 'P6', byList: ['Developer A', 'Developer B', 'Mediador'] },
+  { artifact: 'Release Notes; release implantada', artifactHref: '/guideline-merge/docs/artifacts/release-notes', phaseId: 'P7', byList: ['Developer A', 'Developer B', 'Mediador'] },
+  { artifact: 'Feature Flag (ativação controlada)', artifactHref: '/guideline-merge/docs/artifacts/feature-flag', phaseId: 'P7', byList: ['Developer A', 'Developer B', 'Mediador'] },
   { artifact: 'Plano de rollback; registro de incidente', artifactHref: null, phaseId: 'P8', byList: ['Developer A', 'Developer B', 'Mediador'] },
 ];
 
@@ -115,21 +115,21 @@ const teamAllocation = [
   {
     initials: 'DA', name: 'Developer A',
     avatarBg: '#E1F5EE', avatarColor: '#0F6E56',
-    href: '/mergetrace/docs/roles/developer-principal',
+    href: '/guideline-merge/docs/roles/developer-principal',
     desc: 'Responsável pela criação da branch, implementação das mudanças e abertura do PR. Colabora na resolução de conflitos e na validação em homologação.',
     phaseIds: ['P1','P2','P3','P4','P6','P7','P8'],
   },
   {
     initials: 'DB', name: 'Developer B',
     avatarBg: '#E6F1FB', avatarColor: '#185FA5',
-    href: '/mergetrace/docs/roles/developer-integrador',
+    href: '/guideline-merge/docs/roles/developer-integrador',
     desc: 'Co-desenvolve, sincroniza a branch com a main e colabora na resolução de conflitos e nos testes locais antes do PR.',
     phaseIds: ['P1','P2','P3','P4','P6','P7','P8'],
   },
   {
     initials: 'MD', name: 'Mediador',
     avatarBg: '#EEEDFE', avatarColor: '#534AB7',
-    href: '/mergetrace/docs/roles/mediador',
+    href: '/guideline-merge/docs/roles/mediador',
     desc: 'Conduz o code review, formaliza a aprovação, coordena a resolução de conflitos não triviais e executa o merge final e o rollback.',
     phaseIds: ['P1','P4','P5','P6','P7','P8'],
   },

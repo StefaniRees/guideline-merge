@@ -6,7 +6,7 @@ const structure = [
     label: 'Fases',
     desc: '8 fases operacionais sequenciais: do planejamento ao rollback.',
     color: '#BA7517', bg: '#FAEEDA',
-    href: '/mergetrace/docs/phases',
+    href: '/guideline-merge/docs/phases',
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <path d="M3 11h4l3-5 3 10 3-5h3" stroke={c} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -17,7 +17,7 @@ const structure = [
     label: 'Papéis',
     desc: 'Developer A, Developer B e Mediador — responsabilidades explícitas.',
     color: '#7F77DD', bg: '#EEEDFE',
-    href: '/mergetrace/docs/roles',
+    href: '/guideline-merge/docs/roles',
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <circle cx="8" cy="8" r="3" stroke={c} strokeWidth="1.5"/>
@@ -30,7 +30,7 @@ const structure = [
     label: 'Atividades',
     desc: '8 atividades executáveis com entradas, saídas e quality gates.',
     color: '#639922', bg: '#EAF3DE',
-    href: '/mergetrace/docs/activities',
+    href: '/guideline-merge/docs/activities',
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <rect x="3" y="3" width="16" height="16" rx="3" stroke={c} strokeWidth="1.5"/>
@@ -42,7 +42,7 @@ const structure = [
     label: 'Artefatos',
     desc: '10 artefatos rastreáveis que conectam fases, decisões e resultados.',
     color: '#993556', bg: '#FBEAF0',
-    href: '/mergetrace/docs/artifacts',
+    href: '/guideline-merge/docs/artifacts',
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <rect x="4" y="3" width="14" height="16" rx="2" stroke={c} strokeWidth="1.5"/>
@@ -54,7 +54,7 @@ const structure = [
     label: 'Guidelines',
     desc: '11 quality gates e diretrizes de governança do processo.',
     color: '#0F6E56', bg: '#E1F5EE',
-    href: '/mergetrace/docs/guidelines',
+    href: '/guideline-merge/docs/guidelines',
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <circle cx="11" cy="11" r="8" stroke={c} strokeWidth="1.5"/>
@@ -66,7 +66,7 @@ const structure = [
     label: 'Templates',
     desc: 'Checklists operacionais por fase para padronizar práticas.',
     color: '#378ADD', bg: '#E6F1FB',
-    href: '/mergetrace/docs/templates',
+    href: '/guideline-merge/docs/templates',
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <rect x="3" y="3" width="16" height="16" rx="3" stroke={c} strokeWidth="1.5"/>
@@ -82,25 +82,25 @@ const steps = [
     n: '1', color: '#639922', bg: '#EAF3DE',
     title: 'Entenda os princípios',
     desc: 'Leia Core Principles e compreenda os objetivos O1–O4 do guideline.',
-    href: '/mergetrace/docs/welcome/core-principles',
+    href: '/guideline-merge/docs/welcome/core-principles',
   },
   {
     n: '2', color: '#378ADD', bg: '#E6F1FB',
     title: 'Conheça os papéis',
     desc: 'Identifique quem será Developer A, Developer B e Mediador no seu contexto.',
-    href: '/mergetrace/docs/roles',
+    href: '/guideline-merge/docs/roles',
   },
   {
     n: '3', color: '#BA7517', bg: '#FAEEDA',
     title: 'Percorra as fases',
     desc: 'Explore as 8 fases e seus quality gates para entender o fluxo completo.',
-    href: '/mergetrace/docs/phases',
+    href: '/guideline-merge/docs/phases',
   },
   {
     n: '4', color: '#7F77DD', bg: '#EEEDFE',
     title: 'Adote os templates',
     desc: 'Use os checklists por fase como ponto de entrada prático.',
-    href: '/mergetrace/docs/templates',
+    href: '/guideline-merge/docs/templates',
   },
 ];
 

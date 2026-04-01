@@ -82,14 +82,14 @@ const phases = [
 ];
 
 const mergePhaseMeta = {
-  'P1 — Planejamento':    { color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/mergetrace/docs/phases/planejamento' },
-  'P2 — Desenvolvimento': { color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/mergetrace/docs/phases/desenvolvimento' },
-  'P3 — Pull Request':    { color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB', href: '/mergetrace/docs/phases/pull-request' },
-  'P4 — Code Review':     { color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/mergetrace/docs/phases/code-review' },
-  'P5 — Approval':        { color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/mergetrace/docs/phases/approval' },
-  'P6 — Merge':           { color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC', href: '/mergetrace/docs/phases/merge' },
-  'P7 — Release / Deploy':{ color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/mergetrace/docs/phases/release-deploy' },
-  'P8 — Rollback':        { color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/mergetrace/docs/phases/rollback' },
+  'P1 — Planejamento':    { color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/guideline-merge/docs/phases/planejamento' },
+  'P2 — Desenvolvimento': { color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/guideline-merge/docs/phases/desenvolvimento' },
+  'P3 — Pull Request':    { color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB', href: '/guideline-merge/docs/phases/pull-request' },
+  'P4 — Code Review':     { color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/guideline-merge/docs/phases/code-review' },
+  'P5 — Approval':        { color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/guideline-merge/docs/phases/approval' },
+  'P6 — Merge':           { color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC', href: '/guideline-merge/docs/phases/merge' },
+  'P7 — Release / Deploy':{ color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/guideline-merge/docs/phases/release-deploy' },
+  'P8 — Rollback':        { color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/guideline-merge/docs/phases/rollback' },
 };
 
 const vectors = [
@@ -172,7 +172,7 @@ export default function ProjectLifecycle() {
           <strong>Project Lifecycle ≠ Fases do MergeTrace.</strong> O Project Lifecycle
           (Inception, Elaboration, Construction, Transition) representa o <strong>macro ciclo do projeto</strong> —
           inspirado no OpenUP — e define como o time organiza o trabalho ao longo do tempo.
-          As <Link to="/mergetrace/docs/phases" style={{ color: '#854F0B', fontWeight: 600 }}>Fases operacionais do MergeTrace (P1–P8)</Link> são
+          As <Link to="/guideline-merge/docs/phases" style={{ color: '#854F0B', fontWeight: 600 }}>Fases operacionais do MergeTrace (P1–P8)</Link> são
           o fluxo técnico de cada integração de código, que ocorre <strong>dentro</strong> dessas fases maiores.
         </p>
       </div>

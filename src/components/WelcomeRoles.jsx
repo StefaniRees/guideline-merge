@@ -9,19 +9,19 @@ const roles = [
     openup: 'OpenUP: Implementer',
     avatarBg: '#E1F5EE', avatarColor: '#0F6E56',
     color: '#639922', bg: '#EAF3DE', border: '#97C459',
-    href: '/mergetrace/docs/roles/developer-principal',
+    href: '/guideline-merge/docs/roles/developer-principal',
     description: 'Responsável pelo incremento principal de código (micro-increment). Conduz o desenvolvimento e inicia o fluxo de integração, garantindo contexto, qualidade e rastreabilidade.',
     responsibilities: [
-      { text: 'Implementar a tarefa com commits claros e descritivos.', href: '/mergetrace/docs/guidelines/commit-message' },
-      { text: 'Abrir o Pull Request com descrição contextual e vinculação à issue.', href: '/mergetrace/docs/phases/pull-request' },
-      { text: 'Corrigir conflitos simples antes da revisão.', href: '/mergetrace/docs/phases/merge' },
-      { text: 'Executar testes unitários e validar a build local.', href: '/mergetrace/docs/guidelines/ci-cd-quality-gates' },
-      { text: 'Interagir com Developer B durante ajustes colaborativos.', href: '/mergetrace/docs/roles/developer-integrador' },
+      { text: 'Implementar a tarefa com commits claros e descritivos.', href: '/guideline-merge/docs/guidelines/commit-message' },
+      { text: 'Abrir o Pull Request com descrição contextual e vinculação à issue.', href: '/guideline-merge/docs/phases/pull-request' },
+      { text: 'Corrigir conflitos simples antes da revisão.', href: '/guideline-merge/docs/phases/merge' },
+      { text: 'Executar testes unitários e validar a build local.', href: '/guideline-merge/docs/guidelines/ci-cd-quality-gates' },
+      { text: 'Interagir com Developer B durante ajustes colaborativos.', href: '/guideline-merge/docs/roles/developer-integrador' },
     ],
     artifacts: [
-      { text: 'Branch de atividade (feature/ ou bugfix/)', href: '/mergetrace/docs/artifacts/branch-atividade' },
-      { text: 'Pull Request inicial', href: '/mergetrace/docs/artifacts/pull-request' },
-      { text: 'Commits padronizados e logs de build', href: '/mergetrace/docs/artifacts/commits-padronizados' },
+      { text: 'Branch de atividade (feature/ ou bugfix/)', href: '/guideline-merge/docs/artifacts/branch-atividade' },
+      { text: 'Pull Request inicial', href: '/guideline-merge/docs/artifacts/pull-request' },
+      { text: 'Commits padronizados e logs de build', href: '/guideline-merge/docs/artifacts/commits-padronizados' },
     ],
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -37,19 +37,19 @@ const roles = [
     openup: 'OpenUP: Reviewer',
     avatarBg: '#E6F1FB', avatarColor: '#185FA5',
     color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB',
-    href: '/mergetrace/docs/roles/developer-integrador',
+    href: '/guideline-merge/docs/roles/developer-integrador',
     description: 'Desenvolvedor colaborador que atua como segundo par, apoiando revisões, testes locais e resolução de conflitos. Garante coerência técnica e resolve conflitos com dependências cruzadas.',
     responsibilities: [
-      { text: 'Revisar o PR criado pelo Developer A, sugerindo melhorias.', href: '/mergetrace/docs/phases/code-review' },
-      { text: 'Integrar dependências ou novos módulos relacionados.', href: '/mergetrace/docs/phases/merge' },
-      { text: 'Apoiar resolução de conflitos entre branches.', href: '/mergetrace/docs/guidelines/conflict-resolution-procedure' },
-      { text: 'Acompanhar execução de testes de integração e CI/CD.', href: '/mergetrace/docs/guidelines/ci-cd-quality-gates' },
-      { text: 'Comunicar bloqueios ou riscos ao Mediador.', href: '/mergetrace/docs/roles/mediador' },
+      { text: 'Revisar o PR criado pelo Developer A, sugerindo melhorias.', href: '/guideline-merge/docs/phases/code-review' },
+      { text: 'Integrar dependências ou novos módulos relacionados.', href: '/guideline-merge/docs/phases/merge' },
+      { text: 'Apoiar resolução de conflitos entre branches.', href: '/guideline-merge/docs/guidelines/conflict-resolution-procedure' },
+      { text: 'Acompanhar execução de testes de integração e CI/CD.', href: '/guideline-merge/docs/guidelines/ci-cd-quality-gates' },
+      { text: 'Comunicar bloqueios ou riscos ao Mediador.', href: '/guideline-merge/docs/roles/mediador' },
     ],
     artifacts: [
-      { text: 'Commits complementares', href: '/mergetrace/docs/artifacts/commits-padronizados' },
-      { text: 'Histórico de conflitos resolvidos', href: '/mergetrace/docs/artifacts/historico-conflitos' },
-      { text: 'Relatórios de pipeline de integração', href: '/mergetrace/docs/artifacts/relatorio-build-ci' },
+      { text: 'Commits complementares', href: '/guideline-merge/docs/artifacts/commits-padronizados' },
+      { text: 'Histórico de conflitos resolvidos', href: '/guideline-merge/docs/artifacts/historico-conflitos' },
+      { text: 'Relatórios de pipeline de integração', href: '/guideline-merge/docs/artifacts/relatorio-build-ci' },
     ],
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -66,20 +66,20 @@ const roles = [
     openup: 'OpenUP: Integrator',
     avatarBg: '#EEEDFE', avatarColor: '#534AB7',
     color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC',
-    href: '/mergetrace/docs/roles/mediador',
+    href: '/guideline-merge/docs/roles/mediador',
     description: 'Papel neutro responsável por supervisionar o fluxo de merge, facilitar resoluções e garantir que os Quality Gates sejam seguidos. Torna explícita a função de integrador especializado, registrando e comunicando decisões críticas.',
     responsibilities: [
-      { text: 'Analisar causas de conflitos e orientar correções colaborativas.', href: '/mergetrace/docs/guidelines/conflict-resolution-procedure' },
-      { text: 'Intermediar revisões complexas entre Developer A e Developer B.', href: '/mergetrace/docs/phases/code-review' },
-      { text: 'Validar critérios de aceitação e rastreabilidade dos merges.', href: '/mergetrace/docs/guidelines/approval-policy' },
-      { text: 'Garantir aderência aos Merge Guidelines e Quality Gates.', href: '/mergetrace/docs/guidelines' },
-      { text: 'Executar o Merge Final após aprovações.', href: '/mergetrace/docs/phases/merge' },
-      { text: 'Comunicar ao time resultados de resolução e aprendizado.', href: '/mergetrace/docs/artifacts/historico-conflitos' },
+      { text: 'Analisar causas de conflitos e orientar correções colaborativas.', href: '/guideline-merge/docs/guidelines/conflict-resolution-procedure' },
+      { text: 'Intermediar revisões complexas entre Developer A e Developer B.', href: '/guideline-merge/docs/phases/code-review' },
+      { text: 'Validar critérios de aceitação e rastreabilidade dos merges.', href: '/guideline-merge/docs/guidelines/approval-policy' },
+      { text: 'Garantir aderência aos Merge Guidelines e Quality Gates.', href: '/guideline-merge/docs/guidelines' },
+      { text: 'Executar o Merge Final após aprovações.', href: '/guideline-merge/docs/phases/merge' },
+      { text: 'Comunicar ao time resultados de resolução e aprendizado.', href: '/guideline-merge/docs/artifacts/historico-conflitos' },
     ],
     artifacts: [
-      { text: 'Histórico de conflitos resolvidos', href: '/mergetrace/docs/artifacts/historico-conflitos' },
-      { text: 'Registro de decisões (issues, comentários, PRs)', href: '/mergetrace/docs/artifacts/registro-decisao' },
-      { text: 'Release Notes e registro de incidentes', href: '/mergetrace/docs/artifacts/release-notes' },
+      { text: 'Histórico de conflitos resolvidos', href: '/guideline-merge/docs/artifacts/historico-conflitos' },
+      { text: 'Registro de decisões (issues, comentários, PRs)', href: '/guideline-merge/docs/artifacts/registro-decisao' },
+      { text: 'Release Notes e registro de incidentes', href: '/guideline-merge/docs/artifacts/release-notes' },
     ],
     icon: (c) => (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -91,18 +91,18 @@ const roles = [
 ];
 
 const interactions = [
-  { step: 'Criação da branch e implementação', stepHref: '/mergetrace/docs/phases/planejamento', da: 'Responsável', db: 'Acompanha', md: '—' },
-  { step: 'Abertura do Pull Request', stepHref: '/mergetrace/docs/phases/pull-request', da: 'Responsável', db: 'Revisor', md: 'Supervisiona' },
-  { step: 'Resolução de conflitos simples', stepHref: '/mergetrace/docs/guidelines/conflict-resolution-procedure', da: 'Corrige localmente', db: 'Apoia', md: '—' },
-  { step: 'Code Review e homologação', stepHref: '/mergetrace/docs/phases/code-review', da: '—', db: 'Valida em homologação', md: 'Executa revisão' },
-  { step: 'Conflitos complexos / decisão técnica', stepHref: '/mergetrace/docs/guidelines/conflict-resolution-procedure', da: '—', db: 'Apoia', md: 'Atua como mediador' },
-  { step: 'Merge Final e liberação', stepHref: '/mergetrace/docs/phases/merge', da: '—', db: '—', md: 'Responsável' },
+  { step: 'Criação da branch e implementação', stepHref: '/guideline-merge/docs/phases/planejamento', da: 'Responsável', db: 'Acompanha', md: '—' },
+  { step: 'Abertura do Pull Request', stepHref: '/guideline-merge/docs/phases/pull-request', da: 'Responsável', db: 'Revisor', md: 'Supervisiona' },
+  { step: 'Resolução de conflitos simples', stepHref: '/guideline-merge/docs/guidelines/conflict-resolution-procedure', da: 'Corrige localmente', db: 'Apoia', md: '—' },
+  { step: 'Code Review e homologação', stepHref: '/guideline-merge/docs/phases/code-review', da: '—', db: 'Valida em homologação', md: 'Executa revisão' },
+  { step: 'Conflitos complexos / decisão técnica', stepHref: '/guideline-merge/docs/guidelines/conflict-resolution-procedure', da: '—', db: 'Apoia', md: 'Atua como mediador' },
+  { step: 'Merge Final e liberação', stepHref: '/guideline-merge/docs/phases/merge', da: '—', db: '—', md: 'Responsável' },
 ];
 
 const openupCards = [
-  { role: 'Developer A', roleHref: '/mergetrace/docs/roles/developer-principal', openup: 'Implementer', desc: 'Elabora o incremento funcional e garante conformidade técnica.', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
-  { role: 'Developer B', roleHref: '/mergetrace/docs/roles/developer-integrador', openup: 'Reviewer', desc: 'Verifica, valida e aprimora continuamente o trabalho integrado.', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
-  { role: 'Mediador', roleHref: '/mergetrace/docs/roles/mediador', openup: 'Integrator', desc: 'Integra artefatos, coordena o fluxo e mitiga riscos de merge.', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
+  { role: 'Developer A', roleHref: '/guideline-merge/docs/roles/developer-principal', openup: 'Implementer', desc: 'Elabora o incremento funcional e garante conformidade técnica.', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
+  { role: 'Developer B', roleHref: '/guideline-merge/docs/roles/developer-integrador', openup: 'Reviewer', desc: 'Verifica, valida e aprimora continuamente o trabalho integrado.', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
+  { role: 'Mediador', roleHref: '/guideline-merge/docs/roles/mediador', openup: 'Integrator', desc: 'Integra artefatos, coordena o fluxo e mitiga riscos de merge.', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
 ];
 
 function RoleCard({ role }) {
@@ -218,7 +218,7 @@ export default function WelcomeRoles() {
           adaptados do Open Unified Process (OpenUP). O merge funciona como uma{' '}
           <strong>dupla autoria (A+B)</strong> com suporte de um terceiro agente especializado em
           tomada de decisão técnica e coordenação — o{' '}
-          <Link to="/mergetrace/docs/roles/mediador" style={{ color: '#7F77DD', fontWeight: 600 }}>Mediador</Link>.
+          <Link to="/guideline-merge/docs/roles/mediador" style={{ color: '#7F77DD', fontWeight: 600 }}>Mediador</Link>.
           Os papéis <strong>não são hierárquicos</strong> — todos colaboram dentro de um mesmo
           fluxo contínuo, com responsabilidade compartilhada e risco distribuído.
         </p>
@@ -284,9 +284,9 @@ export default function WelcomeRoles() {
                   >{row.step}</Link>
                 </td>
                 {[
-                  { val: row.da, color: '#639922', bg: '#EAF3DE', href: '/mergetrace/docs/roles/developer-principal' },
-                  { val: row.db, color: '#378ADD', bg: '#E6F1FB', href: '/mergetrace/docs/roles/developer-integrador' },
-                  { val: row.md, color: '#7F77DD', bg: '#EEEDFE', href: '/mergetrace/docs/roles/mediador' },
+                  { val: row.da, color: '#639922', bg: '#EAF3DE', href: '/guideline-merge/docs/roles/developer-principal' },
+                  { val: row.db, color: '#378ADD', bg: '#E6F1FB', href: '/guideline-merge/docs/roles/developer-integrador' },
+                  { val: row.md, color: '#7F77DD', bg: '#EEEDFE', href: '/guideline-merge/docs/roles/mediador' },
                 ].map((cell, j) => (
                   <td key={j} style={{ padding: '10px 12px', verticalAlign: 'top' }}>
                     {cell.val !== '—' ? (
@@ -324,10 +324,10 @@ export default function WelcomeRoles() {
         </div>
         <p style={{ fontSize: '13px', color: '#374151', lineHeight: 1.6, margin: 0 }}>
           O MergeTrace registra eventos e interações entre papéis ao longo do fluxo —{' '}
-          <Link to="/mergetrace/docs/artifacts/pull-request" style={{ color: '#1D9E75', fontWeight: 600 }}>PRs</Link>,{' '}
-          <Link to="/mergetrace/docs/phases/merge" style={{ color: '#1D9E75', fontWeight: 600 }}>merges</Link>,{' '}
-          <Link to="/mergetrace/docs/artifacts/relatorio-build-ci" style={{ color: '#1D9E75', fontWeight: 600 }}>builds</Link> e{' '}
-          <Link to="/mergetrace/docs/artifacts/historico-conflitos" style={{ color: '#1D9E75', fontWeight: 600 }}>logs</Link>.
+          <Link to="/guideline-merge/docs/artifacts/pull-request" style={{ color: '#1D9E75', fontWeight: 600 }}>PRs</Link>,{' '}
+          <Link to="/guideline-merge/docs/phases/merge" style={{ color: '#1D9E75', fontWeight: 600 }}>merges</Link>,{' '}
+          <Link to="/guideline-merge/docs/artifacts/relatorio-build-ci" style={{ color: '#1D9E75', fontWeight: 600 }}>builds</Link> e{' '}
+          <Link to="/guideline-merge/docs/artifacts/historico-conflitos" style={{ color: '#1D9E75', fontWeight: 600 }}>logs</Link>.
           A rastreabilidade permite identificar <strong>quem participou de cada decisão
           técnica e conflito resolvido</strong>, apoiando governança e aprendizado organizacional.
         </p>

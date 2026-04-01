@@ -9,7 +9,7 @@ const activities = [
     phaseColor: '#639922',
     roles: ['Developer A', 'Developer B'],
     summary: 'Criar branch curta e rastreável a partir da main/homologação.',
-    href: '/mergetrace/docs/activities/criar-branch',
+    href: '/guideline-merge/docs/activities/criar-branch',
   },
   {
     id: 'A2',
@@ -18,7 +18,7 @@ const activities = [
     phaseColor: '#639922',
     roles: ['Developer A', 'Developer B'],
     summary: 'Implementar mudanças com commits pequenos e atômicos, sincronizando frequentemente com a main.',
-    href: '/mergetrace/docs/activities/implementar-mudancas',
+    href: '/guideline-merge/docs/activities/implementar-mudancas',
   },
   {
     id: 'A3',
@@ -27,7 +27,7 @@ const activities = [
     phaseColor: '#378ADD',
     roles: ['Developer A', 'Developer B'],
     summary: 'Criar PR com contexto, impacto, riscos e evidências utilizando template obrigatório.',
-    href: '/mergetrace/docs/activities/abrir-pr',
+    href: '/guideline-merge/docs/activities/abrir-pr',
   },
   {
     id: 'A4',
@@ -36,7 +36,7 @@ const activities = [
     phaseColor: '#378ADD',
     roles: ['Developer A', 'Developer B'],
     summary: 'Executar pipeline automático para validar build, qualidade, cobertura e segurança.',
-    href: '/mergetrace/docs/activities/build-ci-cd',
+    href: '/guideline-merge/docs/activities/build-ci-cd',
   },
   {
     id: 'A5',
@@ -45,7 +45,7 @@ const activities = [
     phaseColor: '#BA7517',
     roles: ['Mediador'],
     summary: 'Revisar PR com checklist técnico e colaborativo, garantindo resolução dos comentários.',
-    href: '/mergetrace/docs/activities/code-review',
+    href: '/guideline-merge/docs/activities/code-review',
   },
   {
     id: 'A6',
@@ -54,7 +54,7 @@ const activities = [
     phaseColor: '#7F77DD',
     roles: ['Developer A', 'Developer B', 'Mediador'],
     summary: 'Identificar e resolver conflitos entre branch e main, registrando causas e decisões.',
-    href: '/mergetrace/docs/activities/resolver-conflitos',
+    href: '/guideline-merge/docs/activities/resolver-conflitos',
   },
   {
     id: 'A7',
@@ -63,7 +63,7 @@ const activities = [
     phaseColor: '#BA7517',
     roles: ['Developer A', 'Developer B'],
     summary: 'Executar testes funcionais e regressão em homologação antes do merge final.',
-    href: '/mergetrace/docs/activities/qa-homologacao',
+    href: '/guideline-merge/docs/activities/qa-homologacao',
   },
   {
     id: 'A8',
@@ -72,25 +72,25 @@ const activities = [
     phaseColor: '#7F77DD',
     roles: ['Mediador'],
     summary: 'Integrar branch na main/release após aprovações e gerar Release Notes.',
-    href: '/mergetrace/docs/activities/merge-final',
+    href: '/guideline-merge/docs/activities/merge-final',
   },
 ];
 
 const PHASE_META = {
-  'Planejamento':    { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/mergetrace/docs/phases/planejamento' },
-  'Desenvolvimento': { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/mergetrace/docs/phases/desenvolvimento' },
-  'Pull Request':    { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/mergetrace/docs/phases/pull-request' },
-  'Code Review':     { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/mergetrace/docs/phases/code-review' },
-  'Approval':        { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/mergetrace/docs/phases/approval' },
-  'Merge':           { bg: '#EEEDFE', color: '#3C3489', border: '#AFA9EC', href: '/mergetrace/docs/phases/merge' },
-  'Release/Deploy':  { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/mergetrace/docs/phases/release-deploy' },
-  'Rollback':        { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/mergetrace/docs/phases/rollback' },
+  'Planejamento':    { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/guideline-merge/docs/phases/planejamento' },
+  'Desenvolvimento': { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/guideline-merge/docs/phases/desenvolvimento' },
+  'Pull Request':    { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/guideline-merge/docs/phases/pull-request' },
+  'Code Review':     { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/guideline-merge/docs/phases/code-review' },
+  'Approval':        { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/guideline-merge/docs/phases/approval' },
+  'Merge':           { bg: '#EEEDFE', color: '#3C3489', border: '#AFA9EC', href: '/guideline-merge/docs/phases/merge' },
+  'Release/Deploy':  { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/guideline-merge/docs/phases/release-deploy' },
+  'Rollback':        { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/guideline-merge/docs/phases/rollback' },
 };
 
 const ROLE_META = {
-  'Developer A': { bg: '#E1F5EE', color: '#0F6E56', border: '#9FE1CB', href: '/mergetrace/docs/roles/developer-principal' },
-  'Developer B': { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/mergetrace/docs/roles/developer-integrador' },
-  'Mediador':    { bg: '#EEEDFE', color: '#534AB7', border: '#AFA9EC', href: '/mergetrace/docs/roles/mediador' },
+  'Developer A': { bg: '#E1F5EE', color: '#0F6E56', border: '#9FE1CB', href: '/guideline-merge/docs/roles/developer-principal' },
+  'Developer B': { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/guideline-merge/docs/roles/developer-integrador' },
+  'Mediador':    { bg: '#EEEDFE', color: '#534AB7', border: '#AFA9EC', href: '/guideline-merge/docs/roles/mediador' },
 };
 
 const FILTER_GROUPS = [

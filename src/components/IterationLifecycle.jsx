@@ -92,19 +92,19 @@ const roles = [
   {
     initials: 'DA', name: 'Developer A',
     bg: '#E1F5EE', color: '#0F6E56',
-    href: '/mergetrace/docs/roles/developer-principal',
+    href: '/guideline-merge/docs/roles/developer-principal',
     resp: 'Implementa, abre PR com contexto e testa localmente.',
   },
   {
     initials: 'DB', name: 'Developer B',
     bg: '#E6F1FB', color: '#185FA5',
-    href: '/mergetrace/docs/roles/developer-integrador',
+    href: '/guideline-merge/docs/roles/developer-integrador',
     resp: 'Revisa tecnicamente, integra dependências e resolve conflitos de média complexidade.',
   },
   {
     initials: 'MD', name: 'Mediador',
     bg: '#EEEDFE', color: '#534AB7',
-    href: '/mergetrace/docs/roles/mediador',
+    href: '/guideline-merge/docs/roles/mediador',
     resp: 'Facilita decisões, arbitra conflitos complexos e garante aderência às guidelines.',
   },
 ];

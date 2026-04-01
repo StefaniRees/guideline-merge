@@ -5,7 +5,7 @@ const quickLinks = [
   {
     title: 'Getting Started',
     description: 'Passo a passo para habilitar o processo no seu repositório.',
-    href: '/mergetrace/docs/welcome/getting-started',
+    href: '/guideline-merge/docs/welcome/getting-started',
     color: '#639922',
     bg: '#EAF3DE',
     icon: (color) => (
@@ -18,7 +18,7 @@ const quickLinks = [
   {
     title: 'Core Principles',
     description: 'Princípios que direcionam decisões e qualidade.',
-    href: '/mergetrace/docs/welcome/core-principles',
+    href: '/guideline-merge/docs/welcome/core-principles',
     color: '#378ADD',
     bg: '#E6F1FB',
     icon: (color) => (
@@ -31,7 +31,7 @@ const quickLinks = [
   {
     title: 'Fases',
     description: 'As 8 fases operacionais do fluxo de merge.',
-    href: '/mergetrace/docs/phases',
+    href: '/guideline-merge/docs/phases',
     color: '#BA7517',
     bg: '#FAEEDA',
     icon: (color) => (
@@ -44,7 +44,7 @@ const quickLinks = [
   {
     title: 'Papéis',
     description: 'Developer A, Developer B e Mediador — responsabilidades e handoffs.',
-    href: '/mergetrace/docs/roles',
+    href: '/guideline-merge/docs/roles',
     color: '#7F77DD',
     bg: '#EEEDFE',
     icon: (color) => (
@@ -59,7 +59,7 @@ const quickLinks = [
   {
     title: 'Artefatos',
     description: 'Artefatos rastreáveis que conectam fases, atividades e decisões.',
-    href: '/mergetrace/docs/artifacts',
+    href: '/guideline-merge/docs/artifacts',
     color: '#993556',
     bg: '#FBEAF0',
     icon: (color) => (
@@ -73,7 +73,7 @@ const quickLinks = [
   {
     title: 'Guidelines',
     description: 'Quality gates e diretrizes que governam a progressão do merge.',
-    href: '/mergetrace/docs/guidelines',
+    href: '/guideline-merge/docs/guidelines',
     color: '#0F6E56',
     bg: '#E1F5EE',
     icon: (color) => (

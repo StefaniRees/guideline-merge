@@ -9,7 +9,7 @@ const roles = [
     color: '#378ADD',
     initials: 'DA',
     summary: 'Responsável pelo incremento principal de código, conduz o desenvolvimento e inicia o fluxo de integração.',
-    href: '/mergetrace/docs/roles/developer-principal',
+    href: '/guideline-merge/docs/roles/developer-principal',
   },
   {
     id: 'developer-b',
@@ -18,7 +18,7 @@ const roles = [
     color: '#639922',
     initials: 'DB',
     summary: 'Desenvolvedor colaborador que atua como segundo par, apoiando revisões, testes locais e resolução de conflitos.',
-    href: '/mergetrace/docs/roles/developer-integrador',
+    href: '/guideline-merge/docs/roles/developer-integrador',
   },
   {
     id: 'mediador',
@@ -27,7 +27,7 @@ const roles = [
     color: '#533AB7',
     initials: 'ME',
     summary: 'Papel neutro responsável por supervisionar o fluxo de merge, facilitar resoluções e garantir os Quality Gates.',
-    href: '/mergetrace/docs/roles/mediador',
+    href: '/guideline-merge/docs/roles/mediador',
   },
 ];
 

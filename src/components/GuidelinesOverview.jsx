@@ -9,7 +9,7 @@ const guidelines = [
     typeColor: '#534AB7',
     summary: 'Define critérios mínimos de aprovação de Pull Requests, incluindo número de revisores, papéis envolvidos e exceções permitidas.',
     phase: 'Approval',
-    href: '/mergetrace/docs/guidelines/approval-policy',
+    href: '/guideline-merge/docs/guidelines/approval-policy',
   },
   {
     id: 'branch-naming-convention',
@@ -18,7 +18,7 @@ const guidelines = [
     typeColor: '#639922',
     summary: 'Estabelece padrões de nomeação de branches, favorecendo organização e rastreabilidade em alinhamento com histórias e tarefas.',
     phase: 'Planejamento',
-    href: '/mergetrace/docs/guidelines/branch-naming-convention',
+    href: '/guideline-merge/docs/guidelines/branch-naming-convention',
   },
   {
     id: 'cicd-quality-gates',
@@ -27,7 +27,7 @@ const guidelines = [
     typeColor: '#534AB7',
     summary: 'Define gates obrigatórios no pipeline — build, testes automatizados, análise estática e cobertura mínima — antes da integração.',
     phase: 'Pull Request',
-    href: '/mergetrace/docs/guidelines/ci-cd-quality-gates',
+    href: '/guideline-merge/docs/guidelines/ci-cd-quality-gates',
   },
   {
     id: 'code-review-checklist',
@@ -36,7 +36,7 @@ const guidelines = [
     typeColor: '#534AB7',
     summary: 'Fornece critérios mínimos para revisão técnica, contemplando estilo, impacto, testes, riscos e segurança.',
     phase: 'Code Review',
-    href: '/mergetrace/docs/guidelines/code-review-checklist',
+    href: '/guideline-merge/docs/guidelines/code-review-checklist',
   },
   {
     id: 'commit-message-convention',
@@ -45,7 +45,7 @@ const guidelines = [
     typeColor: '#639922',
     summary: 'Padroniza mensagens de commit, permitindo rastreamento semântico e associação clara entre mudanças, tickets e issues.',
     phase: 'Desenvolvimento',
-    href: '/mergetrace/docs/guidelines/commit-message',
+    href: '/guideline-merge/docs/guidelines/commit-message',
   },
   {
     id: 'conflict-resolution-procedure',
@@ -54,7 +54,7 @@ const guidelines = [
     typeColor: '#BA7517',
     summary: 'Descreve práticas recomendadas para resolução colaborativa de conflitos, incluindo registro de decisões e aprendizado organizacional.',
     phase: 'Merge',
-    href: '/mergetrace/docs/guidelines/conflict-resolution-procedure',
+    href: '/guideline-merge/docs/guidelines/conflict-resolution-procedure',
   },
   {
     id: 'feature-flags-management',
@@ -63,7 +63,7 @@ const guidelines = [
     typeColor: '#378ADD',
     summary: 'Normatiza a criação, uso e remoção de feature flags, permitindo isolamento de impactos e reversões controladas.',
     phase: 'Release/Deploy',
-    href: '/mergetrace/docs/guidelines/feature-flags-management',
+    href: '/guideline-merge/docs/guidelines/feature-flags-management',
   },
   {
     id: 'pull-request-template',
@@ -72,7 +72,7 @@ const guidelines = [
     typeColor: '#378ADD',
     summary: 'Disponibiliza um template estruturado para descrição de contexto, escopo, riscos, testes e artefatos vinculados ao PR.',
     phase: 'Pull Request',
-    href: '/mergetrace/docs/guidelines/pull-request-template',
+    href: '/guideline-merge/docs/guidelines/pull-request-template',
   },
   {
     id: 'qa-in-homolog',
@@ -81,7 +81,7 @@ const guidelines = [
     typeColor: '#534AB7',
     summary: 'Diretriz para validação das alterações em ambiente de homologação antes do merge final, incluindo testes funcionais e de integração.',
     phase: 'Code Review',
-    href: '/mergetrace/docs/guidelines/qa-homolog',
+    href: '/guideline-merge/docs/guidelines/qa-homolog',
   },
   {
     id: 'release-notes-standard',
@@ -90,7 +90,7 @@ const guidelines = [
     typeColor: '#639922',
     summary: 'Padroniza a geração de notas de versão, promovendo comunicação clara sobre mudanças, riscos e componentes afetados.',
     phase: 'Release/Deploy',
-    href: '/mergetrace/docs/guidelines/release-notes-standard',
+    href: '/guideline-merge/docs/guidelines/release-notes-standard',
   },
   {
     id: 'rollback-strategy',
@@ -99,19 +99,19 @@ const guidelines = [
     typeColor: '#BA7517',
     summary: 'Estabelece estratégias e critérios para reversão controlada de merges ou releases, incluindo registro de incidentes e análise pós-falha.',
     phase: 'Rollback',
-    href: '/mergetrace/docs/guidelines/rollback-strategy',
+    href: '/guideline-merge/docs/guidelines/rollback-strategy',
   },
 ];
 
 const PHASE_META = {
-  'Planejamento':    { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/mergetrace/docs/phases/planejamento' },
-  'Desenvolvimento': { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/mergetrace/docs/phases/desenvolvimento' },
-  'Pull Request':    { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/mergetrace/docs/phases/pull-request' },
-  'Code Review':     { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/mergetrace/docs/phases/code-review' },
-  'Approval':        { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/mergetrace/docs/phases/approval' },
-  'Merge':           { bg: '#EEEDFE', color: '#3C3489', border: '#AFA9EC', href: '/mergetrace/docs/phases/merge' },
-  'Release/Deploy':  { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/mergetrace/docs/phases/release-deploy' },
-  'Rollback':        { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/mergetrace/docs/phases/rollback' },
+  'Planejamento':    { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/guideline-merge/docs/phases/planejamento' },
+  'Desenvolvimento': { bg: '#EAF3DE', color: '#3B6D11', border: '#97C459', href: '/guideline-merge/docs/phases/desenvolvimento' },
+  'Pull Request':    { bg: '#E6F1FB', color: '#185FA5', border: '#85B7EB', href: '/guideline-merge/docs/phases/pull-request' },
+  'Code Review':     { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/guideline-merge/docs/phases/code-review' },
+  'Approval':        { bg: '#FAEEDA', color: '#854F0B', border: '#EF9F27', href: '/guideline-merge/docs/phases/approval' },
+  'Merge':           { bg: '#EEEDFE', color: '#3C3489', border: '#AFA9EC', href: '/guideline-merge/docs/phases/merge' },
+  'Release/Deploy':  { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/guideline-merge/docs/phases/release-deploy' },
+  'Rollback':        { bg: '#FBEAF0', color: '#72243E', border: '#ED93B1', href: '/guideline-merge/docs/phases/rollback' },
 };
 
 const TYPE_META = {

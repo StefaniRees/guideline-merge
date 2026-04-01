@@ -6,7 +6,7 @@ import Layout from '@theme/Layout';
 const sections = [
   {
     title: 'Fases',
-    href: '/mergetrace/docs/phases',
+    href: '/guideline-merge/docs/phases',
     color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27',
     desc: '8 fases operacionais do fluxo de merge — do planejamento ao rollback.',
     icon: (
@@ -18,7 +18,7 @@ const sections = [
   },
   {
     title: 'Papéis',
-    href: '/mergetrace/docs/roles',
+    href: '/guideline-merge/docs/roles',
     color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC',
     desc: 'Developer A, Developer B e Mediador — responsabilidades e handoffs explícitos.',
     icon: (
@@ -31,7 +31,7 @@ const sections = [
   },
   {
     title: 'Atividades',
-    href: '/mergetrace/docs/activities',
+    href: '/guideline-merge/docs/activities',
     color: '#639922', bg: '#EAF3DE', border: '#97C459',
     desc: '8 atividades executáveis com entradas, saídas e quality gates definidos.',
     icon: (
@@ -44,7 +44,7 @@ const sections = [
   },
   {
     title: 'Artefatos',
-    href: '/mergetrace/docs/artifacts',
+    href: '/guideline-merge/docs/artifacts',
     color: '#993556', bg: '#FBEAF0', border: '#ED93B1',
     desc: '10 artefatos rastreáveis que conectam fases, papéis e decisões.',
     icon: (
@@ -56,7 +56,7 @@ const sections = [
   },
   {
     title: 'Guidelines',
-    href: '/mergetrace/docs/guidelines',
+    href: '/guideline-merge/docs/guidelines',
     color: '#0F6E56', bg: '#E1F5EE', border: '#9FE1CB',
     desc: '11 quality gates e diretrizes que governam a progressão do fluxo.',
     icon: (
@@ -68,7 +68,7 @@ const sections = [
   },
   {
     title: 'Templates',
-    href: '/mergetrace/docs/templates',
+    href: '/guideline-merge/docs/templates',
     color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB',
     desc: 'Checklists operacionais por fase para padronizar práticas da equipe.',
     icon: (
@@ -84,22 +84,22 @@ const features = [
   {
     title: 'Colaboração estruturada',
     desc: 'Papéis explícitos (Developer A, Developer B, Mediador) garantem que cada decisão técnica seja compartilhada, registrada e rastreável.',
-    img: '/mergetrace/img/pair-programming.svg',
-    href: '/mergetrace/docs/roles',
+    img: '/guideline-merge/img/pair-programming.svg',
+    href: '/guideline-merge/docs/roles',
     color: '#7F77DD',
   },
   {
     title: 'Revisão orientada à qualidade',
     desc: 'Checklists e quality gates objetivos em cada fase eliminam ambiguidades e reduzem conflitos tardios de integração.',
-    img: '/mergetrace/img/undraw_code-review_jdgp.svg',
-    href: '/mergetrace/docs/guidelines/code-review-checklist',
+    img: '/guideline-merge/img/undraw_code-review_jdgp.svg',
+    href: '/guideline-merge/docs/guidelines/code-review-checklist',
     color: '#BA7517',
   },
   {
     title: 'Rastreabilidade ponta a ponta',
     desc: 'De issue a release — cada artefato conecta fases, papéis e decisões, viabilizando auditoria e aprendizado organizacional.',
-    img: '/mergetrace/img/undraw_version-control.svg',
-    href: '/mergetrace/docs/artifacts',
+    img: '/guideline-merge/img/undraw_version-control.svg',
+    href: '/guideline-merge/docs/artifacts',
     color: '#993556',
   },
 ];
@@ -133,7 +133,7 @@ export default function Home(): ReactNode {
                 rastreabilidade e colaboração — construído a partir de evidências empíricas.
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <Link to="/mergetrace/docs/welcome" style={{
+                <Link to="/guideline-merge/docs/welcome" style={{
                   background: '#fff', color: '#0F6E56',
                   textDecoration: 'none', fontSize: '15px', fontWeight: 800,
                   padding: '14px 28px', borderRadius: '10px',
@@ -145,7 +145,7 @@ export default function Home(): ReactNode {
                 >
                   Explorar o guideline →
                 </Link>
-                <Link to="/mergetrace/docs/welcome/getting-started" style={{
+                <Link to="/guideline-merge/docs/welcome/getting-started" style={{
                   background: 'transparent', color: '#fff',
                   textDecoration: 'none', fontSize: '15px', fontWeight: 700,
                   padding: '14px 28px', borderRadius: '10px',
@@ -163,7 +163,7 @@ export default function Home(): ReactNode {
             {/* Right — ilustração */}
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
               <img
-                src="/mergetrace/img/Software integration-rafiki.svg"
+                src="/guideline-merge/img/Software integration-rafiki.svg"
                 alt="Software integration illustration"
                 style={{ width: '100%', maxWidth: '400px', display: 'block' }}
               />
@@ -342,7 +342,7 @@ export default function Home(): ReactNode {
                   </div>
                 ))}
               </div>
-              <Link to="/mergetrace/docs/welcome/introduction" style={{
+              <Link to="/guideline-merge/docs/welcome/introduction" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '6px',
                 background: '#1D9E75', color: '#fff',
                 textDecoration: 'none', fontSize: '14px', fontWeight: 700,
@@ -353,7 +353,7 @@ export default function Home(): ReactNode {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <img
-                src="/mergetrace/img/Developer activity-amico.svg"
+                src="/guideline-merge/img/Developer activity-amico.svg"
                 alt="Developer activity"
                 style={{ width: '100%', maxWidth: '360px' }}
               />
@@ -365,7 +365,7 @@ export default function Home(): ReactNode {
         <div style={{ padding: '80px 24px', textAlign: 'center', background: '#fff' }}>
           <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             <img
-              src="/mergetrace/img/pair-programming.svg"
+              src="/guideline-merge/img/pair-programming.svg"
               alt="Getting started"
               style={{ width: '180px', marginBottom: '28px' }}
             />
@@ -377,7 +377,7 @@ export default function Home(): ReactNode {
               de forma incremental em qualquer contexto organizacional.
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/mergetrace/docs/welcome/getting-started" style={{
+              <Link to="/guideline-merge/docs/welcome/getting-started" style={{
                 background: '#1D9E75', color: '#fff',
                 textDecoration: 'none', fontSize: '15px', fontWeight: 800,
                 padding: '14px 28px', borderRadius: '10px',

@@ -8,20 +8,20 @@ const disciplines = [
     color: '#639922', bg: '#EAF3DE', border: '#97C459',
     summary: 'Implementação de mudanças, criação de branches, commits e correções rápidas com foco em atomicidade e rastreabilidade.',
     activities: [
-      { label: 'Criar Branch', href: '/mergetrace/docs/activities/criar-branch' },
-      { label: 'Implementar Mudanças', href: '/mergetrace/docs/activities/implementar-mudancas' },
+      { label: 'Criar Branch', href: '/guideline-merge/docs/activities/criar-branch' },
+      { label: 'Implementar Mudanças', href: '/guideline-merge/docs/activities/implementar-mudancas' },
     ],
     artifacts: [
-      { label: 'Branch de Atividade', href: '/mergetrace/docs/artifacts/branch-atividade' },
-      { label: 'Commits Padronizados', href: '/mergetrace/docs/artifacts/commits-padronizados' },
+      { label: 'Branch de Atividade', href: '/guideline-merge/docs/artifacts/branch-atividade' },
+      { label: 'Commits Padronizados', href: '/guideline-merge/docs/artifacts/commits-padronizados' },
     ],
     guidelines: [
-      { label: 'Branch Naming Convention', href: '/mergetrace/docs/guidelines/branch-naming-convention' },
-      { label: 'Commit Message Convention', href: '/mergetrace/docs/guidelines/commit-message' },
+      { label: 'Branch Naming Convention', href: '/guideline-merge/docs/guidelines/branch-naming-convention' },
+      { label: 'Commit Message Convention', href: '/guideline-merge/docs/guidelines/commit-message' },
     ],
     roles: [
-      { label: 'Developer A', href: '/mergetrace/docs/roles/developer-principal', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
-      { label: 'Developer B', href: '/mergetrace/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
+      { label: 'Developer A', href: '/guideline-merge/docs/roles/developer-principal', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
+      { label: 'Developer B', href: '/guideline-merge/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
     ],
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -35,22 +35,22 @@ const disciplines = [
     color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB',
     summary: 'Revisão técnica e semântica das alterações com feedback colaborativo, identificação de riscos e aplicação de padrões definidos nas guidelines.',
     activities: [
-      { label: 'Code Review', href: '/mergetrace/docs/activities/code-review' },
-      { label: 'Validar em Homologação (QA)', href: '/mergetrace/docs/activities/qa-homologacao' },
+      { label: 'Code Review', href: '/guideline-merge/docs/activities/code-review' },
+      { label: 'Validar em Homologação (QA)', href: '/guideline-merge/docs/activities/qa-homologacao' },
     ],
     artifacts: [
-      { label: 'Checklist de Revisão', href: '/mergetrace/docs/artifacts/checklist-revisao' },
-      { label: 'Relatório de QA', href: '/mergetrace/docs/artifacts/relatorio-qa' },
-      { label: 'Registro de Decisão', href: '/mergetrace/docs/artifacts/registro-decisao' },
+      { label: 'Checklist de Revisão', href: '/guideline-merge/docs/artifacts/checklist-revisao' },
+      { label: 'Relatório de QA', href: '/guideline-merge/docs/artifacts/relatorio-qa' },
+      { label: 'Registro de Decisão', href: '/guideline-merge/docs/artifacts/registro-decisao' },
     ],
     guidelines: [
-      { label: 'Code Review Checklist', href: '/mergetrace/docs/guidelines/code-review-checklist' },
-      { label: 'QA in Homolog', href: '/mergetrace/docs/guidelines/qa-homolog' },
-      { label: 'Pull Request Template', href: '/mergetrace/docs/guidelines/pull-request-template' },
+      { label: 'Code Review Checklist', href: '/guideline-merge/docs/guidelines/code-review-checklist' },
+      { label: 'QA in Homolog', href: '/guideline-merge/docs/guidelines/qa-homolog' },
+      { label: 'Pull Request Template', href: '/guideline-merge/docs/guidelines/pull-request-template' },
     ],
     roles: [
-      { label: 'Mediador', href: '/mergetrace/docs/roles/mediador', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
-      { label: 'Developer B', href: '/mergetrace/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
+      { label: 'Mediador', href: '/guideline-merge/docs/roles/mediador', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
+      { label: 'Developer B', href: '/guideline-merge/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
     ],
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -66,20 +66,20 @@ const disciplines = [
     color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27',
     summary: 'Validação contínua dos merges por testes automatizados, garantindo estabilidade das builds e ausência de regressões.',
     activities: [
-      { label: 'Executar Build e Testes (CI/CD)', href: '/mergetrace/docs/activities/build-ci-cd' },
-      { label: 'Validar em Homologação (QA)', href: '/mergetrace/docs/activities/qa-homologacao' },
+      { label: 'Executar Build e Testes (CI/CD)', href: '/guideline-merge/docs/activities/build-ci-cd' },
+      { label: 'Validar em Homologação (QA)', href: '/guideline-merge/docs/activities/qa-homologacao' },
     ],
     artifacts: [
-      { label: 'Relatório de Build/CI', href: '/mergetrace/docs/artifacts/relatorio-build-ci' },
-      { label: 'Relatório de QA', href: '/mergetrace/docs/artifacts/relatorio-qa' },
+      { label: 'Relatório de Build/CI', href: '/guideline-merge/docs/artifacts/relatorio-build-ci' },
+      { label: 'Relatório de QA', href: '/guideline-merge/docs/artifacts/relatorio-qa' },
     ],
     guidelines: [
-      { label: 'CI/CD Quality Gates', href: '/mergetrace/docs/guidelines/ci-cd-quality-gates' },
-      { label: 'QA in Homolog', href: '/mergetrace/docs/guidelines/qa-homolog' },
+      { label: 'CI/CD Quality Gates', href: '/guideline-merge/docs/guidelines/ci-cd-quality-gates' },
+      { label: 'QA in Homolog', href: '/guideline-merge/docs/guidelines/qa-homolog' },
     ],
     roles: [
-      { label: 'Developer A', href: '/mergetrace/docs/roles/developer-principal', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
-      { label: 'Developer B', href: '/mergetrace/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
+      { label: 'Developer A', href: '/guideline-merge/docs/roles/developer-principal', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
+      { label: 'Developer B', href: '/guideline-merge/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
     ],
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -94,21 +94,21 @@ const disciplines = [
     color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC',
     summary: 'Integração e entrega contínuas conectando pipelines, artefatos e quality gates. Garante rastreabilidade total entre builds, merges e deploys.',
     activities: [
-      { label: 'Executar Build e Testes (CI/CD)', href: '/mergetrace/docs/activities/build-ci-cd' },
-      { label: 'Merge Final', href: '/mergetrace/docs/activities/merge-final' },
+      { label: 'Executar Build e Testes (CI/CD)', href: '/guideline-merge/docs/activities/build-ci-cd' },
+      { label: 'Merge Final', href: '/guideline-merge/docs/activities/merge-final' },
     ],
     artifacts: [
-      { label: 'Relatório de Build/CI', href: '/mergetrace/docs/artifacts/relatorio-build-ci' },
-      { label: 'Release Notes', href: '/mergetrace/docs/artifacts/release-notes' },
-      { label: 'Feature Flag', href: '/mergetrace/docs/artifacts/feature-flag' },
+      { label: 'Relatório de Build/CI', href: '/guideline-merge/docs/artifacts/relatorio-build-ci' },
+      { label: 'Release Notes', href: '/guideline-merge/docs/artifacts/release-notes' },
+      { label: 'Feature Flag', href: '/guideline-merge/docs/artifacts/feature-flag' },
     ],
     guidelines: [
-      { label: 'CI/CD Quality Gates', href: '/mergetrace/docs/guidelines/ci-cd-quality-gates' },
-      { label: 'Release Notes Standard', href: '/mergetrace/docs/guidelines/release-notes-standard' },
-      { label: 'Feature Flags Management', href: '/mergetrace/docs/guidelines/feature-flags-management' },
+      { label: 'CI/CD Quality Gates', href: '/guideline-merge/docs/guidelines/ci-cd-quality-gates' },
+      { label: 'Release Notes Standard', href: '/guideline-merge/docs/guidelines/release-notes-standard' },
+      { label: 'Feature Flags Management', href: '/guideline-merge/docs/guidelines/feature-flags-management' },
     ],
     roles: [
-      { label: 'Mediador', href: '/mergetrace/docs/roles/mediador', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
+      { label: 'Mediador', href: '/guideline-merge/docs/roles/mediador', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
     ],
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -122,23 +122,23 @@ const disciplines = [
     color: '#993556', bg: '#FBEAF0', border: '#ED93B1',
     summary: 'Monitoramento de conformidade, documentação leve, registro de decisões e aprendizado contínuo baseado em evidências empíricas.',
     activities: [
-      { label: 'Resolver Conflitos de Merge', href: '/mergetrace/docs/activities/resolver-conflitos' },
-      { label: 'Merge Final', href: '/mergetrace/docs/activities/merge-final' },
+      { label: 'Resolver Conflitos de Merge', href: '/guideline-merge/docs/activities/resolver-conflitos' },
+      { label: 'Merge Final', href: '/guideline-merge/docs/activities/merge-final' },
     ],
     artifacts: [
-      { label: 'Histórico de Conflitos', href: '/mergetrace/docs/artifacts/historico-conflitos' },
-      { label: 'Registro de Decisão', href: '/mergetrace/docs/artifacts/registro-decisao' },
-      { label: 'Release Notes', href: '/mergetrace/docs/artifacts/release-notes' },
+      { label: 'Histórico de Conflitos', href: '/guideline-merge/docs/artifacts/historico-conflitos' },
+      { label: 'Registro de Decisão', href: '/guideline-merge/docs/artifacts/registro-decisao' },
+      { label: 'Release Notes', href: '/guideline-merge/docs/artifacts/release-notes' },
     ],
     guidelines: [
-      { label: 'Approval Policy', href: '/mergetrace/docs/guidelines/approval-policy' },
-      { label: 'Conflict Resolution Procedure', href: '/mergetrace/docs/guidelines/conflict-resolution-procedure' },
-      { label: 'Rollback Strategy', href: '/mergetrace/docs/guidelines/rollback-strategy' },
+      { label: 'Approval Policy', href: '/guideline-merge/docs/guidelines/approval-policy' },
+      { label: 'Conflict Resolution Procedure', href: '/guideline-merge/docs/guidelines/conflict-resolution-procedure' },
+      { label: 'Rollback Strategy', href: '/guideline-merge/docs/guidelines/rollback-strategy' },
     ],
     roles: [
-      { label: 'Mediador', href: '/mergetrace/docs/roles/mediador', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
-      { label: 'Developer A', href: '/mergetrace/docs/roles/developer-principal', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
-      { label: 'Developer B', href: '/mergetrace/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
+      { label: 'Mediador', href: '/guideline-merge/docs/roles/mediador', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC' },
+      { label: 'Developer A', href: '/guideline-merge/docs/roles/developer-principal', color: '#639922', bg: '#EAF3DE', border: '#97C459' },
+      { label: 'Developer B', href: '/guideline-merge/docs/roles/developer-integrador', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB' },
     ],
     icon: (c) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -285,8 +285,8 @@ export default function Disciplines() {
       }}>
         <p style={{ fontSize: '14px', color: '#374151', lineHeight: 1.7, margin: 0 }}>
           As <strong>disciplinas do MergeTrace</strong> agrupam{' '}
-          <Link to="/mergetrace/docs/activities" style={{ color: '#1D9E75', fontWeight: 600 }}>atividades</Link> e{' '}
-          <Link to="/mergetrace/docs/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>papéis</Link> que
+          <Link to="/guideline-merge/docs/activities" style={{ color: '#1D9E75', fontWeight: 600 }}>atividades</Link> e{' '}
+          <Link to="/guideline-merge/docs/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>papéis</Link> que
           compartilham um mesmo foco técnico ou colaborativo. Assim como no OpenUP, as disciplinas
           <strong> não são compartimentos isolados</strong> — elas se sobrepõem e interagem
           constantemente ao longo do ciclo de integração, conectando desenvolvedores, revisores e
@@ -320,10 +320,10 @@ export default function Disciplines() {
         </div>
         <p style={{ fontSize: '13px', color: '#374151', lineHeight: 1.6, margin: 0 }}>
           Cada disciplina pode ser representada por um workflow de referência que ilustra as{' '}
-          <Link to="/mergetrace/docs/activities" style={{ color: '#1D9E75', fontWeight: 600 }}>atividades</Link> típicas,
+          <Link to="/guideline-merge/docs/activities" style={{ color: '#1D9E75', fontWeight: 600 }}>atividades</Link> típicas,
           as dependências entre{' '}
-          <Link to="/mergetrace/docs/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>papéis</Link> e os{' '}
-          <Link to="/mergetrace/docs/artifacts" style={{ color: '#1D9E75', fontWeight: 600 }}>artefatos</Link> gerados.
+          <Link to="/guideline-merge/docs/roles" style={{ color: '#1D9E75', fontWeight: 600 }}>papéis</Link> e os{' '}
+          <Link to="/guideline-merge/docs/artifacts" style={{ color: '#1D9E75', fontWeight: 600 }}>artefatos</Link> gerados.
           Esses fluxos servem como guias educacionais e referência para aprimoramento contínuo do time.
         </p>
       </div>
