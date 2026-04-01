@@ -2,60 +2,33 @@
 id: rollback
 title: Rollback – Checklist
 slug: /templates/rollback
-sidebar_position: 29
-description: Checklist estático para reverter releases/merges com segurança e aprendizado no MergeTrace.
+sidebar_position: 27
+description: Checklist para orientar reversões preservando histórico e contexto no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/rollback-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Rollback – Checklist
 
-> **Propósito:** Reversão rápida e segura, com registro para aprendizado.
+> **Propósito:** Orientar reversões preservando histórico e contexto.
+>
+> **Entradas (Required Artifacts):** Plano de rollback; Commit ou versão anterior identificada
+>
+> **Saídas (Produced Artifacts):** Integração revertida; Registro de incidente
 
-## Boas práticas de Rollback
+## Pré-condições (Entradas)
+- [ ] Plano de rollback disponível
+- [ ] Commit ou versão anterior identificada
 
-### Execução
-- [ ] Escolher **caminho de rollback**:
-  - [ ] **Revert commit** (merge revert)
-  - [ ] **Voltar versão/tag** (deploy da versão anterior)
-  - [ ] **Desligar feature flag** (fallback imediato)
-- [ ] Executar **rollback** e **verificar estabilidade** do sistema
-- [ ] Confirmar **estado do banco/infra** (migrações reversíveis, dados consistentes)
-- [ ] Garantir **acessos/credenciais** e trilhas de auditoria habilitadas
+## Execução
+- [ ] Reversão executada de forma controlada e auditável
+- [ ] Registro de incidente concluído (causas, impacto e decisões)
+- [ ] Análise pós-falha realizada
 
-### Validação Pós-Rollback
-- [ ] **Smoke tests** essenciais passando
-- [ ] Dashboards/alertas **voltaram ao normal**
-- [ ] Sem **erros críticos** em logs e sem degradação de performance
-- [ ] Usuários-chave confirmam **funcionalidade básica**
+## Quality Gate (Bloqueante)
+- [ ] Reversão executada e rastreabilidade preservada
+- [ ] Registro de incidente concluído antes de encerrar o ciclo
 
-### Comunicação
-- [ ] Notificar **stakeholders e suporte** (o que ocorreu, impacto, status atual)
-- [ ] Atualizar **canal de incidentes** (linha do tempo e responsáveis)
-- [ ] Alinhar **próximos passos** (hotfix, janela para nova tentativa, monitoramento estendido)
+---
 
-### Registro & Aprendizado
-- [ ] Registrar **causa, impacto e correção** (pós-mortem curto)
-- [ ] Atualizar **Histórico de Conflitos / MergeLog** com o ocorrido
-- [ ] Criar/atualizar **tests, gates, flags** para evitar recorrência
-- [ ] Vincular **tickets/PRs/builds** ao incidente e ao rollback
-
-## Sinais de alerta (postergar rollback)
-- [ ] Migração de **dados irreversível** sem plano alternativo
-- [ ] Dependências externas sem **janela** para voltar versão
-- [ ] Ausência de **observabilidade** mínima para validar o efeito
-
-## Rastreabilidade
-- [ ] Versão/commit **antes** e **depois** do rollback (tags/SHAs)
-- [ ] Pipelines e **artefatos** envolvidos
-- [ ] **Tickets/PRs** relacionados e evidências anexadas
+<DownloadButton href="/mergetrace/downloads/template/rollback-checklist.docx" label="BAIXAR CHECKLIST — ROLLBACK" />

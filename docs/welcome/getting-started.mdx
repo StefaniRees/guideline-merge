@@ -3,98 +3,11 @@ id: getting-started
 title: Getting Started
 slug: /welcome/getting-started
 sidebar_position: 2
-description: Visão geral e primeiros passos para adoção do processo MergeTrace, baseado em princípios iterativos, rastreabilidade e colaboração contínua.
+description: Primeiros passos para adoção do guideline MergeTrace.
 ---
 
-import {
-  ExpandableProvider,
-  ExpandableSection,
-  ExpandAllControls
-} from '@site/src/components/Intro';
+import GettingStarted from '@site/src/components/GettingStarted';
 
-# Getting Started with MergeTrace
+# Getting Started
 
-O **MergeTrace** é um processo leve e iterativo para gerenciar integrações de código e *merges* de forma colaborativa, rastreável e com foco em qualidade contínua.  
-Ele foi inspirado em abordagens como o **OpenUP**, mas adaptado para contextos de **integração de software moderna**, CI/CD, e times distribuídos.
-
-<ExpandableProvider>
-  <div style={{display:'flex',justifyContent:'flex-end',marginBottom:'.5rem'}}>
-    <ExpandAllControls />
-  </div>
-
----
-
-##  Overview of MergeTrace
-
-O MergeTrace foi criado para times de desenvolvimento que trabalham em **integrações frequentes de código**, com múltiplos desenvolvedores atuando sobre bases compartilhadas.  
-O objetivo é **reduzir riscos de merge**, **aumentar a rastreabilidade das decisões técnicas** e **melhorar a colaboração** em ambientes ágeis.
-
-**Características principais:**
-- Foco em *micro-increments* e integração contínua.  
-- Governança leve com papéis claros (Developer A, Developer B, Mediador).  
-- Adoção gradual e adaptável ao contexto da equipe.  
-- Ênfase em *traceability*: cada PR, build, teste e release é conectado.  
-- Feedback contínuo de qualidade via *metrics* e *guidelines*.
-
-**Benefícios esperados:**
-- Menos retrabalho e conflitos de código.  
-- Melhor visibilidade sobre quem fez o quê e por quê.  
-- Integrações previsíveis e sustentáveis.  
-- Processo documentado e auditável sem burocracia.
-
----
-
-##  Core Structure
-
-O MergeTrace é composto por **cinco camadas integradas** que se conectam entre si:
-
-| Camada | Descrição |
-|--------|------------|
-| **Phases** | Ciclo de vida do merge: planejamento, integração, homologação e liberação. |
-| **Roles** | Papéis colaborativos — Developer (A), Developer (B) e Mediador. |
-| **Activities** | Conjunto de tarefas práticas ligadas a cada fase. |
-| **Artifacts (Work Products)** | Itens rastreáveis do processo (Pull Requests, Builds, TestResults, Relase Notes). |
-| **Guidelines** | Princípios, templates e critérios objetivos de qualidade e aprovação. |
-
----
-
-##  Core Principles
-
-O MergeTrace é guiado por quatro princípios centrais:
-
-1. **Colaborar ativamente** — Desenvolvedores compartilham contexto e decisões sobre o código.  
-2. **Equilibrar risco e valor** — Cada merge reduz incertezas e agrega valor real ao produto.  
-3. **Arquitetar para integração** — Estruturar código e automações que minimizem conflitos futuros.  
-4. **Evoluir continuamente** — Melhorar o processo com base em feedback de cada iteração.
-
----
-
-## How to Get Started
-
-Para adotar o MergeTrace no seu projeto, siga um ciclo leve e incremental:
-
-1. **Entenda os princípios fundamentais** — leia as seções *Core Principles* e *Lifecycle*.  
-2. **Mapeie o processo atual de merge** — identifique gargalos, conflitos frequentes e retrabalho.  
-3. **Implemente os papéis e atividades** — defina Developers A/B e o Mediador, alinhando responsabilidades.  
-4. **Adicione rastreabilidade** — vincule PRs, testes e builds a issues e fases do ciclo.  
-5. **Acompanhe os indicadores de qualidade** — use logs, métricas e guidelines para ajustes contínuos.  
-
->  Comece pequeno: aplique o MergeTrace em um único repositório ou squad e evolua gradualmente para toda a organização.
-
----
-
-##  Adaptação e Extensão
-
-O MergeTrace pode ser **customizado** conforme o contexto técnico e organizacional.  
-Você pode estender ou ajustar o processo para incluir:
-
-- Políticas de *branching* específicas (GitFlow, Trunk Based, Feature Toggles).  
-- Automação de validações em CI/CD (Azure DevOps, GitLab, GitHub Actions).  
-- Regras de aprovação ou cobertura mínima em *Pull Requests*.  
-- Integrações com ontologias e dashboards de rastreamento de merges.  
-- Documentação viva e adaptativa via Docusaurus.
-
-> O MergeTrace foi pensado para ser leve, extensível e auditável —  
-> um guia prático para times que desejam evoluir sua governança de integração sem perder agilidade.
-
-</ExpandableProvider>
+<GettingStarted />

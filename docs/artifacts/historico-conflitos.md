@@ -1,23 +1,24 @@
 ---
 id: historico-conflitos
 title: Histórico de Conflitos
-description: Registro das ocorrências de conflitos, causas e decisões de resolução.
+description: Registro estruturado de conflitos, incluindo causas, decisões adotadas e lições aprendidas.
 ---
 
 ## Descrição
-Registro estruturado dos conflitos encontrados (arquivos afetas, causas, estratégia aplicada, decisão final e lições aprendidas).
+Registro estruturado de conflitos de merge, incluindo causas, decisões adotadas e lições aprendidas, apoiando aprendizado organizacional.
 
-## Boas Práticas
-- Registrar **apenas o essencial** para aprendizado futuro.  
-- Consolidar **hotspots** e planejar ações preventivas.
+## Quando é produzido
+Gerado durante e após a resolução de conflitos entre branches, registrando o contexto técnico e as decisões tomadas.
 
-## Justificativa
-Gera **memória organizacional**, evitando recorrência e melhorando as práticas de integração.
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+
+## Atividades Relacionadas
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+
+## Guidelines Relacionadas
+- [Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)
 
 ## Obrigatório?
-**Não**, porém **altamente recomendado**.
-
-## Templates / Guidelines relacionados
-- **Template:** [Conflict Log Template](/docs/templates/conflict-log) *(pendente edição)*
-- **Guideline:** [Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)
-- **Activity:** [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+**Sim**

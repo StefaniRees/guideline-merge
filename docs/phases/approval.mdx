@@ -1,4 +1,5 @@
 ---
+id: approval
 title: Approval
 sidebar_position: 5
 ---
@@ -6,43 +7,59 @@ sidebar_position: 5
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Aprovação formal do PR (pares + especialista/Tech Lead quando necessário). Gate final antes do merge.
+Autorizar formalmente a integração conforme políticas da equipe, consolidando o registro de aprovação antes do merge.
 
-## Entradas
-- PR revisado
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) revisado com [Checklist de Revisão](/docs/artifacts/checklist-revisao) concluído
+- Comentários resolvidos
+- [Relatório de QA](/docs/artifacts/relatorio-qa) disponível
 
-## Saídas
-- PR aprovado conforme política
+## Saídas (Produced Artifacts)
+- Registro de aprovação
+- PR em estado aprovado
 
 ## Papéis
-- **Peer reviewers (R)** — aprovação de pares
-- **Especialista/Tech Lead (A/R)** — aprovação quando exigido
-- **Mediador (C)** — garante cumprimento da política
+- **[Mediador](/docs/roles/mediador)** — autoriza formalmente a integração e garante cumprimento das políticas de aprovação
 
 ## Atividades
-1. Aprovar PR por pares.
-2. Obter aprovação do especialista/Tech Lead quando exigido pela política.
+1. Verificar que todos os critérios de revisão foram atendidos
+2. Autorizar formalmente a integração conforme políticas da equipe
 
 ## Critérios de Entrada
-- Checklist de revisão concluído; comentários resolvidos; CI/CD verde
+- Checklist de revisão concluído; comentários resolvidos; pipeline CI/CD aprovado
 
-## Critérios de Saída
-- Aprovação mínima atingida; política satisfeita
+## Critérios de Saída (Gate)
+- Registro de aprovação registrado + PR em estado aprovado
+
+## Quality Gate
+**[Approval Policy](/docs/guidelines/approval-policy)** — critérios mínimos de aprovação atendidos, incluindo número de revisores, papéis envolvidos e exceções permitidas, antes de avançar para a fase de Merge.
 
 ## Checklist
 <Checklist
   storageKey="phase-approval-v1"
   sections={[
     {
-      id: 'gate',
-      title: 'Gate de Aprovação',
-      icon: '🔑',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'comments', label: 'Todos os comentários resolvidos' },
-        { id: 'ci', label: 'CI/CD verde (build, testes, análise estática, security)' },
-        { id: 'min', label: 'Aprovação mínima atingida (ex.: 2 revisores para módulos críticos)' },
-        { id: 'spec', label: 'Especialista aprovou quando exigido' },
-        { id: 'rules', label: 'Branch protection rules ativas e cumpridas' },
+        { id: 'checklist-ok', label: 'Checklist de revisão concluído' },
+        { id: 'comments-ok', label: 'Todos os comentários resolvidos' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'Execução',
+      items: [
+        { id: 'aprovacao-minima', label: 'Aprovação mínima atingida conforme política da equipe' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'approval-policy', label: 'Approval Policy satisfeita: critérios mínimos, papéis e exceções verificados' },
+        { id: 'pr-aprovado', label: 'PR em estado aprovado e pronto para merge' },
       ],
     },
   ]}

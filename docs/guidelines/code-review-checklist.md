@@ -1,20 +1,24 @@
 ---
+id: code-review-checklist
 title: Code Review Checklist
+description: Fornece critérios mínimos para revisão técnica, contemplando estilo, impacto, testes, riscos e segurança.
 ---
 
-**Descrição**  
-Itens mínimos:  
-- Corretude, testes (incluídos/atualizados), segurança (secrets/deps)  
-- Estilo/convenções, impacto em outros módulos, documentação  
-- SLA de revisão: até 1 dia útil.  
-- Pode ser manual ou automatizado (gate do pipeline).
+## Descrição
+Fornece critérios mínimos para revisão técnica, contemplando estilo, impacto, testes, riscos e segurança. Endereça a centralidade da revisão humana como principal barreira de qualidade e reforça a coordenação entre papéis.
 
-**Artefatos Relacionados**  
-PR, Checklist, Relatórios de CI
+Itens mínimos: corretude, testes incluídos ou atualizados, segurança, estilo e convenções, impacto em outros módulos.
 
-**Papéis Envolvidos**  
-- [Mediador](/docs/roles/mediador.md)
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [Checklist de Revisão](/docs/artifacts/checklist-revisao)
+- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
 
-**Ferramentas**  
-- [SonarQube](/docs/tools/qualidade-seguranca/sonarqube.md)
+## Atividades Relacionadas
+- [Code Review](/docs/activities/code-review)
 
+## Papéis Envolvidos
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Análise de Código](/docs/tools)

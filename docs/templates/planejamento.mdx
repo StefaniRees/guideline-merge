@@ -2,51 +2,34 @@
 id: planejamento
 title: Planejamento – Checklist
 slug: /templates/planejamento
-sidebar_position: 22
-description: Checklist estático de planejamento para preparar merges seguros no MergeTrace.
+sidebar_position: 19
+description: Checklist de planejamento para preparar merges seguros no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/planejamento-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Planejamento – Checklist
 
-> **Propósito:** Preparar um merge seguro: criar a branch correta, alinhar escopo, padronizar commits e reduzir risco de conflito.  
-> **Required Artifacts:** Ticket/issue definido; convenção de nome de branch acordada  
-> **Produced Artifacts:** Branch de Atividade criada e rastreada
+> **Propósito:** Alinhar escopo, riscos e dependências antes do desenvolvimento.
+>
+> **Entradas (Required Artifacts):** Ticket/issue definido e priorizado; Convenção de branch e commits estabelecida
+>
+> **Saídas (Produced Artifacts):** Branch de Atividade criada e rastreada; Riscos mapeados; Plano de sincronização definido
 
-## Boas práticas para planejar
+## Pré-condições (Entradas)
+- [ ] Ticket/issue priorizado e vinculado à branch
+- [ ] Convenção de mensagens de commit já estabelecida
 
-### Escopo & Tamanho
-- [ ] Criar **branch curta** a partir de `main`/`homolog` (`feature/`, `bugfix/`, `hotfix/`)
-- [ ] Definir **escopo coeso** (um objetivo claro; evitar assuntos misturados)
-- [ ] Estimar esforço para caber no **timebox** da iteração
+## Execução
+- [ ] Branch criada com prefixo correto e ID do ticket (`feature/`, `bugfix/`, `hotfix/`)
+- [ ] Escopo coeso definido (um objetivo claro por branch)
+- [ ] Plano de sincronização frequente com `main` definido (merge/rebase periódico)
+- [ ] Riscos de conflito e áreas/módulos sensíveis mapeados
 
-### Template & Preparação
-- [ ] Incluir **ID do ticket/squad** no nome da branch **ou** nas mensagens de commit
-- [ ] Preparar **template de PR** (contexto, mudanças, riscos, testes, checklist)
-- [ ] Mapear **arquivos/módulos sensíveis** e dependências entre squads
+## Quality Gate (Bloqueante)
+- [ ] Branch válida com prefixo correto e ID do ticket antes de avançar para Desenvolvimento
+- [ ] Convenções validadas pelo Mediador
 
-### Sanidade
-- [ ] Validar **linters** e **testes locais** antes do primeiro PR
-- [ ] Checar variáveis/segredos (sem dados sensíveis no repo)
-- [ ] Planejar **sincronização frequente** com `main` (merge/rebase periódico)
+---
 
-### Política & Rastreabilidade
-- [ ] **PR obrigatório** (sem commit direto em `main`) e **branch protection** ativa
-- [ ] Ticket/issue **vinculado** desde o início (contexto e critérios de aceite)
-- [ ] Registrar **riscos e mitigação** (flag/canary/rollback quando aplicável)
-
-## Quando **não** começar ainda
-- [ ] Escopo mal definido ou misto (risco de retrabalho)
-- [ ] Dependências críticas sem acordo entre squads
-- [ ] Falta de política de PR/branch ou proteção de `main` desativada
+<DownloadButton href="/mergetrace/downloads/template/planejamento-checklist.docx" label="BAIXAR CHECKLIST — PLANEJAMENTO" />

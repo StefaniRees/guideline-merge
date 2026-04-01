@@ -19,8 +19,8 @@ Revisão pode exigir múltiplos aprovadores ou especialistas.
 - [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
 
 ## Ferramentas
-- [GIT](/docs/tools/controle-versao/github.md)
-- [Azure DevOps ](/docs/tools/ci-cd/azure-devops.md)
+- [GIT](/docs/tools)
+- [Azure DevOps ](/docs/tools)
 
 ## Guidelines Relacionadas
 - [Pull Request Template](/docs/guidelines/pull-request-template)

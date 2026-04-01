@@ -1,4 +1,5 @@
 ---
+id: desenvolvimento
 title: Desenvolvimento
 sidebar_position: 2
 ---
@@ -6,50 +7,62 @@ sidebar_position: 2
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Implementar mudanças com commits pequenos/frequentes, sincronizando com a principal e validando localmente antes do PR.
+Implementar mudanças de forma incremental e sincronizada, reduzindo conflitos acumulados por meio de commits atômicos, sincronização frequente e validações locais.
 
-## Entradas
-- Branch de Atividade ativa
+## Entradas (Required Artifacts)
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
+- Convenção de mensagens de commit estabelecida
 
-## Saídas
-- Histórico de commits padronizados
+## Saídas (Produced Artifacts)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
 - Branch atualizada
+- Evidências de testes locais
 
 ## Papéis
-- **Desenvolvedor (A/R)** — implementação e sincronização
-- **Mediador (C)** — apoio quando necessário
+- **[Developer A](/docs/roles/developer-principal)** — implementa mudanças, realiza commits atômicos e sincroniza branch
+- **[Developer B](/docs/roles/developer-integrador)** — co-responsável pela implementação e sincronização
 
 ## Atividades
-1. Implementar mudanças com commits **atômicos**.
-2. Sincronizar branch com `main` regularmente (merge/rebase).
-3. Executar lint e testes locais (unit/integration básicos).
+1. [Implementar Mudanças](/docs/activities/implementar-mudancas) com commits atômicos (1 mudança lógica por commit)
+2. Sincronizar branch com `main` regularmente (merge/rebase periódico)
+3. Executar testes locais
 
 ## Critérios de Entrada
-- Branch criada e escopo definido
+- Branch criada, escopo definido e convenção de commits estabelecida
 
-## Critérios de Saída
-- Testes e lint verdes; branch atualizada sem conflitos pendentes
+## Critérios de Saída (Gate)
+- Testes locais aprovados; branch atualizada; commits padronizados
+
+## Quality Gate
+**[Commit Message Convention](/docs/guidelines/commit-message-convention)** — todas as mensagens de commit seguem o padrão definido antes de avançar para a fase de Pull Request.
 
 ## Checklist
 <Checklist
   storageKey="phase-desenvolvimento-v1"
   sections={[
     {
-      id: 'impl',
-      title: 'Implementação',
-      icon: '🧪',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'atomic', label: 'Commits pequenos e atômicos (1 mudança lógica)' },
-        { id: 'conv', label: 'Conventional Commits + ID do ticket' },
+        { id: 'branch-ativa', label: 'Branch de atividade ativa e atualizada' },
+        { id: 'commit-conv', label: 'Convenção de mensagens de commit já estabelecida' },
       ],
     },
     {
-      id: 'qual',
-      title: 'Qualidade',
-      icon: '✅',
+      id: 'execucao',
+      title: 'Execução',
       items: [
-        { id: 'lint', label: 'Lint e testes locais passaram' },
-        { id: 'sync', label: 'Branch sincronizada com main' },
+        { id: 'atomic', label: 'Commits pequenos e atômicos (1 mudança lógica)' },
+        { id: 'sync', label: 'Branch sincronizada com main (merge/rebase)' },
+        { id: 'testes', label: 'Testes locais executados' },
+        { id: 'evidencias', label: 'Evidências de testes locais registradas' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'conv-commits', label: 'Mensagens de commit seguem Conventional Commits + ID do ticket' },
       ],
     },
   ]}

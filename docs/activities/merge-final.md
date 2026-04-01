@@ -16,7 +16,7 @@ Executar o merge na branch principal, garantindo que todos os checks
 - [Mediador](/docs/roles/mediador.md)
 
 ## Ferramentas
-- [GitLab](/docs/tools/controle-versao/gitlab.md)
+- [GitLab](/docs/tools)
 
 ## Guidelines Relacionadas
 - [Release Notes Standard](/docs/guidelines/release-notes)

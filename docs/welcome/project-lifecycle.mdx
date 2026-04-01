@@ -3,106 +3,11 @@ id: project-lifecycle
 title: Project Lifecycle
 slug: /welcome/project-lifecycle
 sidebar_position: 5
-description: Ciclo de vida do projeto no MergeTrace: fases, marcos e critérios objetivos para reduzir risco e aumentar valor com PRs pequenos e rastreabilidade.
+description: Ciclo de vida do projeto no MergeTrace com 4 fases, marcos e critérios objetivos de saída.
 ---
 
-import {
-  ExpandableProvider,
-  ExpandableSection,
-  ExpandAllControls
-} from '@site/src/components/Intro';
-import RelationshipList from '@site/src/components/IntroModern/RelationshipList';
+import ProjectLifecycle from '@site/src/components/ProjectLifecycle';
 
 # Project Lifecycle
 
-O **Project Lifecycle** no MergeTrace oferece **visibilidade, transparência e pontos objetivos de decisão** ao longo do projeto.  
-Foi estruturado para reduzir risco de integração, padronizar decisões e garantir **rastreabilidade** entre *issue ⇄ PR ⇄ build ⇄ testes ⇄ release*.
-
-<ExpandableProvider>
-  <div style={{display:'flex',justifyContent:'flex-end',marginBottom:'.5rem'}}>
-    <ExpandAllControls />
-  </div>
-
-  <ExpandableSection title="Relationships" defaultOpen>
-    <RelationshipList
-      items={[
-        {label: 'Iteration Lifecycle', to: '/docs/welcome/iteration-lifecycle'},
-        {label: 'Micro-Increments', to: '/docs/welcome/micro-increments'},
-        {label: 'Roles', to: '/docs/welcome/roles'},
-        {label: 'Work Products', to: '/docs/welcome/work-products'},
-        {label: 'Core Principles', to: '/docs/welcome/core-principles'},
-      ]}
-    />
-  </ExpandableSection>
-
-  <ExpandableSection title="Main Description" defaultOpen>
-    <p>
-      Organizamos o trabalho em <strong>iterações curtas</strong>, agrupadas em <strong>quatro fases</strong>.  
-      Cada fase termina com um <em>milestone</em> com <strong>critérios objetivos de saída</strong> (quality gates),
-      evitando subjetividade e garantindo previsibilidade.
-    </p>
-
-    <h3>Fases (adaptadas ao MergeTrace)</h3>
-    <ul>
-      <li>
-        <strong>Inception:</strong> objetivo e escopo claros, stakeholders mapeados e <em>baseline</em> técnico definido.
-        <br/>
-        <em>Saídas mínimas:</em> políticas de PR e branching acordadas, CI inicial rodando, templates (PR/Issue/ADR) configurados.
-      </li>
-      <li>
-        <strong>Elaboration:</strong> riscos técnicos priorizados; arquitetura prática para integração contínua; automações de qualidade evoluídas.
-        <br/>
-        <em>Saídas mínimas:</em> quality gates ativos (build, testes, cobertura, análise estática), ambientes de teste, feature flags quando necessário.
-      </li>
-      <li>
-        <strong>Construction:</strong> entrega por <a href="/docs/welcome/micro-increments">micro-increments</a> via PRs pequenos,
-        revisão colaborativa (Developer A/B) e mediação quando houver conflitos.
-        <br/>
-        <em>Saídas mínimas:</em> incremento potencialmente liberável a cada iteração; rastreabilidade completa issue ⇄ PR ⇄ build ⇄ testes.
-      </li>
-      <li>
-        <strong>Transition:</strong> validação final, rollout controlado e aprendizado documentado.
-        <br/>
-        <em>Saídas mínimas:</em> release notes, plano de rollback validado, flags/monitoramento, métricas de entrega consolidadas.
-      </li>
-    </ul>
-
-    <h3>Marcos e perguntas de decisão</h3>
-    <ul>
-      <li><strong>Inception → Elaboration:</strong> “temos o mínimo para integrar com segurança?”</li>
-      <li><strong>Elaboration → Construction:</strong> “os riscos principais estão mitigados e os gates estão confiáveis?”</li>
-      <li><strong>Construction → Transition:</strong> “o produto está estável e rastreável para liberar?”</li>
-      <li><strong>Go/No-Go de Release:</strong> “critérios atendidos e plano de rollback testado?”</li>
-    </ul>
-
-    <h3>Vetores que guiamos durante todo o ciclo</h3>
-    <ul>
-      <li><strong>Redução de risco:</strong> decisões registradas (ADR), flags, canary, automações de verificação.</li>
-      <li><strong>Criação de valor:</strong> PRs pequenos que chegam em produção com impacto mensurável.</li>
-    </ul>
-
-    <p>
-      O MergeTrace integra planejamento leve, automação de qualidade e controle de versão, promovendo
-      <strong>entregas previsíveis e sustentáveis</strong> em cada fase.
-    </p>
-  </ExpandableSection>
-
-  <ExpandableSection title="Exit Criteria (exemplos práticos)">
-    <ul>
-      <li><strong>Inception:</strong> CI inicial executando; templates de PR/Issue/ADR publicados; política de review acordada.</li>
-      <li><strong>Elaboration:</strong> build estável; testes automatizados cobrindo camadas críticas; cobertura mínima definida; análise estática sem críticos.</li>
-      <li><strong>Construction:</strong> incremento validado com evidências; MergeLog sem pendências; documentação de decisão quando aplicável.</li>
-      <li><strong>Transition:</strong> release notes, plano de rollback testado, flags/monitoramento configurados, métricas coletadas.</li>
-    </ul>
-  </ExpandableSection>
-
-  <ExpandableSection title="More Information">
-    <ul>
-      <li><a href="/docs/welcome/iteration-lifecycle">Iteration Lifecycle</a></li>
-      <li><a href="/docs/welcome/micro-increments">Micro-Increments</a></li>
-      <li><a href="/docs/welcome/work-products">Work Products</a></li>
-      <li><a href="/docs/welcome/roles">Roles</a></li>
-      <li><a href="/docs/welcome/core-principles">Core Principles</a></li>
-    </ul>
-  </ExpandableSection>
-</ExpandableProvider>
+<ProjectLifecycle />

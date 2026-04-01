@@ -21,7 +21,7 @@ Atualizar frequentemente com a branch principal para reduzir riscos de conflito.
 - [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
 
 ## Ferramentas
-- [GIT](/docs/tools/controle-versao/github.md)
+- [GIT](/docs/tools)
 
 ## Guidelines Relacionadas
 - [Branch Naming Convention](/docs/guidelines/branch-naming)

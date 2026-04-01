@@ -15,8 +15,6 @@ Executar testes funcionais/regressão em homologação, evidenciando resultados 
 - [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
 - [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
 
-## Ferramentas
-- Ferramentas de QA / Test Automation
 
 ## Guidelines Relacionadas
 - [QA in Homolog](/docs/guidelines/qa-homolog)

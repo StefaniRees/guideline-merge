@@ -20,7 +20,7 @@ Deve ocorrer rápido (≤1 dia útil) e ser colaborativa.
 - [Mediador](/docs/roles/mediador.md)
 
 ## Ferramentas
-- [SonarQube](/docs/tools/qualidade-seguranca/sonarqube.md)
+- [SonarQube](/docs/tools)
 
 ## Guidelines Relacionadas
 - [Code Review Checklist](/docs/guidelines/code-review-checklist)

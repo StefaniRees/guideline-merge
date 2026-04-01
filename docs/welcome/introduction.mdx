@@ -1,98 +1,13 @@
 ---
-id: introduction
-title: Introduction to MergeTrace
+id: Introdução
+title: Introdução ao MergeTrace
 sidebar_position: 1
 slug: /welcome/introduction
-description: Visão geral do processo MergeTrace com links rápidos, cards e considerações principais.
+description: Visão geral do guideline MergeTrace com links rápidos, cards e considerações principais.
 ---
 
-import {
-  ExpandableProvider,
-  ExpandableSection,
-  ExpandAllControls
-} from '@site/src/components/Intro';
-import CardGrid from '@site/src/components/IntroModern/CardGrid';
-import RelationshipList from '@site/src/components/IntroModern/RelationshipList';
+import IntroOverview from '@site/src/components/IntroOverview';
 
-# Introduction to MergeTrace
+# Introdução ao MergeTrace
 
-O **MergeTrace** aplica princípios iterativos e incrementais com governança leve, priorizando colaboração, rastreabilidade e qualidade contínua.
-
-<ExpandableProvider>
-  <div style={{display:'flex',justifyContent:'flex-end',marginBottom:'.5rem'}}>
-    <ExpandAllControls />
-  </div>
-
-  <ExpandableSection title="Relationships" defaultOpen>
-    <RelationshipList
-      items={[
-        {label: 'Core Principles', to: '/docs/welcome/core-principles'},
-        {label: 'Iteration Lifecycle', to: '/docs/welcome/iteration-lifecycle'},
-        {label: 'Micro-Increments', to: '/docs/welcome/micro-increments'},
-        {label: 'Project Lifecycle', to: '/docs/welcome/project-lifecycle'},
-        {label: 'Roles', to: '/docs/welcome/roles'},
-        {label: 'Work Products', to: '/docs/welcome/work-products'},
-        {label: 'Disciplines', to: '/docs/welcome/disciplines'},
-        {label: 'Lifecycle', to: '/docs/welcome/lifecycle'},
-      ]}
-    />
-  </ExpandableSection>
-
-  <ExpandableSection title="Main Description" defaultOpen>
-    <p>
-      O MergeTrace é <strong>agnóstico de ferramentas</strong> (GitHub/GitLab/Azure DevOps, qualquer CI/CD) e
-      <strong> extensível</strong> para diferentes estratégias (trunk/GitFlow/monorepo). Abaixo estão atalhos visuais
-      para começar:
-    </p>
-
-    <CardGrid
-      cards={[
-        {
-          title: 'Getting Started',
-          description: 'Passo a passo para habilitar o processo no seu repositório.',
-          to: '/docs/welcome/getting-started',
-         // emoji: '🚀'
-        },
-        {
-          title: 'Core Principles',
-          description: 'Princípios que direcionam decisões e qualidade.',
-          to: '/docs/welcome/core-principles',
-         // emoji: '🔑'
-        },
-        {
-          title: 'Roles',
-          description: 'Papéis, responsabilidades e handoffs claros.',
-          to: '/docs/welcome/roles',
-        //  emoji: '👥'
-        },
-        {
-          title: 'Work Products',
-          description: 'Artefatos versionados para visibilidade e controle.',
-          to: '/docs/welcome/work-products',
-         // emoji: '📦'
-        },
-        {
-          title: 'Disciplines',
-          description: 'Coding, Code Review, CI/CD, QA e governança leve.',
-          to: '/docs/welcome/disciplines',
-        //  emoji: '📋'
-        },
-        {
-          title: 'Lifecycle',
-          description: 'Fluxo ponta a ponta com gates e critérios objetivos.',
-          to: '/docs/welcome/lifecycle',
-      //    emoji: '🔄'
-        },
-      ]}
-    />
-  </ExpandableSection>
-
-  <ExpandableSection title="Key Considerations">
-    <ul>
-      <li>Preferir <strong>micro-incrementos</strong> e PRs pequenos com contexto.</li>
-      <li>Aplicar <strong>Quality Gates</strong> objetivos (checks de CI, cobertura, revisões).</li>
-      <li>Garantir <strong>traceabilidade</strong> entre issues ⇄ PRs ⇄ build/release.</li>
-      <li><em>Tool-agnostic:</em> adapte, não reescreva o processo.</li>
-    </ul>
-  </ExpandableSection>
-</ExpandableProvider>
+<IntroOverview />

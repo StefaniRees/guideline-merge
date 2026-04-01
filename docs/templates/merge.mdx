@@ -2,53 +2,36 @@
 id: merge
 title: Merge – Checklist
 slug: /templates/merge
-sidebar_position: 26
-description: Passos objetivos para integrar na main/master com segurança e rastreabilidade no MergeTrace.
+sidebar_position: 24
+description: Checklist para garantir integração segura e rastreável na branch principal no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/merge-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Merge – Checklist
 
-> **Propósito:** Integrar em `main/master` sem conflitos e com segurança.  
-> **Required Artifacts:** PR aprovado; branch sincronizada  
-> **Produced Artifacts:** Merge (commit/squash) e build pós-merge (smoke) registrado
+> **Propósito:** Garantir integração segura e rastreável na branch principal.
+>
+> **Entradas (Required Artifacts):** PR aprovado; Relatório de QA; Branch sincronizada
+>
+> **Saídas (Produced Artifacts):** Merge commit ou squash; Build de integração; Histórico de conflitos; Release Notes
 
-## Boas práticas de merge
+## Pré-condições (Entradas)
+- [ ] PR aprovado e Relatório de QA disponível
+- [ ] Branch atualizada imediatamente antes do merge
+- [ ] Pipeline CI/CD aprovado
 
-### Antes do Merge
-- [ ] **Branch atualizada** imediatamente antes do merge (rebase/merge da `main`)
-- [ ] **Conflitos resolvidos** (preferir call colaborativa se for crítico/arriscado)
-- [ ] **Checks verdes**: CI/CD, análise estática e cobertura no PR
-- [ ] **Revisões concluídas** e comentários relevantes resolvidos
-- [ ] **Rastreabilidade** garantida (ticket ↔ PR ↔ commits)
+## Execução
+- [ ] Conflitos identificados e resolvidos colaborativamente
+- [ ] Causas, decisões e histórico de resolução registrados
+- [ ] Build de integração executado
+- [ ] Release Notes geradas
+- [ ] Rastreabilidade ticket ↔ PR ↔ merge garantida
 
-### Estratégia
-- [ ] Escolher a estratégia alinhada à política do repo:
-  - [ ] **Squash merge** (histórico compacto para PRs pequenos)
-  - [ ] **Merge commit** (preserva granularidade de commits)
-  - [ ] **Rebase + merge** (histórico linear; atenção a conflitos)
-- [ ] Mensagem de merge clara (referência ao ticket/PR e resumo do impacto)
+## Quality Gate (Bloqueante)
+- [ ] Todos os conflitos resolvidos e registrados antes de avançar
+- [ ] Build de integração aprovado
 
-### Após o Merge
-- [ ] Executar **build pós-merge (smoke)** e verificar status dos pipelines
-- [ ] **Auditar áreas sensíveis** tocadas pela integração (API/DB/perf/segurança)
-- [ ] Confirmar **rastreabilidade** final (ticket ↔ PR ↔ merge ↔ build)
-- [ ] Atualizar **Release Notes** quando aplicável
-- [ ] Planejar/acompanhar **deploy** conforme janela e política
+---
 
-## Sinais de alerta (postergar merge)
-- [ ] Gates falhando ou cobertura abaixo do mínimo
-- [ ] Conflitos recorrentes não entendidos (rever ordem de integração)
-- [ ] Escopo misto no PR (vários assuntos) ou mudanças de contrato sem migração/rollback
-- [ ] Dependências entre squads sem coordenação/flag/canary
+<DownloadButton href="/mergetrace/downloads/template/merge-checklist.docx" label="BAIXAR CHECKLIST — MERGE" />

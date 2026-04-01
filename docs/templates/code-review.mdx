@@ -2,40 +2,36 @@
 id: code-review
 title: Code Review – Checklist
 slug: /templates/code-review
-sidebar_position: 30
-description: Checklist estático para revisão por pares no MergeTrace.
+sidebar_position: 22
+description: Checklist para estabelecer critérios objetivos de revisão técnica no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/code-review-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Code Review – Checklist
 
-> **Propósito:** Garantir qualidade com revisão por pares + checklists + automações.  
-> **Required Artifacts:** PR aberto com template  
-> **Produced Artifacts:** Comentários e aprovações de review
+> **Propósito:** Estabelecer critérios objetivos de revisão técnica.
+>
+> **Entradas (Required Artifacts):** PR aberto com template preenchido; Pipeline CI/CD aprovado
+>
+> **Saídas (Produced Artifacts):** Comentários de revisão; Checklist de revisão concluído; Registros de decisões técnicas
 
-## Checklist do Revisor
+## Pré-condições (Entradas)
+- [ ] PR aberto com template preenchido
+- [ ] Pipeline CI/CD aprovado
 
-### Qualidade
-- [ ] Compila e passa em testes (unit/integration)
-- [ ] Estilo/convenções seguidos; naming claro; duplicações mínimas
-- [ ] Documentação/README atualizados quando necessário
+## Execução
+- [ ] Estilo e convenções de código avaliados
+- [ ] Impacto das mudanças analisado
+- [ ] Cobertura e qualidade dos testes verificadas
+- [ ] Riscos técnicos identificados e registrados
+- [ ] Aspectos de segurança verificados
+- [ ] Decisões técnicas registradas
 
-### Segurança & Cobertura
-- [ ] Sem secrets expostos; dependências seguras
-- [ ] Cobertura mínima atendida (ex.: 70–80%)
+## Quality Gate (Bloqueante)
+- [ ] Todos os critérios do Code Review Checklist atendidos
+- [ ] Todos os comentários resolvidos antes da aprovação
 
-### Processo
-- [ ] Gates automáticos habilitados (Sonar/linters/cobertura/security)
-- [ ] Comentários relevantes resolvidos antes da aprovação final
-- [ ] SLA respeitado (revisão até 1 dia útil)
+---
+
+<DownloadButton href="/mergetrace/downloads/template/code-review-checklist.docx" label="BAIXAR CHECKLIST — CODE REVIEW" />

@@ -1,4 +1,5 @@
 ---
+id: merge
 title: Merge
 sidebar_position: 6
 ---
@@ -6,50 +7,71 @@ sidebar_position: 6
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Integrar a branch na `main`/master somente após PR aprovado e checks “verdes”. Conflitos resolvidos preferencialmente de forma colaborativa.
+Integrar a branch aprovada à principal de forma controlada e auditável, resolvendo conflitos de forma colaborativa e consolidando a versão integrada.
 
-## Entradas
-- PR aprovado; branch sincronizada com `main`
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aprovado
+- [Relatório de QA](/docs/artifacts/relatorio-qa)
+- Branch sincronizada com main
 
-## Saídas
-- Merge commit/squash executado
-- Build de integração pós-merge (smoke)
+## Saídas (Produced Artifacts)
+- Merge commit ou squash
+- Build de integração
+- [Histórico de Conflitos](/docs/artifacts/historico-conflitos)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados) de resolução
+- [Release Notes](/docs/artifacts/release-notes)
 
 ## Papéis
-- **Mediador (A/R)** — coordena merge e resolução de conflitos
-- **Desenvolvedores (R)** — apoiam resolução quando necessário
+- **[Mediador](/docs/roles/mediador)** — coordena a integração, apoia resolução de conflitos e garante rastreabilidade
+- **[Developer A](/docs/roles/developer-principal)** — apoia resolução de conflitos quando necessário
+- **[Developer B](/docs/roles/developer-integrador)** — apoia resolução de conflitos quando necessário
 
 ## Atividades
-1. Resolver conflitos de merge (colaborativo quando crítico).
-2. Executar build pós-merge (smoke).
+1. [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos) — identificar e resolver conflitos entre branch e main
+2. Registrar causas, decisões e histórico de resolução
+3. [Merge Final](/docs/activities/merge-final) — integrar branch na main/release após aprovações
+4. Consolidar versão integrada e gerar Release Notes
+5. Executar build de integração
 
 ## Critérios de Entrada
-- Aprovação formal; CI verde
+- PR aprovado; Relatório de QA disponível; pipeline CI/CD aprovado
 
-## Critérios de Saída
-- Smoke pós-merge ok; integração auditada e rastreável
+## Critérios de Saída (Gate)
+- Conflitos resolvidos e registrados + build de integração aprovado + Release Notes geradas
+
+## Quality Gate
+**[Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)** — conflitos identificados, resolvidos colaborativamente, com causas, decisões e histórico registrados antes de avançar para Release/Deploy.
 
 ## Checklist
 <Checklist
   storageKey="phase-merge-v1"
   sections={[
     {
-      id: 'antes',
-      title: 'Antes do Merge',
-      icon: '⏳',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'sync', label: 'Branch atualizada imediatamente antes do merge' },
-        { id: 'conflicts', label: 'Conflitos verificados e resolvidos (call se crítico)' },
+        { id: 'pr-aprovado', label: 'PR aprovado e Relatório de QA disponível' },
+        { id: 'branch-sync', label: 'Branch atualizada imediatamente antes do merge' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
       ],
     },
     {
-      id: 'apos',
-      title: 'Após o Merge',
-      icon: '🚀',
+      id: 'execucao',
+      title: 'Execução',
       items: [
-        { id: 'smoke', label: 'Build pós-merge (smoke) executado' },
-        { id: 'audit', label: 'Mudanças sensíveis auditadas' },
+        { id: 'conflicts', label: 'Conflitos identificados e resolvidos colaborativamente' },
+        { id: 'historico', label: 'Causas, decisões e histórico de resolução registrados' },
+        { id: 'build', label: 'Build de integração executado' },
+        { id: 'release-notes', label: 'Release Notes geradas' },
         { id: 'trace', label: 'Rastreabilidade ticket ↔ PR ↔ merge garantida' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'conflicts-ok', label: 'Todos os conflitos resolvidos e registrados antes de avançar' },
+        { id: 'build-ok', label: 'Build de integração aprovado' },
       ],
     },
   ]}

@@ -1,4 +1,5 @@
 ---
+id: planejamento
 title: Planejamento
 sidebar_position: 1
 ---
@@ -9,44 +10,53 @@ import Checklist from '@site/src/components/Checklist';
 Preparar condições para um merge seguro: definir branch, escopo e convenções; reduzir risco de conflitos com atualização contínua.
 
 ## Entradas (Required Artifacts)
-- Ticket/issue definido e priorizado
+- [Ticket/issue](/docs/artifacts/branch-atividade) definido e priorizado
 - Convenção de branch e commits estabelecida
 
 ## Saídas (Produced Artifacts)
-- Branch de Atividade criada e rastreada
-- Riscos de conflito mapeados
-- Plano de sincronização definido
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
 
-## Papéis 
-- **Desenvolvedor (A/R)** — cria branch, define plano de sync, realiza commits padronizados
-- **Mediador (C/R)** — valida convenções e sinaliza riscos
-- **Equipe (I)** — informada
+## Papéis
+- **[Developer A](/docs/roles/developer-principal)** — cria branch, define plano de sync, realiza commits padronizados
+- **[Developer B](/docs/roles/developer-integrador)** — co-responsável pela branch e sincronização
+- **[Mediador](/docs/roles/mediador)** — valida convenções e sinaliza riscos
 
 ## Atividades
-1. Criar branch curta a partir de `main`/homologação (feature/, bugfix/, hotfix/).
-2. Definir escopo e responsáveis.
-3. Atualizar frequentemente a branch com a principal (merge/rebase periódico).
-4. Realizar commits padronizados (pré-PR).
+1. [Criar Branch](/docs/activities/criar-branch) a partir de `main`/homologação (`feature/`, `bugfix/`, `hotfix/`)
+2. Definir escopo e responsáveis
+3. Atualizar frequentemente a branch com a principal (merge/rebase periódico)
+4. Realizar commits padronizados (pré-PR)
 
-## Critérios de Entrada
-- Ticket priorizado; acesso ao repositório
 
-## Critérios de Saída (Gate)
-- Branch válida + riscos documentados + plano de sync registrado
+## Quality Gate
+**[Branch Naming Convention](/docs/guidelines/branch-naming-convention)** — branch válida com prefixo, ID do ticket e plano de sincronização registrado antes de avançar para a fase de Desenvolvimento.
 
 ## Checklist
 <Checklist
   storageKey="phase-planejamento-v1"
   sections={[
     {
-      id: 'valid',
-      title: 'Validação',
-      icon: '🧭',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'branch', label: 'Branch criada com prefixo e ID do ticket' },
+        { id: 'ticket', label: 'Ticket/issue priorizado e vinculado à branch' },
+        { id: 'commit-convention', label: 'Convenção de mensagens de commit já estabelecida' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'Execução',
+      items: [
+        { id: 'branch', label: 'Branch criada com prefixo correto e ID do ticket' },
         { id: 'sync', label: 'Plano de sincronização definido' },
         { id: 'risks', label: 'Áreas/módulos sensíveis mapeados' },
-        { id: 'mediador', label: 'Convenções validadas pelo mediador' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'mediador', label: 'Convenções validadas pelo mediador antes de avançar' },
       ],
     },
   ]}

@@ -1,19 +1,27 @@
 ---
+id: rollback-strategy
 title: Rollback Strategy
+description: Estabelece estratégias e critérios para reversão controlada de merges ou releases, incluindo registro de incidentes e análise pós-falha.
 ---
 
-**Descrição**  
-- Ter caminho claro de reversão: revert commit, voltar versão ou desligar flag.  
-- Executar rollback e verificar estabilidade.  
-- Checklist rápido de rollback + responsáveis + comunicação.  
-- Registrar pós-mortem e lições aprendidas.
+## Descrição
+Estabelece estratégias e critérios para reversão controlada de merges ou releases, incluindo registro de incidentes e análise pós-falha. Relaciona-se às fases do processo, às ferramentas de suporte e à coordenação entre papéis.
 
-**Artefatos Relacionados**  
-Release Notes, Histórico de Conflitos
+Ter caminho claro de reversão. Executar rollback e verificar estabilidade. Registrar incidente com causas, impacto e decisões. Realizar análise pós-falha.
 
-**Papéis Envolvidos**  
-- [Mediador](/docs/roles/mediador.md)
+## Artefatos Relacionados
+- [Release Notes](/docs/artifacts/release-notes)
+- [Histórico de Conflitos](/docs/artifacts/historico-conflitos)
+- [Registro de Decisão](/docs/artifacts/registro-decisao)
 
-**Ferramentas**  
-- [GIT](/docs/tools/controle-versao/github.md)
-- [Azure DevOps ](/docs/tools/ci-cd/azure-devops.md)
+## Atividades Relacionadas
+- [Merge Final](/docs/activities/merge-final)
+
+## Papéis Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Controle de Versão](/docs/tools)
+- [Ferramentas de CI/CD](/docs/tools)

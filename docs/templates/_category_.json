@@ -1,8 +1,8 @@
 {
   "label": "Templates",
-  "position": 7,
+  "position": 6,
   "link": {
     "type": "doc",
-    "id": "templates/index"
+    "id": "index"
   }
 }

@@ -1,20 +1,25 @@
 ---
-title: QA in Homolog (Pre-merge Validation)
+id: qa-in-homolog
+title: QA in Homolog (Pré-merge Validation)
+description: Diretriz para validação das alterações em ambiente de homologação antes do merge final.
 ---
 
-**Descrição**  
-- Executar testes funcionais/regressão em homologação antes de aprovar merge final.  
-- Evidenciar resultados no PR (print/log/relatório).  
-- Complementar com testes exploratórios quando houver risco.
+## Descrição
+Diretriz para validação das alterações em ambiente de homologação antes do merge final, incluindo testes funcionais e de integração. Relaciona-se às atividades de teste, papéis colaborativos e coordenação entre papéis.
 
-**Artefatos Relacionados**  
-Relatório de QA, PR
+Executar testes funcionais e regressão em homologação antes de aprovar o merge final. Registrar evidências no PR.
 
-**Papéis Envolvidos**  
-- [Mediador](/docs/roles/mediador.md)
-- [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
-- [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
+## Artefatos Relacionados
+- [Relatório de QA](/docs/artifacts/relatorio-qa)
+- [Pull Request](/docs/artifacts/pull-request)
 
+## Atividades Relacionadas
+- [Validar em Homologação (QA)](/docs/activities/qa-homologacao)
 
-**Ferramentas**  
-Ferramentas de testes/pipelines de QA
+## Papéis Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de CI/CD](/docs/tools)

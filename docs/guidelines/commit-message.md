@@ -1,22 +1,24 @@
 ---
+id: commit-message-convention
 title: Commit Message Convention
+description: Padroniza mensagens de commit, permitindo rastreamento semântico e associação clara entre mudanças, tickets e issues.
 ---
 
-**Descrição**  
-- Seguir *Conventional Commits*: `feat:`, `fix:`, `docs:`, `refactor:`, `chore:` etc.  
-- Uma mudança lógica por commit; commits pequenos e frequentes.  
-- Incluir ID de ticket/squad na mensagem (ex.: `feat(orders): APP-321 calcula frete`).
+## Descrição
+Padroniza mensagens de commit, permitindo rastreamento semântico e associação clara entre mudanças, tickets e issues.
 
-**Justificativa**  
-Permite gerar changelog/release notes automáticos e rollback assertivo.
+Seguir Conventional Commits: `feat:`, `fix:`, `docs:`, `refactor:`, `chore:` etc. Uma mudança lógica por commit — commits pequenos e frequentes. Incluir ID do ticket na mensagem (ex.: `feat(orders): APP-321 calcula frete`).
 
-**Artefatos Relacionados**  
-Commits, Release Notes
+## Artefatos Relacionados
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- [Release Notes](/docs/artifacts/release-notes)
 
-**Papéis Envolvidos**  
-- [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
-- [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
+## Atividades Relacionadas
+- [Implementar Mudanças](/docs/activities/implementar-mudancas)
 
+## Papéis Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
 
-**Ferramentas**  
-- [GIT](/docs/tools/controle-versao/github.md)
+## Ferramentas
+- [Ferramentas de Controle de Versão](/docs/tools)

@@ -2,56 +2,34 @@
 id: approval
 title: Approval – Checklist
 slug: /templates/approval
-sidebar_position: 20
-description: Aprovação formal de PR conforme política (pares + especialista/Tech Lead) e gates de qualidade do MergeTrace.
+sidebar_position: 23
+description: Checklist para formalizar critérios de aprovação do PR no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/approval-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Approval – Checklist
 
-> **Propósito:** Realizar a **aprovação formal** do PR conforme a política (pares + especialista/Tech Lead quando exigido) e os **quality gates**.  
-> **Required Artifacts:** PR revisado (comentários resolvidos)  
-> **Produced Artifacts:** PR aprovado (estado e registros de aprovação)
+> **Propósito:** Formalizar critérios de aprovação do PR.
+>
+> **Entradas (Required Artifacts):** PR revisado; Checklist de revisão concluído; Comentários resolvidos
+>
+> **Saídas (Produced Artifacts):** Registro de aprovação; PR em estado aprovado
 
-## Boas práticas para aprovar PR
+## Pré-condições (Entradas)
+- [ ] Checklist de revisão concluído
+- [ ] Todos os comentários resolvidos
+- [ ] Pipeline CI/CD aprovado
 
-### Qualidade & Gates
-- CI/CD verde (build, testes, análise estática e segurança)
-- Cobertura dentro do limiar acordado
-- Nenhum “request changes” pendente
-- Checklist do PR atendido
+## Execução
+- [ ] Aprovação mínima atingida conforme política da equipe
+- [ ] Ticket/issue vinculado ao PR
+- [ ] Registro de aprovação gerado
 
-### Revisores & Política
-- Mínimo de aprovações cumprido  
-  - Módulos padrão: ≥ 1 aprovação  
-  - **Críticos:** ≥ 2 aprovações (1 par + 1 especialista/Tech Lead)
-- Code Owners aprovando quando aplicável
-- Especialista/Tech Lead envolvido em decisões arquiteturais
+## Quality Gate (Bloqueante)
+- [ ] Approval Policy satisfeita: critérios mínimos, papéis e exceções verificados
+- [ ] PR em estado aprovado e pronto para merge
 
-### Conteúdo & Riscos
-- Escopo do PR **coeso** (sem assuntos misturados)
-- Impactos claros (API/DB/UX/performance) e plano de rollback
-- Uso de **feature flags** com plano de limpeza/monitoramento
-- Arquivos/áreas sensíveis devidamente revisados
+---
 
-### Rastreabilidade
-- Issue/ticket vinculado
-- Evidências anexadas: build, testes, cobertura, links do pipeline
-- Decisões relevantes registradas (ex.: ADR) quando necessário
-
-### Quando **não** aprovar ainda
-- Gates falhando ou cobertura abaixo do mínimo
-- Comentários relevantes não resolvidos
-- Mudanças de contrato/DB sem migração/rollback
-- Escopo expandido (scope creep) no mesmo PR
+<DownloadButton href="/mergetrace/downloads/template/approval-checklist.docx" label="BAIXAR CHECKLIST — APPROVAL" />

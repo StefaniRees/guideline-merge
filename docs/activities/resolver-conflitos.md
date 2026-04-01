@@ -1,27 +1,26 @@
 ---
 id: resolver-conflitos
 title: Resolver Conflitos de Merge
-description: Detectar e resolver conflitos entre a branch e a main.
+description: Identificar e resolver conflitos entre a branch e a main, registrando causas e decisões.
 ---
 
 ## Descrição
-Identificar conflitos entre a branch de atividade e a main, resolvendo manualmente
-ou colaborativamente e registrando as decisões.
+Identificar conflitos entre a branch de atividade e a main, resolvendo manualmente ou colaborativamente e registrando as decisões.
 
 ## Artefatos
-- **Entrada:** PR em conflito
-- **Saída:** Histórico de Conflitos, commits de resolução
+- **Entrada:** [Pull Request](/docs/artifacts/pull-request)
+- **Saída:** [Histórico de Conflitos](/docs/artifacts/historico-conflitos); [Commits Padronizados](/docs/artifacts/commits-padronizados)
 
 ## Participantes
-- [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
-- [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
-- [Mediador](/docs/roles/mediador.md)
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Fase
+- [Merge](/docs/phases/merge)
 
 ## Ferramentas
-- [Intellij](/docs/tools/resolucao-conflitos/intellij-idea.md)
-- [Meld](/docs/tools/resolucao-conflitos/meld)
-- [VS Code](/docs/tools/resolucao-conflitos/vscode.md)
-- [Linhas de Comando](/docs/tools/linha-comando/git-bash.md)
+- [Ferramentas de Resolução de Conflitos](/docs/tools)
 
 ## Guidelines Relacionadas
-- [Conflict Resolution Procedure](/docs/guidelines/conflict-resolution)
+- [Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)

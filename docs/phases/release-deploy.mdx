@@ -6,50 +6,64 @@ sidebar_position: 7
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Promover a versão integrada; comunicar mudanças; monitorar o sistema.
+Disponibilizar a versão integrada e monitorar seu comportamento em produção, garantindo rastreabilidade da liberação.
 
-## Entradas
-- CI/CD de release configurado
+## Entradas (Required Artifacts)
+- Merge concluído
+- Release Notes geradas
 
-## Saídas
-- Release implantada; Release Notes publicados; evidências de monitoramento
+## Saídas (Produced Artifacts)
+- Release implantada
+- Release Notes publicadas
+- Logs de deploy e monitoramento
 
 ## Papéis
-- **Dev/DevOps (A/R)** — pipeline e deploy
-- **Mediador (C)** — valida comunicação e evidências
+- **Developer A** — responsável pelo deploy e geração de evidências
+- **Developer B** — co-responsável pelo deploy e monitoramento
+- **Mediador** — valida evidências e garante rastreabilidade da liberação
 
 ## Atividades
-1. Gerar Release Notes (preferência automática via commits/PRs).
-2. Realizar deploy via pipeline (sem passos manuais críticos).
-3. Monitorar pós-deploy (observabilidade/alertas).
+1. Gerar e publicar Release Notes.
+2. Realizar deploy via pipeline.
+3. Monitorar comportamento pós-deploy e registrar logs.
 
 ## Critérios de Entrada
-- Merge concluído; artefatos prontos
+- Merge concluído; Release Notes disponíveis
 
-## Critérios de Saída
-- Sistema estável; stakeholders informados
+## Critérios de Saída (Gate)
+- Release implantada + logs de deploy registrados + Release Notes publicadas
+
+## Quality Gate
+**Release Notes Standard** — Release Notes padronizadas geradas e publicadas, comunicando mudanças, riscos e componentes afetados antes de avançar para encerramento ou Rollback.
 
 ## Checklist
 <Checklist
   storageKey="phase-release-v1"
   sections={[
     {
-      id: 'release',
-      title: 'Release',
-      icon: '📦',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'notes', label: 'Release Notes gerados e publicados' },
-        { id: 'pipeline', label: 'Deploy via pipeline (automação)' },
-        { id: 'observa', label: 'Observabilidade/alertas habilitados; janela ativa' },
+        { id: 'merge-ok', label: 'Merge concluído com build de integração aprovado' },
+        { id: 'notes-prontas', label: 'Release Notes geradas' },
       ],
     },
     {
-      id: 'comms',
-      title: 'Comunicação & Pós',
-      icon: '📣',
+      id: 'execucao',
+      title: 'Execução',
       items: [
-        { id: 'stake', label: 'Release comunicada aos stakeholders' },
-        { id: 'inc', label: 'Sem incidentes pós-deploy confirmados' },
+        { id: 'notes', label: 'Release Notes publicadas' },
+        { id: 'pipeline', label: 'Deploy realizado via pipeline' },
+        { id: 'logs', label: 'Logs de deploy registrados' },
+        { id: 'monitor', label: 'Monitoramento pós-deploy executado' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'notes-ok', label: 'Release Notes padronizadas publicadas conforme Release Notes Standard' },
+        { id: 'deploy-ok', label: 'Release implantada e logs de monitoramento registrados' },
       ],
     },
   ]}

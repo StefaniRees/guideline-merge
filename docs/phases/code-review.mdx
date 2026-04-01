@@ -1,4 +1,5 @@
 ---
+id: code-review
 title: Code Review
 sidebar_position: 4
 ---
@@ -6,61 +7,64 @@ sidebar_position: 4
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Revisão por pares com checklist (estilo, testes, segurança, impacto). Comentários resolvidos antes da aprovação.
+Avaliar colaborativamente a integração proposta, identificando riscos técnicos e de qualidade por meio de revisão com checklist estruturado.
 
-## Entradas
-- PR aberto com template
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
+- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci) aprovado
 
-## Saídas
-- Comentários e aprovações de review
-- Checklist de revisão concluído
+## Saídas (Produced Artifacts)
+- Comentários de revisão
+- [Checklist de Revisão](/docs/artifacts/checklist-revisao) concluído
+- [Registro de Decisão](/docs/artifacts/registro-decisao)
 
 ## Papéis
-- **Mediador (A/R)** — conduz revisão e qualidade
-- **Revisores (R)** — análise técnica
+- **[Mediador](/docs/roles/mediador)** — conduz a revisão técnica, aplica o checklist e garante resolução completa dos comentários
 
 ## Atividades
-1. Revisar código (1–2 revisores).
-2. Rodar checks automáticos (Sonar/linters/cobertura).
-3. Tratar comentários e solicitar nova revisão quando necessário.
+1. [Code Review](/docs/activities/code-review) — revisar PR com checklist técnico e colaborativo
+2. [Validar em Homologação (QA)](/docs/activities/qa-homologacao) — executar testes funcionais e regressão antes de avançar
+3. Garantir resolução completa dos comentários antes de avançar
 
 ## Critérios de Entrada
-- PR com template completo; CI executável
+- PR com template preenchido e pipeline CI/CD aprovado
 
-## Critérios de Saída
-- Comentários resolvidos; quality gates verdes
+## Critérios de Saída (Gate)
+- Checklist de revisão concluído + comentários resolvidos + decisões técnicas registradas
+
+## Quality Gate
+**[Code Review Checklist](/docs/guidelines/code-review-checklist)** — critérios mínimos de revisão técnica contemplando estilo, impacto, testes, riscos e segurança devem ser atendidos antes de avançar para a fase de Approval.
 
 ## Checklist
 <Checklist
   storageKey="phase-cr-v1"
   sections={[
     {
-      id: 'qualidade',
-      title: 'Qualidade',
-      icon: '✅',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'tests', label: 'Compila e passa testes (unit/integration)' },
-        { id: 'estilo', label: 'Estilo/convenções e naming adequados; duplicações mínimas' },
-        { id: 'docs', label: 'Docs/README atualizados quando necessário' },
+        { id: 'pr-ok', label: 'PR aberto com template preenchido' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
       ],
     },
     {
-      id: 'seguranca',
-      title: 'Segurança & Cobertura',
-      icon: '🔒',
+      id: 'execucao',
+      title: 'Execução',
       items: [
-        { id: 'secrets', label: 'Sem secrets expostos; dependências seguras' },
-        { id: 'coverage', label: 'Cobertura mínima atendida (ex.: 70–80%)' },
+        { id: 'estilo', label: 'Estilo e convenções de código avaliados' },
+        { id: 'impacto', label: 'Impacto das mudanças analisado' },
+        { id: 'testes', label: 'Cobertura e qualidade dos testes verificadas' },
+        { id: 'riscos', label: 'Riscos técnicos identificados e registrados' },
+        { id: 'seguranca', label: 'Aspectos de segurança verificados' },
+        { id: 'decisoes', label: 'Decisões técnicas registradas' },
       ],
     },
     {
-      id: 'processo',
-      title: 'Processo',
-      icon: '🧭',
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
       items: [
-        { id: 'gates', label: 'Gates automáticos habilitados (Sonar/linters/cobertura/security)' },
-        { id: 'comments', label: 'Comentários resolvidos antes da aprovação' },
-        { id: 'sla', label: 'SLA: revisão em até 1 dia útil' },
+        { id: 'checklist-ok', label: 'Todos os critérios do Code Review Checklist atendidos' },
+        { id: 'comments-ok', label: 'Todos os comentários resolvidos antes da aprovação' },
       ],
     },
   ]}

@@ -2,59 +2,34 @@
 id: release-deploy
 title: Release/Deploy – Checklist
 slug: /templates/release-deploy
-sidebar_position: 28
-description: Checklist estático para promover versões com comunicação e monitoramento no MergeTrace.
+sidebar_position: 25
+description: Checklist para padronizar liberação e registro de evidências de build no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/release-deploy-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Release/Deploy – Checklist
 
-> **Propósito:** Promover a versão integrada, comunicar mudanças e monitorar.  
+> **Propósito:** Padronizar liberação e registro de evidências de build.
+>
+> **Entradas (Required Artifacts):** Merge concluído; Release Notes geradas
+>
+> **Saídas (Produced Artifacts):** Release implantada; Release Notes publicadas; Logs de deploy e monitoramento
 
-## Boas práticas de Release/Deploy
+## Pré-condições (Entradas)
+- [ ] Merge concluído com build de integração aprovado
+- [ ] Release Notes geradas
 
-### Release
-- [ ] **Release Notes** gerados (preferência automática via commits/PRs)
-- [ ] Versão/tag criada conforme política (semântico ou equivalente)
-- [ ] Artefatos assinados/imutáveis quando aplicável
-- [ ] Aprovações e janelas de mudança confirmadas
+## Execução
+- [ ] Release Notes publicadas
+- [ ] Deploy realizado via pipeline
+- [ ] Logs de deploy registrados
+- [ ] Monitoramento pós-deploy executado
 
-### Deploy (via pipeline)
-- [ ] **Deploy via pipeline** (sem passos manuais críticos)
-- [ ] Estratégia de rollout definida: canary/blue-green/flag
-- [ ] Plano de **rollback** testado e documentado
-- [ ] Variáveis/segredos revisados para o ambiente de destino
+## Quality Gate (Bloqueante)
+- [ ] Release Notes padronizadas publicadas conforme Release Notes Standard
+- [ ] Release implantada e logs de monitoramento registrados
 
-### Observabilidade & Monitoramento
-- [ ] **Observabilidade/alertas** habilitados (logs, métricas, traces)
-- [ ] **Janela de monitoramento** ativa pós-deploy
-- [ ] Painéis (dashboards) atualizados com novos indicadores
-- [ ] Limiares de alerta revisados para a nova versão
+---
 
-### Comunicação & Pós
-- [ ] **Stakeholders comunicados** (escopo, impactos, risco e janela)
-- [ ] Times de apoio avisados (Suporte/CS/Marketing se aplicável)
-- [ ] **Sem incidentes pós-deploy** confirmados
-- [ ] Tarefas de **cleanup** (flags antigas, migrações temporárias) planejadas
-
-## Sinais de alerta (adiar release/deploy)
-- [ ] Falta de rollback testado ou dependência crítica não validada
-- [ ] Gaps de observabilidade/alerta para partes sensíveis
-- [ ] Mudanças de contrato/DB sem migração segura
-- [ ] Release notes incompletos ou comunicação pendente
-
-## Rastreabilidade
-- [ ] Tag/versão ↔ PRs/commits ↔ builds ↔ ambiente de destino
-- [ ] Incidentes/alertas vinculados à versão (quando houver)
-- [ ] Release notes publicados e acessíveis
+<DownloadButton href="/mergetrace/downloads/template/release-deploy-checklist.docx" label="BAIXAR CHECKLIST — RELEASE/DEPLOY" />

@@ -1,4 +1,5 @@
 ---
+id: pull-request
 title: Pull Request (PR)
 sidebar_position: 3
 ---
@@ -6,60 +7,68 @@ sidebar_position: 3
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Abrir PR padronizado com objetivo, impacto e testes. Preferir PRs pequenos para revisão eficiente; uso de templates obrigatório.
+Formalizar a solicitação de integração e consolidar informações para revisão colaborativa, concentrando contexto, impacto, riscos e evidências de teste.
 
-## Entradas
-- Branch pronta e sincronizada
+## Entradas (Required Artifacts)
+- [Branch de Atividade](/docs/artifacts/branch-atividade) com [commits padronizados](/docs/artifacts/commits-padronizados)
+- Testes locais aprovados
 
-## Saídas
-- PR aberto com template e checklist preenchido
+## Saídas (Produced Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
+- [Checklist de Revisão](/docs/artifacts/checklist-revisao) preenchido
+- Ticket vinculado ao PR
+- Diffs de código disponíveis para revisão
+- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
 
 ## Papéis
-- **Desenvolvedor (A/R)** — abre PR e preenche template
-- **Mediador (C/R)** — valida padronização quando necessário
+- **[Developer A](/docs/roles/developer-principal)** — abre o PR, preenche o template, vincula ticket e evidências
+- **[Developer B](/docs/roles/developer-integrador)** — co-responsável pelo PR e evidências de teste
 
 ## Atividades
-1. Abrir PR com **template oficial** (contexto, mudanças, impacto/risco, testes, checklist).
-2. Preencher checklist de PR.
-3. Vincular ticket/issue ao PR.
-4. Marcar arquivos sensíveis/áreas críticas.
-5. Selecionar revisores (≥1; ≥2 se crítico).
+1. [Abrir Pull Request](/docs/activities/abrir-pr) com contexto, impacto, riscos e evidências utilizando o template obrigatório
+2. Preencher checklist de PR
+3. Vincular ticket/issue ao PR
+4. [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd) — build, testes automatizados, análise estática, cobertura mínima
 
 ## Critérios de Entrada
-- Branch atualizada; testes e lint locais ok
+- Branch atualizada; commits padronizados; testes locais aprovados
 
-## Critérios de Saída
-- Template seguido; revisores definidos; ticket vinculado
+## Critérios de Saída (Gate)
+- Template preenchido + ticket vinculado + pipeline CI/CD aprovado
+
+## Quality Gates
+- **[Pull Request Template](/docs/guidelines/pull-request-template)** — PR deve conter contexto, impacto, riscos e evidências de teste antes de avançar para Code Review
+- **[CI/CD Quality Gates](/docs/guidelines/cicd-quality-gates)** — pipeline deve passar antes de solicitar revisão
 
 ## Checklist
 <Checklist
   storageKey="phase-pr-v1"
   sections={[
     {
-      id: 'escopo',
-      title: 'Escopo & Tamanho',
-      icon: '🧭',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'pequeno', label: 'PR pequeno/coeso (preferência ≤ ~400 LOC)' },
-        { id: 'sync', label: 'Sincronizado com main/homolog' },
+        { id: 'branch-ok', label: 'Branch atualizada com main e commits padronizados' },
+        { id: 'testes-locais', label: 'Testes locais aprovados' },
       ],
     },
     {
-      id: 'conteudo',
-      title: 'Template & Conteúdo',
-      icon: '📝',
+      id: 'execucao',
+      title: 'Execução',
       items: [
-        { id: 'template', label: 'Template preenchido (contexto, mudanças, impacto/risco, testes, checklist)' },
-        { id: 'ticket', label: 'Ticket/issue vinculado' },
-        { id: 'sensivel', label: 'Arquivos sensíveis/áreas críticas sinalizados' },
+        { id: 'template', label: 'PR aberto com template preenchido (contexto, impacto, riscos, evidências)' },
+        { id: 'checklist', label: 'Checklist de PR preenchido' },
+        { id: 'ticket', label: 'Ticket/issue vinculado ao PR' },
+        { id: 'diffs', label: 'Diffs de código disponíveis para revisão' },
+        { id: 'cicd', label: 'Pipeline CI/CD executado (build, testes, análise estática, cobertura)' },
       ],
     },
     {
-      id: 'revisores',
-      title: 'Revisores',
-      icon: '👥',
+      id: 'gate',
+      title: 'Quality Gates (Bloqueantes)',
       items: [
-        { id: 'rev', label: 'Revisores definidos (≥1; ≥2 se crítico)' },
+        { id: 'pr-template-ok', label: 'Template do PR preenchido completamente antes de solicitar revisão' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado sem falhas bloqueantes' },
       ],
     },
   ]}

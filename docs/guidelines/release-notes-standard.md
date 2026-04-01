@@ -1,19 +1,26 @@
 ---
+id: release-notes-standard
 title: Release Notes Standard
+description: Padroniza a geração de notas de versão, promovendo comunicação clara sobre mudanças, riscos e componentes afetados.
 ---
 
-**Descrição**  
-Gerar notas automaticamente a partir de commits/PRs (*conventional commits*).  
-- Estrutura: Features | Fixes | Chores | Breaking Changes.  
-- Publicar junto com o deploy e arquivar para auditoria.
+## Descrição
+Padroniza a geração de notas de versão, promovendo comunicação clara sobre mudanças, riscos e componentes afetados. Ancora-se nas evidências sobre artefatos de comunicação e coordenação entre equipes.
 
-**Artefatos Relacionados**  
-Release Notes, PR, Commits
+Gerar notas a partir de commits e PRs seguindo Conventional Commits. Estrutura: Features, Fixes, Breaking Changes. Publicar junto com o deploy e arquivar para auditoria.
 
-**Papéis Envolvidos**  
-- [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
-- [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
+## Artefatos Relacionados
+- [Release Notes](/docs/artifacts/release-notes)
+- [Pull Request](/docs/artifacts/pull-request)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
 
+## Atividades Relacionadas
+- [Merge Final](/docs/activities/merge-final)
 
-**Ferramentas**  
-semantic-release, GitHub Releases
+## Papéis Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Controle de Versão](/docs/tools)

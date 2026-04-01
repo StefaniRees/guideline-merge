@@ -3,92 +3,11 @@ id: roles
 title: Roles
 slug: /welcome/roles
 sidebar_position: 6
-description: Papéis principais no processo de merge do MergeTrace, com foco em colaboração, rastreabilidade e resolução de conflitos.
+description: Papéis colaborativos no MergeTrace — Developer A, Developer B e Mediador.
 ---
+
+import WelcomeRoles from '@site/src/components/WelcomeRoles';
 
 # Roles
 
-Definição estruturada dos papéis envolvidos no **processo de merge de software**.  
-Cada papel é caracterizado por **responsabilidades, atividades e artefatos específicos**, permitindo análise sistemática das interações, tomada de decisão e resolução de conflitos ao longo do ciclo de integração.
-
----
-
-##  Developer (A)
-
-O **Developer A** é o autor inicial da contribuição — responsável por implementar a tarefa, criar a branch e abrir o *Pull Request*.  
-Ele conduz o desenvolvimento da mudança, garantindo contexto, qualidade e rastreabilidade do código.
-
-**Principais responsabilidades:**
-- Implementar a tarefa com commits claros e descritivos.  
-- Abrir o *Pull Request* com descrição contextual e vinculação à issue.  
-- Corrigir conflitos simples antes da revisão.  
-- Executar testes unitários e validar a build local.  
-- Interagir com o Reviewer ou Developer B durante ajustes colaborativos.
-
-**Artefatos e rastros associados:**
-- Branch criada (feature/ ou bugfix/).  
-- Pull Request inicial.  
-- Commits e logs de build.  
-- Execução de testes unitários.
-
----
-
-##  Developer (B)
-
-O **Developer B** atua como **coautor ou integrador**, responsável por revisar, complementar e integrar alterações sobre a base criada pelo Developer A.  
-Ele garante a coerência técnica e resolve conflitos que envolvem dependências cruzadas ou integrações complexas.
-
-**Principais responsabilidades:**
-- Revisar o PR criado pelo Developer A, sugerindo melhorias.  
-- Integrar dependências ou novos módulos relacionados.  
-- Resolver conflitos entre branches e coordenar merges complexos.  
-- Acompanhar execução de testes de integração e validação de CI/CD.  
-- Comunicar bloqueios ou riscos ao Mediador.
-
-**Artefatos e rastros associados:**
-- Commits complementares.  
-- Logs de merge e resolução de conflitos.  
-- Resultados de pipelines de integração.
-
----
-
-##  Mediador
-
-O **Mediador** atua como **revisor técnico e facilitador** em conflitos de merge que envolvem múltiplos desenvolvedores.  
-Ele representa o papel de governança leve no MergeTrace, assegurando que as decisões sejam técnicas, transparentes e rastreáveis.
-
-**Principais responsabilidades:**
-- Analisar causas de conflitos e orientar correções colaborativas.  
-- Intermediar revisões complexas entre Developers A e B.  
-- Validar critérios de aceitação e rastreabilidade dos merges.  
-- Garantir aderência aos *Merge Guidelines* e *Quality Gates*.  
-- Comunicar ao time (ou à QA) resultados de resolução e aprendizado.
-
-**Artefatos e rastros associados:**
-- Relatórios de conflitos resolvidos.  
-- Histórico de decisões (issues, comentários, PRs).  
-- Atualização de templates ou guidelines quando necessário.
-
----
-
-##  Interação entre os papéis
-
-| Etapa do Processo | Developer (A) | Developer (B) | Mediador |
-|-------------------|---------------|---------------|-----------|
-| Criação da branch e implementação |  Responsável  |  Acompanha | — |
-| Abertura do Pull Request |   Responsável |   Revisor |   Supervisiona |
-| Resolução de conflitos simples |   Corrige localmente |   Apoia | — |
-| Revisão técnica e integração final | — |   Executa o merge |   Valida |
-| Conflitos complexos / decisão técnica | — |   Apoia |   Atua como mediador |
-| Homologação e liberação | — | — |   Valida resultado final |
-
----
-
-###  Observações
-- Os papéis não são hierárquicos — todos colaboram dentro de um mesmo fluxo contínuo.  
-- O MergeTrace registra automaticamente os eventos e interações entre papéis (PRs, merges, builds, logs).  
-- As análises de *traceability* permitem identificar **quem participou de cada decisão técnica e conflito resolvido**.  
-
----
-
-> **Dica:** Use os *Merge Guidelines* como referência prática para documentar responsabilidades, critérios de aprovação e checklists de qualidade em cada papel.
+<WelcomeRoles />

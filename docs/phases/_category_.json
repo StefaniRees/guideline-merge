@@ -1,10 +1,8 @@
 {
-  "label": "Phases",
+  "label": "Fases",
   "position": 4,
   "link": {
-    "type": "generated-index",
-    "title": "Software Merge – Phases",
-    "description": "Etapas do processo de merge de software, com descrição acadêmica, atividades e critérios de qualidade",
-    "slug": "/phases"
+    "type": "doc",
+    "id": "phases"
   }
 }

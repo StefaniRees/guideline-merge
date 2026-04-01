@@ -2,34 +2,34 @@
 id: desenvolvimento
 title: Desenvolvimento – Checklist
 slug: /templates/desenvolvimento
-sidebar_position: 25
-description: Checklist estático para implementação e acompanhamento no MergeTrace.
+sidebar_position: 20
+description: Checklist de desenvolvimento para orientar boas práticas de implementação e testes locais no MergeTrace.
 ---
 
-<p>
-  <a
-    className="button button--primary"
-    href="/downloads/template/desenvolvimento-checklist.docx"
-    download
-    target="_self"
-    rel="noopener"
-  >
-    IMPRESSÃO
-  </a>
-</p>
+import DownloadButton from '@site/src/components/DownloadButton';
 
 # Desenvolvimento – Checklist
 
-> **Propósito:** Implementar com commits pequenos e frequentes, sincronizando com a principal e validando localmente.  
-> **Required Artifacts:** Branch de Atividade ativa  
-> **Produced Artifacts:** Histórico de commits padronizados, Branch atualizada
+> **Propósito:** Orientar boas práticas de implementação e testes locais.
+>
+> **Entradas (Required Artifacts):** Branch de Atividade ativa; Convenção de mensagens de commit estabelecida
+>
+> **Saídas (Produced Artifacts):** Histórico de commits padronizados; Branch atualizada; Evidências de testes locais
 
-## Checklist – Implementação
-- [ ] Fazer commits pequenos e atômicos (uma mudança lógica)
-- [ ] Usar **Conventional Commits** + ID do ticket
-- [ ] Sincronizar com **main** regularmente (merge/rebase) para evitar conflitos tardios
-- [ ] Executar **lint** e **testes locais** antes de abrir PR
+## Pré-condições (Entradas)
+- [ ] Branch de atividade ativa e atualizada
+- [ ] Convenção de mensagens de commit já estabelecida
 
-## Checklist – Acompanhamento
-- [ ] Acompanhar **cadência de sync**; intervir se a branch ficar longa
-- [ ] Checar **padrão e qualidade** das mensagens de commit (ver Template: Commit Message Convention)
+## Execução
+- [ ] Commits pequenos e atômicos (1 mudança lógica por commit)
+- [ ] Mensagens de commit seguem Conventional Commits + ID do ticket
+- [ ] Branch sincronizada com main regularmente (merge/rebase periódico)
+- [ ] Testes locais executados
+- [ ] Evidências de testes locais registradas
+
+## Quality Gate (Bloqueante)
+- [ ] Todas as mensagens de commit seguem Conventional Commits + ID do ticket antes de avançar para Pull Request
+
+---
+
+<DownloadButton href="/mergetrace/downloads/template/desenvolvimento-checklist.docx" label="BAIXAR CHECKLIST — DESENVOLVIMENTO" />

@@ -1,21 +1,22 @@
 ---
+id: cicd-quality-gates
 title: CI/CD Quality Gates
+description: Define gates obrigatórios no pipeline, garantindo validações automáticas antes da integração.
 ---
 
-**Descrição**  
-Nenhum PR é mergeado sem build + testes passarem.  
-- Análise estática (linters/Sonar) e cobertura de testes com meta mínima (ex.: 70–80%).  
-- Checagem de vulnerabilidades e secrets expostos.
+## Descrição
+Define gates obrigatórios no pipeline — build, testes automatizados, análise estática e cobertura mínima — garantindo validações automáticas antes da integração. Está alinhado às evidências sobre automação supervisionada.
 
-**Artefatos Relacionados**  
-Relatório de Build/CI, PR
+## Artefatos Relacionados
+- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
+- [Pull Request](/docs/artifacts/pull-request)
 
-**Papéis Envolvidos**  
-- [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
-- [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
+## Atividades Relacionadas
+- [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd)
 
+## Papéis Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
 
-**Ferramentas**  
-- [Azure DevOps ](/docs/tools/ci-cd/azure-devops.md)
-- [GitLab](/docs/tools/controle-versao/gitlab.md)
-- [SonarQube](/docs/tools/qualidade-seguranca/sonarqube.md)
+## Ferramentas
+- [Ferramentas de CI/CD](/docs/tools)

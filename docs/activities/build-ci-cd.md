@@ -19,8 +19,8 @@ análise estática e segurança do código.
 - [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
 
 ## Ferramentas
-- [Azure DevOps ](/docs/tools/ci-cd/azure-devops.md)
-- [GitLab](/docs/tools/controle-versao/gitlab.md)
+- [Azure DevOps ](/docs/tools)
+- [GitLab](/docs/tools)
 
 ## Guidelines Relacionadas
 - [CI/CD Quality Gates](/docs/guidelines/ci-cd-quality-gates)

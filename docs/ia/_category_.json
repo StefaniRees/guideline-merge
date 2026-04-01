@@ -1,9 +1,9 @@
 {
   "label": "Comunidade de Especialistas",
-  "position": 5,
+  "position": 99,
   "link": {
     "type": "generated-index",
-    "title": "Aplicações de Boas Práticas para o Processo de Merge",
+    "title": "Aplicações de Boas Práticas para o Fluxo de Merge",
     "description": "Propostas de técnicas utilizando Inteligência Artificial para apoiar, de forma responsável e fundamentada, atividades de integração e resolução de conflitos em fluxos de desenvolvimento de software.",
     "slug": "/ia"
   }

@@ -1,4 +1,5 @@
 ---
+id: rollback
 title: Rollback
 sidebar_position: 8
 ---
@@ -6,50 +7,65 @@ sidebar_position: 8
 import Checklist from '@site/src/components/Checklist';
 
 ## Objetivo
-Reversão rápida e segura quando o release causar falhas; preferencialmente suportada por feature flags e scripts de rollback.
+Reverter rapidamente a integração quando necessário, preservando rastreabilidade e registrando o incidente para aprendizado organizacional.
 
-## Entradas
-- Plano de rollback; versão/commit anterior ou flags disponíveis
+## Entradas (Required Artifacts)
+- Plano de rollback disponível
+- Commit ou versão anterior identificada
 
-## Saídas
-- Sistema revertido; pós-mortem curto registrado
+## Saídas (Produced Artifacts)
+- Integração revertida
+- [Registro de Incidente](/docs/artifacts/historico-conflitos)
 
 ## Papéis
-- **Dev/DevOps (A/R)** — executa rollback
-- **Mediador (C)** — coordena comunicação e registro
+- **[Developer A](/docs/roles/developer-principal)** — executa a reversão e registra o incidente
+- **[Developer B](/docs/roles/developer-integrador)** — apoia a execução da reversão
+- **[Mediador](/docs/roles/mediador)** — coordena o processo de reversão e garante rastreabilidade
 
 ## Atividades
-1. Escolher caminho: revert commit, voltar versão ou desligar flag.
-2. Executar rollback e verificar estabilidade.
-3. Registrar causa/impacto/correção e atualizar histórico.
+1. Executar reversão de forma controlada e auditável
+2. Registrar incidente com causas, impacto e decisões adotadas
+3. Realizar análise pós-falha
 
 ## Critérios de Entrada
-- Incidente/risco identificado; janela para rollback
+- Incidente ou risco identificado que justifique a reversão
 
-## Critérios de Saída
-- Sistema estável; comunicação e registro concluídos
+## Critérios de Saída (Gate)
+- Reversão executada + registro de incidente concluído
+
+## Quality Gate
+**[Rollback Strategy](/docs/guidelines/rollback-strategy)** — reversão executada de forma controlada com registro de incidente e análise pós-falha antes de encerrar o ciclo.
+
+## Ferramentas
+- [Controle de Versão](/docs/tools)
 
 ## Checklist
 <Checklist
   storageKey="phase-rollback-v1"
   sections={[
     {
-      id: 'exec',
-      title: 'Execução',
-      icon: '⏪',
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
       items: [
-        { id: 'path', label: 'Caminho escolhido (revert/versão/flag)' },
-        { id: 'do', label: 'Rollback executado e validado' },
+        { id: 'plano', label: 'Plano de rollback disponível' },
+        { id: 'versao', label: 'Commit ou versão anterior identificada' },
       ],
     },
     {
-      id: 'reg',
-      title: 'Registro & Prevenção',
-      icon: '📝',
+      id: 'execucao',
+      title: 'Execução',
       items: [
-        { id: 'post', label: 'Pós-mortem curto registrado; histórico atualizado' },
-        { id: 'comm', label: 'Comunicação coordenada (stakeholders/suporte)' },
-        { id: 'preven', label: 'Ações preventivas definidas (tests, gates, flags)' },
+        { id: 'rollback', label: 'Reversão executada de forma controlada e auditável' },
+        { id: 'incidente', label: 'Registro de incidente concluído (causas, impacto, decisões)' },
+        { id: 'pos-falha', label: 'Análise pós-falha realizada' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'rollback-ok', label: 'Reversão executada e rastreabilidade preservada' },
+        { id: 'registro-ok', label: 'Registro de incidente concluído antes de encerrar o ciclo' },
       ],
     },
   ]}

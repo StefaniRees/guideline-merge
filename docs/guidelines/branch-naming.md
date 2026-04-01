@@ -1,24 +1,23 @@
 ---
+id: branch-naming-convention
 title: Branch Naming Convention
+description: Estabelece padrões de nomeação de branches, favorecendo organização e rastreabilidade.
 ---
 
-**Descrição**  
-Padrão `type/descrição-curta` (ex.: `feature/login-form`, `bugfix/null-pointer`, `hotfix/limit-check`)  
+## Descrição
+Estabelece padrões de nomeação de branches, favorecendo organização e rastreabilidade em alinhamento com histórias e tarefas de negócio.
 
-- Incluir chave de ticket/squad quando aplicável (ex.: `feature/APP-123-login`).  
-- Evitar branches longas; integrar com main/homolog frequentemente.
+Padrão: `type/descrição-curta` (ex.: `feature/login-form`, `bugfix/null-pointer`, `hotfix/limit-check`). Incluir ID do ticket ou squad quando aplicável (ex.: `feature/APP-123-login`). Evitar branches longas — integrar com main frequentemente.
 
-**Justificativa**  
-Reduz conflitos e melhora rastreabilidade (alinhado a GitFlow/Trunk-Based).
+## Artefatos Relacionados
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
 
-**Artefatos Relacionados**  
-Branch de Atividade
+## Atividades Relacionadas
+- [Criar Branch](/docs/activities/criar-branch)
 
-**Papéis Envolvidos**  
-- [Developer (Principal)](/docs/roles/developer-primeiro-autor.md)
-- [Developer (Integrador)](/docs/roles/developer-segundo-autor.md)
+## Papéis Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
 
-
-**Ferramentas**  
-- [GIT](/docs/tools/controle-versao/github.md)
-- [GitLab](/docs/tools/controle-versao/gitlab.md)
+## Ferramentas
+- [Ferramentas de Controle de Versão](/docs/tools)

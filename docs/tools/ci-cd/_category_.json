@@ -1,9 +1,0 @@
-{
-  "label": "CI/CD, Build & Deploy",
-  "link": {
-    "type": "generated-index",
-    "title": "Ferramentas de Integração Contínua e Deploy",
-    "description": "Pipelines e plataformas de automação de build e deploy."
-  }
-}
-

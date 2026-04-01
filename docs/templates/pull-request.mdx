@@ -1,34 +1,36 @@
-
-<a className="button button--primary"
-   href="/downloads/template/pull-request-checklist.docx"
-   download
-   target="_self"
-   rel="noopener"
->
-   IMPRESSÃO
-</a>
-
-Pull Request – Checklist
+---
+id: pull-request
+title: Pull Request – Checklist
+slug: /templates/pull-request
+sidebar_position: 21
+description: Checklist para estruturar a descrição do PR com contexto e evidências no MergeTrace.
 ---
 
-> **Propósito:** Abrir PR padronizado, pequeno e claro, para revisão eficiente e automações.  
-> **Required Artifacts:** Branch pronta e sincronizada  
-> **Produced Artifacts:** PR aberto (com template), Checklist de PR preenchido
+import DownloadButton from '@site/src/components/DownloadButton';
 
-## Boas práticas para abertura de PR
+# Pull Request – Checklist
 
-### Escopo & Tamanho
-- PR pequeno/coeso 
-- Branch sincronizada com main/homolog
+> **Propósito:** Estruturar descrição do PR com contexto e evidências.
+>
+> **Entradas (Required Artifacts):** Branch com commits padronizados; Testes locais aprovados
+>
+> **Saídas (Produced Artifacts):** PR aberto com template; Checklist preenchido; Ticket vinculado; Diffs; Relatório de Build/CI; Relatório de Qualidade
 
-### Template & Conteúdo
-- Template preenchido: contexto, mudanças, impacto/risco, testes, checklist
-- Ticket/issue vinculado
-- Arquivos sensíveis/áreas críticas sinalizados
+## Pré-condições (Entradas)
+- [ ] Branch atualizada com main e commits padronizados
+- [ ] Testes locais aprovados
 
-### Sanidade
-- Testes locais passaram
-- CI/CD verde (build, testes, análise estática, security)
+## Execução
+- [ ] PR aberto com template preenchido (contexto, impacto, riscos, evidências)
+- [ ] Checklist de PR preenchido
+- [ ] Ticket/issue vinculado ao PR
+- [ ] Diffs de código disponíveis para revisão
+- [ ] Pipeline CI/CD executado (build, testes, análise estática, cobertura)
 
-### Revisores
-- Revisores definidos (≥1; ≥2 se crítico)
+## Quality Gates (Bloqueantes)
+- [ ] Template do PR preenchido completamente antes de solicitar revisão
+- [ ] Pipeline CI/CD aprovado sem falhas bloqueantes
+
+---
+
+<DownloadButton href="/mergetrace/downloads/template/pull-request-checklist.docx" label="BAIXAR CHECKLIST — PULL REQUEST" />
