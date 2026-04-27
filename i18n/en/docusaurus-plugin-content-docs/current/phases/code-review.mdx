@@ -1,0 +1,71 @@
+---
+id: code-review
+title: Code Review
+sidebar_position: 4
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Avaliar colaborativamente a integração proposta, identificando riscos técnicos e de qualidade por meio de revisão com checklist estruturado.
+
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
+- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci) aprovado
+
+## Saídas (Produced Artifacts)
+- Comentários de revisão
+- [Checklist de Revisão](/docs/artifacts/checklist-revisao) concluído
+- [Registro de Decisão](/docs/artifacts/registro-decisao)
+
+## Papéis
+- **[Mediador](/docs/roles/mediador)** — conduz a revisão técnica, aplica o checklist e garante resolução completa dos comentários
+
+## Atividades
+1. [Code Review](/docs/activities/code-review) — revisar PR com checklist técnico e colaborativo
+2. [Validar em Homologação (QA)](/docs/activities/qa-homologacao) — executar testes funcionais e regressão antes de avançar
+3. Garantir resolução completa dos comentários antes de avançar
+
+## Critérios de Entrada
+- PR com template preenchido e pipeline CI/CD aprovado
+
+## Critérios de Saída (Gate)
+- Checklist de revisão concluído + comentários resolvidos + decisões técnicas registradas
+
+## Quality Gate
+**[Code Review Checklist](/docs/guidelines/code-review-checklist)** — critérios mínimos de revisão técnica contemplando estilo, impacto, testes, riscos e segurança devem ser atendidos antes de avançar para a fase de Approval.
+
+## Checklist
+<Checklist
+  storageKey="phase-cr-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
+      items: [
+        { id: 'pr-ok', label: 'PR aberto com template preenchido' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'Execução',
+      items: [
+        { id: 'estilo', label: 'Estilo e convenções de código avaliados' },
+        { id: 'impacto', label: 'Impacto das mudanças analisado' },
+        { id: 'testes', label: 'Cobertura e qualidade dos testes verificadas' },
+        { id: 'riscos', label: 'Riscos técnicos identificados e registrados' },
+        { id: 'seguranca', label: 'Aspectos de segurança verificados' },
+        { id: 'decisoes', label: 'Decisões técnicas registradas' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'checklist-ok', label: 'Todos os critérios do Code Review Checklist atendidos' },
+        { id: 'comments-ok', label: 'Todos os comentários resolvidos antes da aprovação' },
+      ],
+    },
+  ]}
+/>

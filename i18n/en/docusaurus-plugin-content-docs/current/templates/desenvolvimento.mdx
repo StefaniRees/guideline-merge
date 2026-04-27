@@ -1,0 +1,35 @@
+---
+id: desenvolvimento
+title: Development — Checklist
+slug: /templates/desenvolvimento
+sidebar_position: 20
+description: Development checklist to guide good implementation practices and local testing in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Development — Checklist
+
+> **Purpose:** Guide good implementation practices and local testing.
+>
+> **Inputs (Required Artifacts):** Active activity branch; Established commit message convention
+>
+> **Outputs (Produced Artifacts):** Standardized commit history; Updated branch; Local test evidence
+
+## Pre-conditions (Inputs)
+- [ ] Activity branch active and updated
+- [ ] Commit message convention already established
+
+## Execution
+- [ ] Small and atomic commits (1 logical change per commit)
+- [ ] Commit messages follow Conventional Commits + ticket ID
+- [ ] Branch synced with main regularly (periodic merge/rebase)
+- [ ] Local tests run
+- [ ] Local test evidence recorded
+
+## Quality Gate (Blocking)
+- [ ] All commit messages follow Conventional Commits + ticket ID before advancing to Pull Request
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/desenvolvimento-checklist.docx" label="DOWNLOAD CHECKLIST — DEVELOPMENT" />

@@ -1,0 +1,62 @@
+{
+  "link.title.Guideline": {
+    "message": "Guideline",
+    "description": "The title of the footer links column with title=Guideline in the footer"
+  },
+  "link.title.Referências": {
+    "message": "Referências",
+    "description": "The title of the footer links column with title=Referências in the footer"
+  },
+  "link.title.Pesquisa": {
+    "message": "Pesquisa",
+    "description": "The title of the footer links column with title=Pesquisa in the footer"
+  },
+  "link.item.label.Welcome": {
+    "message": "Welcome",
+    "description": "The label of footer link with label=Welcome linking to /docs/welcome"
+  },
+  "link.item.label.Fases": {
+    "message": "Fases",
+    "description": "The label of footer link with label=Fases linking to /docs/phases"
+  },
+  "link.item.label.Papéis": {
+    "message": "Papéis",
+    "description": "The label of footer link with label=Papéis linking to /docs/roles"
+  },
+  "link.item.label.Atividades": {
+    "message": "Atividades",
+    "description": "The label of footer link with label=Atividades linking to /docs/activities"
+  },
+  "link.item.label.Artefatos": {
+    "message": "Artefatos",
+    "description": "The label of footer link with label=Artefatos linking to /docs/artifacts"
+  },
+  "link.item.label.Guidelines": {
+    "message": "Guidelines",
+    "description": "The label of footer link with label=Guidelines linking to /docs/guidelines"
+  },
+  "link.item.label.Templates": {
+    "message": "Templates",
+    "description": "The label of footer link with label=Templates linking to /docs/templates"
+  },
+  "link.item.label.Ferramentas": {
+    "message": "Ferramentas",
+    "description": "The label of footer link with label=Ferramentas linking to /docs/tools"
+  },
+  "link.item.label.Comunidade de Especialistas": {
+    "message": "Comunidade de Especialistas",
+    "description": "The label of footer link with label=Comunidade de Especialistas linking to /docs/ia"
+  },
+  "link.item.label.Repositório GitHub": {
+    "message": "Repositório GitHub",
+    "description": "The label of footer link with label=Repositório GitHub linking to https://github.com/StefaniRees/mergetrace"
+  },
+  "link.item.label.UNISINOS — PPG Computação Aplicada": {
+    "message": "UNISINOS — PPG Computação Aplicada",
+    "description": "The label of footer link with label=UNISINOS — PPG Computação Aplicada linking to https://www.unisinos.br"
+  },
+  "copyright": {
+    "message": "© 2026 MergeTrace · Stéfani Celestino Rees · UNISINOS · PPG Computação Aplicada",
+    "description": "The footer copyright"
+  }
+}

@@ -1,0 +1,35 @@
+---
+id: approval
+title: Approval — Checklist
+slug: /templates/approval
+sidebar_position: 23
+description: Checklist to formalize PR approval criteria in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Approval — Checklist
+
+> **Purpose:** Formalize PR approval criteria.
+>
+> **Inputs (Required Artifacts):** Reviewed PR; Completed review checklist; Resolved comments
+>
+> **Outputs (Produced Artifacts):** Approval record; PR in approved state
+
+## Pre-conditions (Inputs)
+- [ ] Review checklist completed
+- [ ] All comments resolved
+- [ ] CI/CD pipeline approved
+
+## Execution
+- [ ] Minimum approval reached according to team policy
+- [ ] Ticket/issue linked to PR
+- [ ] Approval record generated
+
+## Quality Gate (Blocking)
+- [ ] Approval Policy satisfied: minimum criteria, roles, and exceptions verified
+- [ ] PR in approved state and ready for merge
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/approval-checklist.docx" label="DOWNLOAD CHECKLIST — APPROVAL" />

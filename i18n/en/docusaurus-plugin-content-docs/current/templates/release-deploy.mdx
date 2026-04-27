@@ -1,0 +1,35 @@
+---
+id: release-deploy
+title: Release/Deploy — Checklist
+slug: /templates/release-deploy
+sidebar_position: 25
+description: Checklist to standardize release and build evidence recording in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Release/Deploy — Checklist
+
+> **Purpose:** Standardize release and build evidence recording.
+>
+> **Inputs (Required Artifacts):** Merge completed; Release Notes generated
+>
+> **Outputs (Produced Artifacts):** Release deployed; Release Notes published; Deploy and monitoring logs
+
+## Pre-conditions (Inputs)
+- [ ] Merge completed with approved integration build
+- [ ] Release Notes generated
+
+## Execution
+- [ ] Release Notes published
+- [ ] Deploy performed via pipeline
+- [ ] Deploy logs recorded
+- [ ] Post-deploy monitoring executed
+
+## Quality Gate (Blocking)
+- [ ] Standardized Release Notes published per Release Notes Standard
+- [ ] Release deployed and monitoring logs recorded
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/release-deploy-checklist.docx" label="DOWNLOAD CHECKLIST — RELEASE/DEPLOY" />

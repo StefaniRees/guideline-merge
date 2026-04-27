@@ -1,0 +1,37 @@
+---
+id: code-review
+title: Code Review — Checklist
+slug: /templates/code-review
+sidebar_position: 22
+description: Checklist to establish objective technical review criteria in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Code Review — Checklist
+
+> **Purpose:** Establish objective technical review criteria.
+>
+> **Inputs (Required Artifacts):** PR opened with filled template; CI/CD pipeline approved
+>
+> **Outputs (Produced Artifacts):** Review comments; Completed review checklist; Technical decision records
+
+## Pre-conditions (Inputs)
+- [ ] PR opened with filled template
+- [ ] CI/CD pipeline approved
+
+## Execution
+- [ ] Code style and conventions evaluated
+- [ ] Impact of changes analyzed
+- [ ] Test coverage and quality verified
+- [ ] Technical risks identified and recorded
+- [ ] Security aspects verified
+- [ ] Technical decisions recorded
+
+## Quality Gate (Blocking)
+- [ ] All Code Review Checklist criteria met
+- [ ] All comments resolved before approval
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/code-review-checklist.docx" label="DOWNLOAD CHECKLIST — CODE REVIEW" />

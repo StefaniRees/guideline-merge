@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "MergeTrace",
+    "description": "The title in the navbar"
+  },
+  "item.label.Welcome": {
+    "message": "Welcome",
+    "description": "Navbar item with label Welcome"
+  },
+  "item.label.Comunidade de Especialistas": {
+    "message": "Comunidade de Especialistas",
+    "description": "Navbar item with label Comunidade de Especialistas"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

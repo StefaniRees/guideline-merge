@@ -1,0 +1,75 @@
+---
+id: pull-request
+title: Pull Request (PR)
+sidebar_position: 3
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Formalizar a solicitação de integração e consolidar informações para revisão colaborativa, concentrando contexto, impacto, riscos e evidências de teste.
+
+## Entradas (Required Artifacts)
+- [Branch de Atividade](/docs/artifacts/branch-atividade) com [commits padronizados](/docs/artifacts/commits-padronizados)
+- Testes locais aprovados
+
+## Saídas (Produced Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
+- [Checklist de Revisão](/docs/artifacts/checklist-revisao) preenchido
+- Ticket vinculado ao PR
+- Diffs de código disponíveis para revisão
+- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
+
+## Papéis
+- **[Developer A](/docs/roles/developer-principal)** — abre o PR, preenche o template, vincula ticket e evidências
+- **[Developer B](/docs/roles/developer-integrador)** — co-responsável pelo PR e evidências de teste
+
+## Atividades
+1. [Abrir Pull Request](/docs/activities/abrir-pr) com contexto, impacto, riscos e evidências utilizando o template obrigatório
+2. Preencher checklist de PR
+3. Vincular ticket/issue ao PR
+4. [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd) — build, testes automatizados, análise estática, cobertura mínima
+
+## Critérios de Entrada
+- Branch atualizada; commits padronizados; testes locais aprovados
+
+## Critérios de Saída (Gate)
+- Template preenchido + ticket vinculado + pipeline CI/CD aprovado
+
+## Quality Gates
+- **[Pull Request Template](/docs/guidelines/pull-request-template)** — PR deve conter contexto, impacto, riscos e evidências de teste antes de avançar para Code Review
+- **[CI/CD Quality Gates](/docs/guidelines/cicd-quality-gates)** — pipeline deve passar antes de solicitar revisão
+
+## Checklist
+<Checklist
+  storageKey="phase-pr-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
+      items: [
+        { id: 'branch-ok', label: 'Branch atualizada com main e commits padronizados' },
+        { id: 'testes-locais', label: 'Testes locais aprovados' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'Execução',
+      items: [
+        { id: 'template', label: 'PR aberto com template preenchido (contexto, impacto, riscos, evidências)' },
+        { id: 'checklist', label: 'Checklist de PR preenchido' },
+        { id: 'ticket', label: 'Ticket/issue vinculado ao PR' },
+        { id: 'diffs', label: 'Diffs de código disponíveis para revisão' },
+        { id: 'cicd', label: 'Pipeline CI/CD executado (build, testes, análise estática, cobertura)' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gates (Bloqueantes)',
+      items: [
+        { id: 'pr-template-ok', label: 'Template do PR preenchido completamente antes de solicitar revisão' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado sem falhas bloqueantes' },
+      ],
+    },
+  ]}
+/>

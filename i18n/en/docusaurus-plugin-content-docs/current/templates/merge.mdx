@@ -1,0 +1,37 @@
+---
+id: merge
+title: Merge — Checklist
+slug: /templates/merge
+sidebar_position: 24
+description: Checklist to ensure safe and traceable integration into the main branch in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Merge — Checklist
+
+> **Purpose:** Ensure safe and traceable integration into the main branch.
+>
+> **Inputs (Required Artifacts):** Approved PR; QA Report; Synced branch
+>
+> **Outputs (Produced Artifacts):** Merge commit or squash; Integration build; Conflict history; Release Notes
+
+## Pre-conditions (Inputs)
+- [ ] PR approved and QA Report available
+- [ ] Branch updated immediately before merge
+- [ ] CI/CD pipeline approved
+
+## Execution
+- [ ] Conflicts identified and resolved collaboratively
+- [ ] Causes, decisions, and resolution history recorded
+- [ ] Integration build run
+- [ ] Release Notes generated
+- [ ] Traceability ticket ↔ PR ↔ merge ensured
+
+## Quality Gate (Blocking)
+- [ ] All conflicts resolved and recorded before advancing
+- [ ] Integration build approved
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/merge-checklist.docx" label="DOWNLOAD CHECKLIST — MERGE" />

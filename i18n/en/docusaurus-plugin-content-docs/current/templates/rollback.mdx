@@ -1,0 +1,34 @@
+---
+id: rollback
+title: Rollback — Checklist
+slug: /templates/rollback
+sidebar_position: 27
+description: Checklist to guide rollbacks while preserving history and context in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Rollback — Checklist
+
+> **Purpose:** Guide rollbacks while preserving history and context.
+>
+> **Inputs (Required Artifacts):** Rollback plan; Previous commit or version identified
+>
+> **Outputs (Produced Artifacts):** Integration reverted; Incident record
+
+## Pre-conditions (Inputs)
+- [ ] Rollback plan available
+- [ ] Previous commit or version identified
+
+## Execution
+- [ ] Reversion executed in a controlled and auditable manner
+- [ ] Incident record completed (causes, impact, and decisions)
+- [ ] Post-failure analysis performed
+
+## Quality Gate (Blocking)
+- [ ] Reversion executed and traceability preserved
+- [ ] Incident record completed before closing the cycle
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/rollback-checklist.docx" label="DOWNLOAD CHECKLIST — ROLLBACK" />

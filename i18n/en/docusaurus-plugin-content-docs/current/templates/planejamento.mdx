@@ -1,0 +1,35 @@
+---
+id: planejamento
+title: Planning — Checklist
+slug: /templates/planejamento
+sidebar_position: 19
+description: Planning checklist to prepare safe merges in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Planning — Checklist
+
+> **Purpose:** Align scope, risks, and dependencies before development.
+>
+> **Inputs (Required Artifacts):** Defined and prioritized ticket/issue; Established branch and commit convention
+>
+> **Outputs (Produced Artifacts):** Activity branch created and tracked; Risks mapped; Sync plan defined
+
+## Pre-conditions (Inputs)
+- [ ] Ticket/issue prioritized and linked to branch
+- [ ] Commit message convention already established
+
+## Execution
+- [ ] Branch created with correct prefix and ticket ID (`feature/`, `bugfix/`, `hotfix/`)
+- [ ] Cohesive scope defined (one clear objective per branch)
+- [ ] Frequent sync plan with `main` defined (periodic merge/rebase)
+- [ ] Conflict risks and sensitive areas/modules mapped
+
+## Quality Gate (Blocking)
+- [ ] Valid branch with correct prefix and ticket ID before advancing to Development
+- [ ] Conventions validated by Mediator
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/planejamento-checklist.docx" label="DOWNLOAD CHECKLIST — PLANNING" />

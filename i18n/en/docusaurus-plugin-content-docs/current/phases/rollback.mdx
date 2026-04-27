@@ -1,0 +1,72 @@
+---
+id: rollback
+title: Rollback
+sidebar_position: 8
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Reverter rapidamente a integração quando necessário, preservando rastreabilidade e registrando o incidente para aprendizado organizacional.
+
+## Entradas (Required Artifacts)
+- Plano de rollback disponível
+- Commit ou versão anterior identificada
+
+## Saídas (Produced Artifacts)
+- Integração revertida
+- [Registro de Incidente](/docs/artifacts/historico-conflitos)
+
+## Papéis
+- **[Developer A](/docs/roles/developer-principal)** — executa a reversão e registra o incidente
+- **[Developer B](/docs/roles/developer-integrador)** — apoia a execução da reversão
+- **[Mediador](/docs/roles/mediador)** — coordena o processo de reversão e garante rastreabilidade
+
+## Atividades
+1. Executar reversão de forma controlada e auditável
+2. Registrar incidente com causas, impacto e decisões adotadas
+3. Realizar análise pós-falha
+
+## Critérios de Entrada
+- Incidente ou risco identificado que justifique a reversão
+
+## Critérios de Saída (Gate)
+- Reversão executada + registro de incidente concluído
+
+## Quality Gate
+**[Rollback Strategy](/docs/guidelines/rollback-strategy)** — reversão executada de forma controlada com registro de incidente e análise pós-falha antes de encerrar o ciclo.
+
+## Ferramentas
+- [Controle de Versão](/docs/tools)
+
+## Checklist
+<Checklist
+  storageKey="phase-rollback-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'Pré-condições (Entradas)',
+      items: [
+        { id: 'plano', label: 'Plano de rollback disponível' },
+        { id: 'versao', label: 'Commit ou versão anterior identificada' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'Execução',
+      items: [
+        { id: 'rollback', label: 'Reversão executada de forma controlada e auditável' },
+        { id: 'incidente', label: 'Registro de incidente concluído (causas, impacto, decisões)' },
+        { id: 'pos-falha', label: 'Análise pós-falha realizada' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'rollback-ok', label: 'Reversão executada e rastreabilidade preservada' },
+        { id: 'registro-ok', label: 'Registro de incidente concluído antes de encerrar o ciclo' },
+      ],
+    },
+  ]}
+/>

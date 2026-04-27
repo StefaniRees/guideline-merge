@@ -1,0 +1,36 @@
+---
+id: pull-request
+title: Pull Request — Checklist
+slug: /templates/pull-request
+sidebar_position: 21
+description: Checklist to structure the PR description with context and evidence in MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Pull Request — Checklist
+
+> **Purpose:** Structure PR description with context and evidence.
+>
+> **Inputs (Required Artifacts):** Branch with standardized commits; Local tests approved
+>
+> **Outputs (Produced Artifacts):** PR opened with template; Filled checklist; Linked ticket; Diffs; Build/CI Report; Quality Report
+
+## Pre-conditions (Inputs)
+- [ ] Branch updated with main and standardized commits
+- [ ] Local tests approved
+
+## Execution
+- [ ] PR opened with filled template (context, impact, risks, evidence)
+- [ ] PR checklist filled
+- [ ] Ticket/issue linked to PR
+- [ ] Code diffs available for review
+- [ ] CI/CD pipeline run (build, tests, static analysis, coverage)
+
+## Quality Gates (Blocking)
+- [ ] PR template completely filled before requesting review
+- [ ] CI/CD pipeline approved without blocking failures
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/pull-request-checklist.docx" label="DOWNLOAD CHECKLIST — PULL REQUEST" />

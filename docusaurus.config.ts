@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Software Merge Guidelines',
-  tagline: 'Documentação e guia de apoio ao merge',
+  title: 'MergeTrace',
+  tagline: 'Software Merge Guidelines',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -20,9 +20,22 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  // ─── i18n: PT-BR como padrão, EN como alternativa ───────────────────────
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'pt-BR',
+    locales: ['pt-BR', 'en'],
+    localeConfigs: {
+      'pt-BR': {
+        label: '🇧🇷 Português',
+        direction: 'ltr',
+        htmlLang: 'pt-BR',
+      },
+      en: {
+        label: '🇺🇸 English',
+        direction: 'ltr',
+        htmlLang: 'en',
+      },
+    },
   },
 
   presets: [
@@ -43,7 +56,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Página Inicial',
+      title: 'MergeTrace',
       items: [
         {
           to: '/docs/welcome',
@@ -58,6 +71,11 @@ const config: Config = {
         {
           href: 'https://github.com/StefaniRees/mergetrace',
           label: 'GitHub',
+          position: 'right',
+        },
+        // ─── Botão de troca de idioma ──────────────────────────────────────
+        {
+          type: 'localeDropdown',
           position: 'right',
         },
       ],
