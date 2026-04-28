@@ -1,8 +1,1 @@
-{
-  "label": "Atividades",
-  "position": 4,
-  "link": {
-    "type": "doc",
-    "id": "activities"
-  }
-}
+﻿{"label": "Activities","position": 4,"link": {"type": "doc","id": "activities"}}

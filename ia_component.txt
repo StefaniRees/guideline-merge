@@ -1,0 +1,324 @@
+﻿import React, { useState } from 'react';
+
+const WARNING_COLOR = '#BA7517';
+const INFO_COLOR = '#378ADD';
+const SUCCESS_COLOR = '#639922';
+const PURPLE_COLOR = '#533AB7';
+const DANGER_COLOR = '#D4537E';
+
+const useCases = [
+  {
+    id: 'visao-geral',
+    icon: 'â—ˆ',
+    color: PURPLE_COLOR,
+    title: 'VisÃ£o Geral',
+    tag: 'PrincÃ­pio',
+    tagColor: PURPLE_COLOR,
+    summary: 'A IA acelera revisÃµes, gera esboÃ§os e sugere commits â€” mas nÃ£o substitui o julgamento tÃ©cnico.',
+    content: [
+      { type: 'principle', text: 'Use como apoio. DecisÃµes crÃ­ticas continuam humanas.' },
+      { type: 'quote', text: '"A IA pode sugerir uma resoluÃ§Ã£o e eu comparar com a minha. Se estiver 95% parecido, eu aceito."', author: 'P8' },
+      { type: 'quote', text: '"Se a IA disser o que mudar, quero saber por que, e de onde veio essa recomendaÃ§Ã£o."', author: 'P8' },
+    ],
+  },
+  {
+    id: 'apoio-juniores',
+    icon: 'â—Ž',
+    color: SUCCESS_COLOR,
+    title: 'Apoio a Juniores',
+    tag: 'EducaÃ§Ã£o',
+    tagColor: SUCCESS_COLOR,
+    summary: 'ExplicaÃ§Ãµes de boas prÃ¡ticas, code smells e estilo com rascunhos de correÃ§Ãµes simples.',
+    content: [
+      { type: 'do', text: 'Usar para explicar boas prÃ¡ticas, paralelismo e code smells' },
+      { type: 'do', text: 'Gerar rascunhos de correÃ§Ãµes simples e exemplos de testes' },
+      { type: 'dont', text: 'NÃ£o aceite sugestÃµes cegamente â€” leitura crÃ­tica Ã© obrigatÃ³ria' },
+      { type: 'quote', text: '"Seria interessante uma IA avisar quando dois devs estÃ£o mexendo no mesmo mÃ©todo antes de dar conflito."', author: 'P7' },
+    ],
+  },
+  {
+    id: 'deteccao-conflitos',
+    icon: 'â—‰',
+    color: WARNING_COLOR,
+    title: 'DetecÃ§Ã£o de Conflitos',
+    tag: 'PrevenÃ§Ã£o',
+    tagColor: WARNING_COLOR,
+    summary: 'Alertas antecipados de conflitos em mÃ©todos compartilhados e destaque de hotspots histÃ³ricos.',
+    content: [
+      { type: 'do', text: 'Alertas antecipados de conflitos em mÃ©todos compartilhados' },
+      { type: 'do', text: 'Destacar hotspots â€” arquivos com muitos conflitos histÃ³ricos' },
+      { type: 'do', text: 'Sugerir estratÃ©gias de resoluÃ§Ã£o: merge colaborativo, dividir PR' },
+      { type: 'quote', text: '"A IA do GitHub mostrava quem mexeu no arquivo e quanto tempo ia demorar o review."', author: 'P3' },
+    ],
+  },
+  {
+    id: 'mensagens-commit',
+    icon: 'â—‡',
+    color: INFO_COLOR,
+    title: 'Mensagens de Commit',
+    tag: 'PadronizaÃ§Ã£o',
+    tagColor: INFO_COLOR,
+    summary: 'Gere resumos iniciais de commit e ajuste manualmente seguindo Conventional Commits.',
+    content: [
+      { type: 'do', text: 'Gerar resumos iniciais de commit para ajuste manual' },
+      { type: 'do', text: 'Seguir Conventional Commits com ID da tarefa/squad' },
+      { type: 'dont', text: 'IA ajuda na forma â€” o conteÃºdo tÃ©cnico Ã© sua responsabilidade' },
+      { type: 'quote', text: '"Usei pra gerar um sumÃ¡rio do que mudou no PR. Me ajudou a escrever a mensagem de commit certinha."', author: 'P5' },
+    ],
+  },
+  {
+    id: 'estrategias-merge',
+    icon: 'â—†',
+    color: PURPLE_COLOR,
+    title: 'EstratÃ©gias de Merge',
+    tag: 'AutomaÃ§Ã£o',
+    tagColor: PURPLE_COLOR,
+    summary: 'Dicas contextuais, reconhecimento de padrÃµes pÃ³s-build e notificaÃ§Ãµes de regressÃµes.',
+    content: [
+      { type: 'do', text: 'Dicas contextuais: "seu cÃ³digo estÃ¡ estÃ¡vel, commite agora"' },
+      { type: 'do', text: 'Reconhecer padrÃµes de pÃ³s-build e sugerir aÃ§Ãµes como rodar lint' },
+      { type: 'do', text: 'NotificaÃ§Ãµes quando a pipeline detecta regressÃµes recorrentes' },
+    ],
+  },
+  {
+    id: 'pre-review',
+    icon: 'â—',
+    color: INFO_COLOR,
+    title: 'PrÃ©-review e Revisores',
+    tag: 'RevisÃ£o',
+    tagColor: INFO_COLOR,
+    summary: 'Use IA para prÃ©-review â€” apontar pontos de atenÃ§Ã£o antes de envolver revisores humanos.',
+    content: [
+      { type: 'do', text: 'PrÃ©-review: apontar pontos de atenÃ§Ã£o antes de envolver revisores' },
+      { type: 'do', text: 'SugestÃ£o de revisores com base em histÃ³rico e arquivos afetados' },
+      { type: 'dont', text: 'NÃ£o trate sugestÃµes como aprovaÃ§Ã£o â€” a anÃ¡lise final Ã© humana' },
+    ],
+  },
+  {
+    id: 'testes-diff',
+    icon: 'â—‘',
+    color: SUCCESS_COLOR,
+    title: 'Testes a partir do Diff',
+    tag: 'Qualidade',
+    tagColor: SUCCESS_COLOR,
+    summary: 'PeÃ§a Ã  IA para sugerir testes com base no diff â€” mÃ©todos e arquivos afetados.',
+    content: [
+      { type: 'do', text: 'Sugerir testes com base no diff â€” mÃ©todos e arquivos afetados' },
+      { type: 'do', text: 'Ãštil para lembrar casos de borda e cobertura mÃ­nima' },
+      { type: 'dont', text: 'Revise e adapte â€” testes gerados nÃ£o garantem lÃ³gica de negÃ³cio correta' },
+    ],
+  },
+  {
+    id: 'riscos',
+    icon: 'âš ',
+    color: DANGER_COLOR,
+    title: 'Riscos e Cuidados',
+    tag: 'AtenÃ§Ã£o',
+    tagColor: DANGER_COLOR,
+    summary: 'Estudos indicam aumento de vulnerabilidades quando IA Ã© usada sem revisÃ£o humana.',
+    content: [
+      { type: 'dont', text: 'Nunca faÃ§a auto-commit ou auto-merge baseado apenas na IA' },
+      { type: 'dont', text: 'AtenÃ§Ã£o a vazamento de dados em prompts â€” secrets e informaÃ§Ãµes sensÃ­veis' },
+      { type: 'warning', text: 'Estudos indicam aumento de ~5% em vulnerabilidades quando IA Ã© usada sem revisÃ£o' },
+      { type: 'quote', text: '"A IA pode ajudar, mas ainda arrisca gerar vulnerabilidades â€” um estudo mostrou aumento de cerca de 5%."', author: 'P8' },
+    ],
+  },
+];
+
+function ContentItem({ item }) {
+  const styles = {
+    do: { bg: '#EAF3DE', color: '#3B6D11', prefix: 'âœ“' },
+    dont: { bg: '#FBEAF0', color: '#72243E', prefix: 'âœ—' },
+    principle: { bg: '#EEEDFE', color: '#3C3489', prefix: 'â†’' },
+    warning: { bg: '#FAEEDA', color: '#633806', prefix: '!' },
+    quote: { bg: '#F5F5F5', color: '#555', prefix: '"' },
+  };
+
+  const s = styles[item.type] || styles.do;
+
+  if (item.type === 'quote') {
+    return (
+      <div style={{
+        background: s.bg, borderRadius: '8px', padding: '10px 14px',
+        marginBottom: '6px', borderLeft: '3px solid #d1d5db',
+      }}>
+        <p style={{ fontSize: '12px', color: s.color, lineHeight: 1.5, margin: 0, fontStyle: 'italic' }}>
+          {item.text}
+        </p>
+        {item.author && (
+          <p style={{ fontSize: '11px', color: '#9ca3af', margin: '4px 0 0', fontWeight: 700 }}>
+            â€” {item.author}
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div style={{
+      display: 'flex', gap: '8px', alignItems: 'flex-start',
+      background: s.bg, borderRadius: '8px', padding: '8px 12px',
+      marginBottom: '6px',
+    }}>
+      <span style={{ fontSize: '12px', fontWeight: 700, color: s.color, flexShrink: 0, marginTop: '1px' }}>
+        {s.prefix}
+      </span>
+      <span style={{ fontSize: '12px', color: s.color, lineHeight: 1.5 }}>
+        {item.text}
+      </span>
+    </div>
+  );
+}
+
+function UseCaseCard({ useCase }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div style={{
+      border: '1px solid #e5e7eb',
+      borderTop: `3px solid ${useCase.color}`,
+      borderRadius: '10px',
+      background: '#fff',
+      overflow: 'hidden',
+      transition: 'box-shadow 0.15s',
+    }}
+      onMouseEnter={e => e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)'}
+      onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        style={{
+          width: '100%', textAlign: 'left', background: 'none',
+          border: 'none', cursor: 'pointer', padding: '16px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+          <div style={{
+            width: '36px', height: '36px', borderRadius: '8px',
+            background: `${useCase.color}14`,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: '16px', color: useCase.color, flexShrink: 0,
+          }}>
+            {useCase.icon}
+          </div>
+          <div style={{ flex: 1 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+              <span style={{ fontSize: '14px', fontWeight: 700, color: '#111' }}>{useCase.title}</span>
+              <span style={{
+                fontSize: '10px', padding: '1px 7px', borderRadius: '99px', fontWeight: 700,
+                background: `${useCase.tagColor}14`, color: useCase.tagColor,
+              }}>
+                {useCase.tag}
+              </span>
+            </div>
+            <p style={{ fontSize: '12px', color: '#6b7280', lineHeight: 1.5, margin: 0 }}>
+              {useCase.summary}
+            </p>
+          </div>
+          <span style={{
+            fontSize: '12px', color: '#9ca3af', flexShrink: 0,
+            transform: open ? 'rotate(180deg)' : 'none',
+            transition: 'transform 0.2s', marginTop: '4px',
+          }}>â–¾</span>
+        </div>
+      </button>
+
+      {open && (
+        <div style={{ padding: '0 16px 16px' }}>
+          <div style={{ borderTop: '1px solid #f3f4f6', paddingTop: '12px' }}>
+            {useCase.content.map((item, i) => (
+              <ContentItem key={i} item={item} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function IASection() {
+  return (
+    <div style={{ padding: '0 0 2rem' }}>
+
+      {/* Principle banner */}
+      <div style={{
+        background: '#EEEDFE',
+        border: '1px solid #AFA9EC',
+        borderLeft: '4px solid #533AB7',
+        borderRadius: '10px',
+        padding: '16px 20px',
+        marginBottom: '28px',
+        display: 'flex',
+        gap: '16px',
+        alignItems: 'flex-start',
+      }}>
+        <div style={{
+          width: '40px', height: '40px', borderRadius: '50%',
+          background: '#533AB7', display: 'flex', alignItems: 'center',
+          justifyContent: 'center', flexShrink: 0,
+          fontSize: '18px', color: '#fff',
+        }}>
+          â—ˆ
+        </div>
+        <div>
+          <div style={{ fontSize: '14px', fontWeight: 700, color: '#3C3489', marginBottom: '4px' }}>
+            PrincÃ­pio central â€” C6: IA como apoio transversal
+          </div>
+          <p style={{ fontSize: '13px', color: '#534AB7', lineHeight: 1.6, margin: 0 }}>
+            A IA Ã© posicionada como um mecanismo de <strong>suporte contextual</strong> â€” nÃ£o de substituiÃ§Ã£o â€” Ã s decisÃµes humanas.
+            Em todos os usos, as evidÃªncias empÃ­ricas reforÃ§am a necessidade de <strong>supervisÃ£o humana contÃ­nua</strong>,
+            especialmente para mitigar riscos relacionados Ã  introduÃ§Ã£o de vulnerabilidades e decisÃµes tÃ©cnicas equivocadas.
+          </p>
+        </div>
+      </div>
+
+      {/* Stats row */}
+      <div style={{
+        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '10px', marginBottom: '28px',
+      }}>
+        {[
+          { value: '6/8', label: 'especialistas relataram uso positivo de IA', color: '#639922' },
+          { value: '6/8', label: 'usaram IA para sumarizaÃ§Ã£o de diffs e PRs', color: '#378ADD' },
+          { value: '~5%', label: 'aumento de vulnerabilidades sem supervisÃ£o', color: '#D4537E' },
+        ].map((stat, i) => (
+          <div key={i} style={{
+            background: `${stat.color}08`,
+            border: `1px solid ${stat.color}33`,
+            borderRadius: '10px', padding: '14px 16px',
+          }}>
+            <div style={{ fontSize: '24px', fontWeight: 700, color: stat.color, marginBottom: '4px' }}>
+              {stat.value}
+            </div>
+            <div style={{ fontSize: '11px', color: '#6b7280', lineHeight: 1.4 }}>
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Use cases grid */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+        gap: '12px',
+      }}>
+        {useCases.map(uc => (
+          <UseCaseCard key={uc.id} useCase={uc} />
+        ))}
+      </div>
+
+      {/* Footer note */}
+      <div style={{
+        marginTop: '24px', padding: '14px 18px',
+        background: '#F9FAFB', borderRadius: '10px',
+        border: '1px solid #e5e7eb',
+        fontSize: '12px', color: '#6b7280', lineHeight: 1.6,
+      }}>
+        <strong style={{ color: '#374151' }}>FundamentaÃ§Ã£o empÃ­rica:</strong> Os usos de IA descritos nesta seÃ§Ã£o derivam diretamente
+        das entrevistas com especialistas (P1â€“P8), categorizados como C6 â€” InteligÃªncia Artificial como apoio transversal â€”
+        e das observaÃ§Ãµes O11 e O12 do estudo qualitativo do MergeTrace.
+      </div>
+    </div>
+  );
+}

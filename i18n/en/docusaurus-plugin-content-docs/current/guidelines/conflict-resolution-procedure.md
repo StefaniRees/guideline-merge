@@ -1,26 +1,26 @@
 ---
 id: conflict-resolution-procedure
 title: Conflict Resolution Procedure
-description: Descreve práticas recomendadas para resolução colaborativa de conflitos, incluindo registro de decisões e aprendizado organizacional.
+description: Describes recommended practices for collaborative conflict resolution, including decision recording and organizational learning.
 ---
 
-## Descrição
-Descreve práticas recomendadas para resolução colaborativa de conflitos, incluindo registro de decisões e aprendizado organizacional. Reflete evidências sobre resolução em pares e coordenação entre squads.
+## Description
+Describes recommended practices for collaborative conflict resolution, including decision recording and organizational learning. Reflects evidence on pair resolution and coordination between squads.
 
-Atualizar a branch com main antes de pedir aprovação. Resolver conflitos usando ferramentas visuais. Registrar decisões importantes no histórico. Conflitos críticos: realizar merge colaborativo com os envolvidos.
+Update the branch with main before requesting approval. Resolve conflicts using visual tools. Record important decisions in the history. Critical conflicts: perform collaborative merge with those involved.
 
-## Artefatos Relacionados
-- [Histórico de Conflitos](/docs/artifacts/historico-conflitos)
+## Related Artifacts
+- [Conflict History](/docs/artifacts/historico-conflitos)
 - [Pull Request](/docs/artifacts/pull-request)
-- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- [Standardized Commits](/docs/artifacts/commits-padronizados)
 
-## Atividades Relacionadas
-- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+## Related Activities
+- [Resolve Merge Conflicts](/docs/activities/resolver-conflitos)
 
-## Papéis Envolvidos
+## Roles Involved
 - [Developer A](/docs/roles/developer-principal)
 - [Developer B](/docs/roles/developer-integrador)
-- [Mediador](/docs/roles/mediador)
+- [Mediator](/docs/roles/mediador)
 
-## Ferramentas
-- [Ferramentas de Resolução de Conflitos](/docs/tools)
+## Tools
+- [Conflict Resolution Tools](/docs/tools)

@@ -6,34 +6,34 @@ sidebar_position: 4
 
 import Checklist from '@site/src/components/Checklist';
 
-## Objetivo
-Avaliar colaborativamente a integração proposta, identificando riscos técnicos e de qualidade por meio de revisão com checklist estruturado.
+## Objective
+Collaboratively evaluate the proposed integration, identifying technical and quality risks through a structured checklist review.
 
-## Entradas (Required Artifacts)
-- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
-- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci) aprovado
+## Inputs (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) opened with filled template
+- [Build/CI Report](/docs/artifacts/relatorio-build-ci) approved
 
-## Saídas (Produced Artifacts)
-- Comentários de revisão
-- [Checklist de Revisão](/docs/artifacts/checklist-revisao) concluído
-- [Registro de Decisão](/docs/artifacts/registro-decisao)
+## Outputs (Produced Artifacts)
+- Review comments
+- Completed [Review Checklist](/docs/artifacts/checklist-revisao)
+- [Decision Record](/docs/artifacts/registro-decisao)
 
-## Papéis
-- **[Mediador](/docs/roles/mediador)** — conduz a revisão técnica, aplica o checklist e garante resolução completa dos comentários
+## Roles
+- **[Mediator](/docs/roles/mediador)** — conducts technical review, applies the checklist, and ensures complete resolution of comments
 
-## Atividades
-1. [Code Review](/docs/activities/code-review) — revisar PR com checklist técnico e colaborativo
-2. [Validar em Homologação (QA)](/docs/activities/qa-homologacao) — executar testes funcionais e regressão antes de avançar
-3. Garantir resolução completa dos comentários antes de avançar
+## Activities
+1. [Code Review](/docs/activities/code-review) — review PR with technical and collaborative checklist
+2. [Validate in Staging (QA)](/docs/activities/qa-homologacao) — run functional and regression tests before advancing
+3. Ensure complete resolution of comments before advancing
 
-## Critérios de Entrada
-- PR com template preenchido e pipeline CI/CD aprovado
+## Entry Criteria
+- PR with filled template and CI/CD pipeline approved
 
-## Critérios de Saída (Gate)
-- Checklist de revisão concluído + comentários resolvidos + decisões técnicas registradas
+## Exit Criteria (Gate)
+- Review checklist completed + comments resolved + technical decisions recorded
 
 ## Quality Gate
-**[Code Review Checklist](/docs/guidelines/code-review-checklist)** — critérios mínimos de revisão técnica contemplando estilo, impacto, testes, riscos e segurança devem ser atendidos antes de avançar para a fase de Approval.
+**[Code Review Checklist](/docs/guidelines/code-review-checklist)** — minimum technical review criteria covering style, impact, tests, risks, and security must be met before advancing to the Approval phase.
 
 ## Checklist
 <Checklist
@@ -41,30 +41,30 @@ Avaliar colaborativamente a integração proposta, identificando riscos técnico
   sections={[
     {
       id: 'entradas',
-      title: 'Pré-condições (Entradas)',
+      title: 'Pre-conditions (Inputs)',
       items: [
-        { id: 'pr-ok', label: 'PR aberto com template preenchido' },
-        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+        { id: 'pr-ok', label: 'PR opened with filled template' },
+        { id: 'cicd-ok', label: 'CI/CD pipeline approved' },
       ],
     },
     {
       id: 'execucao',
-      title: 'Execução',
+      title: 'Execution',
       items: [
-        { id: 'estilo', label: 'Estilo e convenções de código avaliados' },
-        { id: 'impacto', label: 'Impacto das mudanças analisado' },
-        { id: 'testes', label: 'Cobertura e qualidade dos testes verificadas' },
-        { id: 'riscos', label: 'Riscos técnicos identificados e registrados' },
-        { id: 'seguranca', label: 'Aspectos de segurança verificados' },
-        { id: 'decisoes', label: 'Decisões técnicas registradas' },
+        { id: 'estilo', label: 'Code style and conventions evaluated' },
+        { id: 'impacto', label: 'Impact of changes analyzed' },
+        { id: 'testes', label: 'Test coverage and quality verified' },
+        { id: 'riscos', label: 'Technical risks identified and recorded' },
+        { id: 'seguranca', label: 'Security aspects verified' },
+        { id: 'decisoes', label: 'Technical decisions recorded' },
       ],
     },
     {
       id: 'gate',
-      title: 'Quality Gate (Bloqueante)',
+      title: 'Quality Gate (Blocking)',
       items: [
-        { id: 'checklist-ok', label: 'Todos os critérios do Code Review Checklist atendidos' },
-        { id: 'comments-ok', label: 'Todos os comentários resolvidos antes da aprovação' },
+        { id: 'checklist-ok', label: 'All Code Review Checklist criteria met' },
+        { id: 'comments-ok', label: 'All comments resolved before approval' },
       ],
     },
   ]}

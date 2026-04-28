@@ -1,0 +1,770 @@
+﻿---
+id: approval
+title: Approval
+sidebar_position: 5
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Autorizar formalmente a integraÃ§Ã£o conforme polÃ­ticas da equipe, consolidando o registro de aprovaÃ§Ã£o antes do merge.
+
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) revisado com [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao) concluÃ­do
+- ComentÃ¡rios resolvidos
+- [RelatÃ³rio de QA](/docs/artifacts/relatorio-qa) disponÃ­vel
+
+## SaÃ­das (Produced Artifacts)
+- Registro de aprovaÃ§Ã£o
+- PR em estado aprovado
+
+## PapÃ©is
+- **[Mediador](/docs/roles/mediador)** â€” autoriza formalmente a integraÃ§Ã£o e garante cumprimento das polÃ­ticas de aprovaÃ§Ã£o
+
+## Atividades
+1. Verificar que todos os critÃ©rios de revisÃ£o foram atendidos
+2. Autorizar formalmente a integraÃ§Ã£o conforme polÃ­ticas da equipe
+
+## CritÃ©rios de Entrada
+- Checklist de revisÃ£o concluÃ­do; comentÃ¡rios resolvidos; pipeline CI/CD aprovado
+
+## CritÃ©rios de SaÃ­da (Gate)
+- Registro de aprovaÃ§Ã£o registrado + PR em estado aprovado
+
+## Quality Gate
+**[Approval Policy](/docs/guidelines/approval-policy)** â€” critÃ©rios mÃ­nimos de aprovaÃ§Ã£o atendidos, incluindo nÃºmero de revisores, papÃ©is envolvidos e exceÃ§Ãµes permitidas, antes de avanÃ§ar para a fase de Merge.
+
+## Checklist
+<Checklist
+  storageKey="phase-approval-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'checklist-ok', label: 'Checklist de revisÃ£o concluÃ­do' },
+        { id: 'comments-ok', label: 'Todos os comentÃ¡rios resolvidos' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'aprovacao-minima', label: 'AprovaÃ§Ã£o mÃ­nima atingida conforme polÃ­tica da equipe' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'approval-policy', label: 'Approval Policy satisfeita: critÃ©rios mÃ­nimos, papÃ©is e exceÃ§Ãµes verificados' },
+        { id: 'pr-aprovado', label: 'PR em estado aprovado e pronto para merge' },
+      ],
+    },
+  ]}
+/>
+---
+id: code-review
+title: Code Review
+sidebar_position: 4
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Avaliar colaborativamente a integraÃ§Ã£o proposta, identificando riscos tÃ©cnicos e de qualidade por meio de revisÃ£o com checklist estruturado.
+
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
+- [RelatÃ³rio de Build/CI](/docs/artifacts/relatorio-build-ci) aprovado
+
+## SaÃ­das (Produced Artifacts)
+- ComentÃ¡rios de revisÃ£o
+- [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao) concluÃ­do
+- [Registro de DecisÃ£o](/docs/artifacts/registro-decisao)
+
+## PapÃ©is
+- **[Mediador](/docs/roles/mediador)** â€” conduz a revisÃ£o tÃ©cnica, aplica o checklist e garante resoluÃ§Ã£o completa dos comentÃ¡rios
+
+## Atividades
+1. [Code Review](/docs/activities/code-review) â€” revisar PR com checklist tÃ©cnico e colaborativo
+2. [Validar em HomologaÃ§Ã£o (QA)](/docs/activities/qa-homologacao) â€” executar testes funcionais e regressÃ£o antes de avanÃ§ar
+3. Garantir resoluÃ§Ã£o completa dos comentÃ¡rios antes de avanÃ§ar
+
+## CritÃ©rios de Entrada
+- PR com template preenchido e pipeline CI/CD aprovado
+
+## CritÃ©rios de SaÃ­da (Gate)
+- Checklist de revisÃ£o concluÃ­do + comentÃ¡rios resolvidos + decisÃµes tÃ©cnicas registradas
+
+## Quality Gate
+**[Code Review Checklist](/docs/guidelines/code-review-checklist)** â€” critÃ©rios mÃ­nimos de revisÃ£o tÃ©cnica contemplando estilo, impacto, testes, riscos e seguranÃ§a devem ser atendidos antes de avanÃ§ar para a fase de Approval.
+
+## Checklist
+<Checklist
+  storageKey="phase-cr-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'pr-ok', label: 'PR aberto com template preenchido' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'estilo', label: 'Estilo e convenÃ§Ãµes de cÃ³digo avaliados' },
+        { id: 'impacto', label: 'Impacto das mudanÃ§as analisado' },
+        { id: 'testes', label: 'Cobertura e qualidade dos testes verificadas' },
+        { id: 'riscos', label: 'Riscos tÃ©cnicos identificados e registrados' },
+        { id: 'seguranca', label: 'Aspectos de seguranÃ§a verificados' },
+        { id: 'decisoes', label: 'DecisÃµes tÃ©cnicas registradas' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'checklist-ok', label: 'Todos os critÃ©rios do Code Review Checklist atendidos' },
+        { id: 'comments-ok', label: 'Todos os comentÃ¡rios resolvidos antes da aprovaÃ§Ã£o' },
+      ],
+    },
+  ]}
+/>
+---
+id: desenvolvimento
+title: Desenvolvimento
+sidebar_position: 2
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Implementar mudanÃ§as de forma incremental e sincronizada, reduzindo conflitos acumulados por meio de commits atÃ´micos, sincronizaÃ§Ã£o frequente e validaÃ§Ãµes locais.
+
+## Entradas (Required Artifacts)
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
+- ConvenÃ§Ã£o de mensagens de commit estabelecida
+
+## SaÃ­das (Produced Artifacts)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- Branch atualizada
+- EvidÃªncias de testes locais
+
+## PapÃ©is
+- **[Developer A](/docs/roles/developer-principal)** â€” implementa mudanÃ§as, realiza commits atÃ´micos e sincroniza branch
+- **[Developer B](/docs/roles/developer-integrador)** â€” co-responsÃ¡vel pela implementaÃ§Ã£o e sincronizaÃ§Ã£o
+
+## Atividades
+1. [Implementar MudanÃ§as](/docs/activities/implementar-mudancas) com commits atÃ´micos (1 mudanÃ§a lÃ³gica por commit)
+2. Sincronizar branch com `main` regularmente (merge/rebase periÃ³dico)
+3. Executar testes locais
+
+## CritÃ©rios de Entrada
+- Branch criada, escopo definido e convenÃ§Ã£o de commits estabelecida
+
+## CritÃ©rios de SaÃ­da (Gate)
+- Testes locais aprovados; branch atualizada; commits padronizados
+
+## Quality Gate
+**[Commit Message Convention](/docs/guidelines/commit-message-convention)** â€” todas as mensagens de commit seguem o padrÃ£o definido antes de avanÃ§ar para a fase de Pull Request.
+
+## Checklist
+<Checklist
+  storageKey="phase-desenvolvimento-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'branch-ativa', label: 'Branch de atividade ativa e atualizada' },
+        { id: 'commit-conv', label: 'ConvenÃ§Ã£o de mensagens de commit jÃ¡ estabelecida' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'atomic', label: 'Commits pequenos e atÃ´micos (1 mudanÃ§a lÃ³gica)' },
+        { id: 'sync', label: 'Branch sincronizada com main (merge/rebase)' },
+        { id: 'testes', label: 'Testes locais executados' },
+        { id: 'evidencias', label: 'EvidÃªncias de testes locais registradas' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'conv-commits', label: 'Mensagens de commit seguem Conventional Commits + ID do ticket' },
+      ],
+    },
+  ]}
+/>
+---
+id: phases
+title: Fases
+slug: /phases
+sidebar_position: 4
+description: Fases operacionais do fluxo de merge no MergeTrace.
+---
+
+import PhasesOverview from '@site/src/components/PhasesOverview';
+
+# Fases
+
+<PhasesOverview />
+---
+id: merge
+title: Merge
+sidebar_position: 6
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Integrar a branch aprovada Ã  principal de forma controlada e auditÃ¡vel, resolvendo conflitos de forma colaborativa e consolidando a versÃ£o integrada.
+
+## Entradas (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aprovado
+- [RelatÃ³rio de QA](/docs/artifacts/relatorio-qa)
+- Branch sincronizada com main
+
+## SaÃ­das (Produced Artifacts)
+- Merge commit ou squash
+- Build de integraÃ§Ã£o
+- [HistÃ³rico de Conflitos](/docs/artifacts/historico-conflitos)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados) de resoluÃ§Ã£o
+- [Release Notes](/docs/artifacts/release-notes)
+
+## PapÃ©is
+- **[Mediador](/docs/roles/mediador)** â€” coordena a integraÃ§Ã£o, apoia resoluÃ§Ã£o de conflitos e garante rastreabilidade
+- **[Developer A](/docs/roles/developer-principal)** â€” apoia resoluÃ§Ã£o de conflitos quando necessÃ¡rio
+- **[Developer B](/docs/roles/developer-integrador)** â€” apoia resoluÃ§Ã£o de conflitos quando necessÃ¡rio
+
+## Atividades
+1. [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos) â€” identificar e resolver conflitos entre branch e main
+2. Registrar causas, decisÃµes e histÃ³rico de resoluÃ§Ã£o
+3. [Merge Final](/docs/activities/merge-final) â€” integrar branch na main/release apÃ³s aprovaÃ§Ãµes
+4. Consolidar versÃ£o integrada e gerar Release Notes
+5. Executar build de integraÃ§Ã£o
+
+## CritÃ©rios de Entrada
+- PR aprovado; RelatÃ³rio de QA disponÃ­vel; pipeline CI/CD aprovado
+
+## CritÃ©rios de SaÃ­da (Gate)
+- Conflitos resolvidos e registrados + build de integraÃ§Ã£o aprovado + Release Notes geradas
+
+## Quality Gate
+**[Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)** â€” conflitos identificados, resolvidos colaborativamente, com causas, decisÃµes e histÃ³rico registrados antes de avanÃ§ar para Release/Deploy.
+
+## Checklist
+<Checklist
+  storageKey="phase-merge-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'pr-aprovado', label: 'PR aprovado e RelatÃ³rio de QA disponÃ­vel' },
+        { id: 'branch-sync', label: 'Branch atualizada imediatamente antes do merge' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'conflicts', label: 'Conflitos identificados e resolvidos colaborativamente' },
+        { id: 'historico', label: 'Causas, decisÃµes e histÃ³rico de resoluÃ§Ã£o registrados' },
+        { id: 'build', label: 'Build de integraÃ§Ã£o executado' },
+        { id: 'release-notes', label: 'Release Notes geradas' },
+        { id: 'trace', label: 'Rastreabilidade ticket â†” PR â†” merge garantida' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'conflicts-ok', label: 'Todos os conflitos resolvidos e registrados antes de avanÃ§ar' },
+        { id: 'build-ok', label: 'Build de integraÃ§Ã£o aprovado' },
+      ],
+    },
+  ]}
+/>
+---
+id: planejamento
+title: Planejamento
+sidebar_position: 1
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Preparar condiÃ§Ãµes para um merge seguro: definir branch, escopo e convenÃ§Ãµes; reduzir risco de conflitos com atualizaÃ§Ã£o contÃ­nua.
+
+## Entradas (Required Artifacts)
+- [Ticket/issue](/docs/artifacts/branch-atividade) definido e priorizado
+- ConvenÃ§Ã£o de branch e commits estabelecida
+
+## SaÃ­das (Produced Artifacts)
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
+
+## PapÃ©is
+- **[Developer A](/docs/roles/developer-principal)** â€” cria branch, define plano de sync, realiza commits padronizados
+- **[Developer B](/docs/roles/developer-integrador)** â€” co-responsÃ¡vel pela branch e sincronizaÃ§Ã£o
+- **[Mediador](/docs/roles/mediador)** â€” valida convenÃ§Ãµes e sinaliza riscos
+
+## Atividades
+1. [Criar Branch](/docs/activities/criar-branch) a partir de `main`/homologaÃ§Ã£o (`feature/`, `bugfix/`, `hotfix/`)
+2. Definir escopo e responsÃ¡veis
+3. Atualizar frequentemente a branch com a principal (merge/rebase periÃ³dico)
+4. Realizar commits padronizados (prÃ©-PR)
+
+
+## Quality Gate
+**[Branch Naming Convention](/docs/guidelines/branch-naming-convention)** â€” branch vÃ¡lida com prefixo, ID do ticket e plano de sincronizaÃ§Ã£o registrado antes de avanÃ§ar para a fase de Desenvolvimento.
+
+## Checklist
+<Checklist
+  storageKey="phase-planejamento-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'ticket', label: 'Ticket/issue priorizado e vinculado Ã  branch' },
+        { id: 'commit-convention', label: 'ConvenÃ§Ã£o de mensagens de commit jÃ¡ estabelecida' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'branch', label: 'Branch criada com prefixo correto e ID do ticket' },
+        { id: 'sync', label: 'Plano de sincronizaÃ§Ã£o definido' },
+        { id: 'risks', label: 'Ãreas/mÃ³dulos sensÃ­veis mapeados' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'mediador', label: 'ConvenÃ§Ãµes validadas pelo mediador antes de avanÃ§ar' },
+      ],
+    },
+  ]}
+/>
+---
+id: pull-request
+title: Pull Request (PR)
+sidebar_position: 3
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Formalizar a solicitaÃ§Ã£o de integraÃ§Ã£o e consolidar informaÃ§Ãµes para revisÃ£o colaborativa, concentrando contexto, impacto, riscos e evidÃªncias de teste.
+
+## Entradas (Required Artifacts)
+- [Branch de Atividade](/docs/artifacts/branch-atividade) com [commits padronizados](/docs/artifacts/commits-padronizados)
+- Testes locais aprovados
+
+## SaÃ­das (Produced Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) aberto com template preenchido
+- [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao) preenchido
+- Ticket vinculado ao PR
+- Diffs de cÃ³digo disponÃ­veis para revisÃ£o
+- [RelatÃ³rio de Build/CI](/docs/artifacts/relatorio-build-ci)
+
+## PapÃ©is
+- **[Developer A](/docs/roles/developer-principal)** â€” abre o PR, preenche o template, vincula ticket e evidÃªncias
+- **[Developer B](/docs/roles/developer-integrador)** â€” co-responsÃ¡vel pelo PR e evidÃªncias de teste
+
+## Atividades
+1. [Abrir Pull Request](/docs/activities/abrir-pr) com contexto, impacto, riscos e evidÃªncias utilizando o template obrigatÃ³rio
+2. Preencher checklist de PR
+3. Vincular ticket/issue ao PR
+4. [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd) â€” build, testes automatizados, anÃ¡lise estÃ¡tica, cobertura mÃ­nima
+
+## CritÃ©rios de Entrada
+- Branch atualizada; commits padronizados; testes locais aprovados
+
+## CritÃ©rios de SaÃ­da (Gate)
+- Template preenchido + ticket vinculado + pipeline CI/CD aprovado
+
+## Quality Gates
+- **[Pull Request Template](/docs/guidelines/pull-request-template)** â€” PR deve conter contexto, impacto, riscos e evidÃªncias de teste antes de avanÃ§ar para Code Review
+- **[CI/CD Quality Gates](/docs/guidelines/cicd-quality-gates)** â€” pipeline deve passar antes de solicitar revisÃ£o
+
+## Checklist
+<Checklist
+  storageKey="phase-pr-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'branch-ok', label: 'Branch atualizada com main e commits padronizados' },
+        { id: 'testes-locais', label: 'Testes locais aprovados' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'template', label: 'PR aberto com template preenchido (contexto, impacto, riscos, evidÃªncias)' },
+        { id: 'checklist', label: 'Checklist de PR preenchido' },
+        { id: 'ticket', label: 'Ticket/issue vinculado ao PR' },
+        { id: 'diffs', label: 'Diffs de cÃ³digo disponÃ­veis para revisÃ£o' },
+        { id: 'cicd', label: 'Pipeline CI/CD executado (build, testes, anÃ¡lise estÃ¡tica, cobertura)' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gates (Bloqueantes)',
+      items: [
+        { id: 'pr-template-ok', label: 'Template do PR preenchido completamente antes de solicitar revisÃ£o' },
+        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado sem falhas bloqueantes' },
+      ],
+    },
+  ]}
+/>
+---
+title: Release / Deploy
+sidebar_position: 7
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Disponibilizar a versÃ£o integrada e monitorar seu comportamento em produÃ§Ã£o, garantindo rastreabilidade da liberaÃ§Ã£o.
+
+## Entradas (Required Artifacts)
+- Merge concluÃ­do
+- Release Notes geradas
+
+## SaÃ­das (Produced Artifacts)
+- Release implantada
+- Release Notes publicadas
+- Logs de deploy e monitoramento
+
+## PapÃ©is
+- **Developer A** â€” responsÃ¡vel pelo deploy e geraÃ§Ã£o de evidÃªncias
+- **Developer B** â€” co-responsÃ¡vel pelo deploy e monitoramento
+- **Mediador** â€” valida evidÃªncias e garante rastreabilidade da liberaÃ§Ã£o
+
+## Atividades
+1. Gerar e publicar Release Notes.
+2. Realizar deploy via pipeline.
+3. Monitorar comportamento pÃ³s-deploy e registrar logs.
+
+## CritÃ©rios de Entrada
+- Merge concluÃ­do; Release Notes disponÃ­veis
+
+## CritÃ©rios de SaÃ­da (Gate)
+- Release implantada + logs de deploy registrados + Release Notes publicadas
+
+## Quality Gate
+**Release Notes Standard** â€” Release Notes padronizadas geradas e publicadas, comunicando mudanÃ§as, riscos e componentes afetados antes de avanÃ§ar para encerramento ou Rollback.
+
+## Checklist
+<Checklist
+  storageKey="phase-release-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'merge-ok', label: 'Merge concluÃ­do com build de integraÃ§Ã£o aprovado' },
+        { id: 'notes-prontas', label: 'Release Notes geradas' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'notes', label: 'Release Notes publicadas' },
+        { id: 'pipeline', label: 'Deploy realizado via pipeline' },
+        { id: 'logs', label: 'Logs de deploy registrados' },
+        { id: 'monitor', label: 'Monitoramento pÃ³s-deploy executado' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'notes-ok', label: 'Release Notes padronizadas publicadas conforme Release Notes Standard' },
+        { id: 'deploy-ok', label: 'Release implantada e logs de monitoramento registrados' },
+      ],
+    },
+  ]}
+/>
+---
+id: rollback
+title: Rollback
+sidebar_position: 8
+---
+
+import Checklist from '@site/src/components/Checklist';
+
+## Objetivo
+Reverter rapidamente a integraÃ§Ã£o quando necessÃ¡rio, preservando rastreabilidade e registrando o incidente para aprendizado organizacional.
+
+## Entradas (Required Artifacts)
+- Plano de rollback disponÃ­vel
+- Commit ou versÃ£o anterior identificada
+
+## SaÃ­das (Produced Artifacts)
+- IntegraÃ§Ã£o revertida
+- [Registro de Incidente](/docs/artifacts/historico-conflitos)
+
+## PapÃ©is
+- **[Developer A](/docs/roles/developer-principal)** â€” executa a reversÃ£o e registra o incidente
+- **[Developer B](/docs/roles/developer-integrador)** â€” apoia a execuÃ§Ã£o da reversÃ£o
+- **[Mediador](/docs/roles/mediador)** â€” coordena o processo de reversÃ£o e garante rastreabilidade
+
+## Atividades
+1. Executar reversÃ£o de forma controlada e auditÃ¡vel
+2. Registrar incidente com causas, impacto e decisÃµes adotadas
+3. Realizar anÃ¡lise pÃ³s-falha
+
+## CritÃ©rios de Entrada
+- Incidente ou risco identificado que justifique a reversÃ£o
+
+## CritÃ©rios de SaÃ­da (Gate)
+- ReversÃ£o executada + registro de incidente concluÃ­do
+
+## Quality Gate
+**[Rollback Strategy](/docs/guidelines/rollback-strategy)** â€” reversÃ£o executada de forma controlada com registro de incidente e anÃ¡lise pÃ³s-falha antes de encerrar o ciclo.
+
+## Ferramentas
+- [Controle de VersÃ£o](/docs/tools)
+
+## Checklist
+<Checklist
+  storageKey="phase-rollback-v1"
+  sections={[
+    {
+      id: 'entradas',
+      title: 'PrÃ©-condiÃ§Ãµes (Entradas)',
+      items: [
+        { id: 'plano', label: 'Plano de rollback disponÃ­vel' },
+        { id: 'versao', label: 'Commit ou versÃ£o anterior identificada' },
+      ],
+    },
+    {
+      id: 'execucao',
+      title: 'ExecuÃ§Ã£o',
+      items: [
+        { id: 'rollback', label: 'ReversÃ£o executada de forma controlada e auditÃ¡vel' },
+        { id: 'incidente', label: 'Registro de incidente concluÃ­do (causas, impacto, decisÃµes)' },
+        { id: 'pos-falha', label: 'AnÃ¡lise pÃ³s-falha realizada' },
+      ],
+    },
+    {
+      id: 'gate',
+      title: 'Quality Gate (Bloqueante)',
+      items: [
+        { id: 'rollback-ok', label: 'ReversÃ£o executada e rastreabilidade preservada' },
+        { id: 'registro-ok', label: 'Registro de incidente concluÃ­do antes de encerrar o ciclo' },
+      ],
+    },
+  ]}
+/>
+{
+  "label": "Fases",
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "phases"
+  }
+}
+---
+id: tools
+title: Ferramentas e Ambientes de Suporte
+slug: /tools
+sidebar_position: 5
+description: Ferramentas que suportam cada fase do processo de merge no MergeTrace.
+---
+
+import ToolsByPhase from '@site/src/components/ToolsByPhase';
+
+# Ferramentas e Ambientes de Suporte
+
+<ToolsByPhase />
+{
+  "label": "Ferramentas",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Ferramentas utilizadas no processo de merge",
+    "description": "Conjunto de ferramentas tÃ©cnicas que dÃ£o suporte operacional e analÃ­tico ao processo de merge de software. Incluem ambientes de controle de versÃ£o, plataformas de integraÃ§Ã£o contÃ­nua, mecanismos de revisÃ£o de cÃ³digo e recursos de automaÃ§Ã£o, possibilitando rastreabilidade, qualidade e governanÃ§a das atividades de integraÃ§Ã£o.",
+    "slug": "/tools"
+  }
+}
+---
+id: ia
+title: IA no MergeTrace
+slug: /ia
+sidebar_position: 7
+description: InteligÃªncia Artificial como apoio transversal ao processo de merge.
+---
+
+import IASection from '@site/src/components/IASection';
+
+# IA no MergeTrace
+
+<IASection />
+{
+  "label": "Comunidade de Especialistas",
+  "position": 99,
+  "link": {
+    "type": "generated-index",
+    "title": "AplicaÃ§Ãµes de Boas PrÃ¡ticas para o Fluxo de Merge",
+    "description": "Propostas de tÃ©cnicas utilizando InteligÃªncia Artificial para apoiar, de forma responsÃ¡vel e fundamentada, atividades de integraÃ§Ã£o e resoluÃ§Ã£o de conflitos em fluxos de desenvolvimento de software.",
+    "slug": "/ia"
+  }
+}
+---
+id: core-principles
+title: Core Principles
+slug: /welcome/core-principles
+sidebar_position: 2
+description: Quatro princÃ­pios fundamentais do MergeTrace que orientam decisÃµes, papÃ©is e qualidade.
+---
+
+import CorePrinciples from '@site/src/components/CorePrinciples';
+
+# Core Principles
+
+<CorePrinciples />
+---
+id: disciplines
+title: Disciplines
+slug: /welcome/disciplines
+sidebar_position: 7
+description: Disciplinas que organizam as atividades do MergeTrace, promovendo rastreabilidade, qualidade e governanÃ§a leve.
+---
+
+import Disciplines from '@site/src/components/Disciplines';
+
+# Disciplines
+
+<Disciplines />
+---
+id: getting-started
+title: Getting Started
+slug: /welcome/getting-started
+sidebar_position: 2
+description: Primeiros passos para adoÃ§Ã£o do guideline MergeTrace.
+---
+
+import GettingStarted from '@site/src/components/GettingStarted';
+
+# Getting Started
+
+<GettingStarted />
+---
+id: welcome
+title: Welcome
+slug: /welcome
+sidebar_position: 1
+description: Porta de entrada do guideline MergeTrace â€” visÃ£o geral, fundamentos e navegaÃ§Ã£o.
+---
+
+import WelcomeOverview from '@site/src/components/WelcomeOverview';
+
+# Welcome
+
+<WelcomeOverview />
+---
+id: IntroduÃ§Ã£o
+title: IntroduÃ§Ã£o ao MergeTrace
+sidebar_position: 1
+slug: /welcome/introduction
+description: VisÃ£o geral do guideline MergeTrace com links rÃ¡pidos, cards e consideraÃ§Ãµes principais.
+---
+
+import IntroOverview from '@site/src/components/IntroOverview';
+
+# IntroduÃ§Ã£o ao MergeTrace
+
+<IntroOverview />
+---
+id: Iteration-lifecycle
+title: Iteration Lifecycle
+slug: /welcome/iteration-lifecycle
+sidebar_position: 3
+description: Ciclo de vida da iteraÃ§Ã£o no MergeTrace com roteiro, quality gates e mÃ©tricas.
+---
+
+import IterationLifecycle from '@site/src/components/IterationLifecycle';
+
+# Iteration Lifecycle
+
+<IterationLifecycle />
+---
+id: micro-increments
+title: Micro-Increments
+slug: /welcome/micro-increments
+sidebar_position: 4
+description: Unidade mÃ­nima de valor no MergeTrace â€” PRs pequenos, rastreÃ¡veis e validados por quality gates.
+---
+
+import MicroIncrements from '@site/src/components/MicroIncrements';
+
+# Micro-Increments
+
+<MicroIncrements />
+---
+id: project-lifecycle
+title: Project Lifecycle
+slug: /welcome/project-lifecycle
+sidebar_position: 5
+description: Ciclo de vida do projeto no MergeTrace com 4 fases, marcos e critÃ©rios objetivos de saÃ­da.
+---
+
+import ProjectLifecycle from '@site/src/components/ProjectLifecycle';
+
+# Project Lifecycle
+
+<ProjectLifecycle />
+---
+id: roles
+title: Roles
+slug: /welcome/roles
+sidebar_position: 6
+description: PapÃ©is colaborativos no MergeTrace â€” Developer A, Developer B e Mediador.
+---
+
+import WelcomeRoles from '@site/src/components/WelcomeRoles';
+
+# Roles
+
+<WelcomeRoles />
+---
+id: work-products
+title: Work Products
+slug: /welcome/work-products
+sidebar_position: 8
+description: Artefatos rastreÃ¡veis do MergeTrace â€” o que sÃ£o, onde vivem e como se conectam a fases, papÃ©is e atividades.
+---
+
+import WorkProducts from '@site/src/components/WorkProducts';
+
+# Work Products
+
+<WorkProducts />
+{
+  "label": "Welcome",
+  "position": 1,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "welcome"
+  }
+}

@@ -1,24 +1,24 @@
 ---
 id: code-review-checklist
 title: Code Review Checklist
-description: Fornece critérios mínimos para revisão técnica, contemplando estilo, impacto, testes, riscos e segurança.
+description: Provides minimum criteria for technical review, covering style, impact, tests, risks, and security.
 ---
 
-## Descrição
-Fornece critérios mínimos para revisão técnica, contemplando estilo, impacto, testes, riscos e segurança. Endereça a centralidade da revisão humana como principal barreira de qualidade e reforça a coordenação entre papéis.
+## Description
+Provides minimum criteria for technical review, covering style, impact, tests, risks, and security. Addresses the centrality of human review as the main quality barrier and reinforces coordination between roles.
 
-Itens mínimos: corretude, testes incluídos ou atualizados, segurança, estilo e convenções, impacto em outros módulos.
+Minimum items: correctness, tests included or updated, security, style and conventions, impact on other modules.
 
-## Artefatos Relacionados
+## Related Artifacts
 - [Pull Request](/docs/artifacts/pull-request)
-- [Checklist de Revisão](/docs/artifacts/checklist-revisao)
-- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
+- [Review Checklist](/docs/artifacts/checklist-revisao)
+- [Build/CI Report](/docs/artifacts/relatorio-build-ci)
 
-## Atividades Relacionadas
+## Related Activities
 - [Code Review](/docs/activities/code-review)
 
-## Papéis Envolvidos
-- [Mediador](/docs/roles/mediador)
+## Roles Involved
+- [Mediator](/docs/roles/mediador)
 
-## Ferramentas
-- [Ferramentas de Análise de Código](/docs/tools)
+## Tools
+- [Code Analysis Tools](/docs/tools)

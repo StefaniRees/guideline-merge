@@ -6,41 +6,41 @@ sidebar_position: 6
 
 import Checklist from '@site/src/components/Checklist';
 
-## Objetivo
-Integrar a branch aprovada à principal de forma controlada e auditável, resolvendo conflitos de forma colaborativa e consolidando a versão integrada.
+## Objective
+Integrate the approved branch into the main in a controlled and auditable manner, resolving conflicts collaboratively and consolidating the integrated version.
 
-## Entradas (Required Artifacts)
-- [Pull Request](/docs/artifacts/pull-request) aprovado
-- [Relatório de QA](/docs/artifacts/relatorio-qa)
-- Branch sincronizada com main
+## Inputs (Required Artifacts)
+- Approved [Pull Request](/docs/artifacts/pull-request)
+- [QA Report](/docs/artifacts/relatorio-qa)
+- Branch synced with main
 
-## Saídas (Produced Artifacts)
-- Merge commit ou squash
-- Build de integração
-- [Histórico de Conflitos](/docs/artifacts/historico-conflitos)
-- [Commits Padronizados](/docs/artifacts/commits-padronizados) de resolução
+## Outputs (Produced Artifacts)
+- Merge commit or squash
+- Integration build
+- [Conflict History](/docs/artifacts/historico-conflitos)
+- Resolution [Standardized Commits](/docs/artifacts/commits-padronizados)
 - [Release Notes](/docs/artifacts/release-notes)
 
-## Papéis
-- **[Mediador](/docs/roles/mediador)** — coordena a integração, apoia resolução de conflitos e garante rastreabilidade
-- **[Developer A](/docs/roles/developer-principal)** — apoia resolução de conflitos quando necessário
-- **[Developer B](/docs/roles/developer-integrador)** — apoia resolução de conflitos quando necessário
+## Roles
+- **[Mediator](/docs/roles/mediador)** — coordinates integration, supports conflict resolution, and ensures traceability
+- **[Developer A](/docs/roles/developer-principal)** — supports conflict resolution when needed
+- **[Developer B](/docs/roles/developer-integrador)** — supports conflict resolution when needed
 
-## Atividades
-1. [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos) — identificar e resolver conflitos entre branch e main
-2. Registrar causas, decisões e histórico de resolução
-3. [Merge Final](/docs/activities/merge-final) — integrar branch na main/release após aprovações
-4. Consolidar versão integrada e gerar Release Notes
-5. Executar build de integração
+## Activities
+1. [Resolve Merge Conflicts](/docs/activities/resolver-conflitos) — identify and resolve conflicts between branch and main
+2. Record causes, decisions, and resolution history
+3. [Final Merge](/docs/activities/merge-final) — integrate branch into main/release after approvals
+4. Consolidate integrated version and generate Release Notes
+5. Run integration build
 
-## Critérios de Entrada
-- PR aprovado; Relatório de QA disponível; pipeline CI/CD aprovado
+## Entry Criteria
+- PR approved; QA Report available; CI/CD pipeline approved
 
-## Critérios de Saída (Gate)
-- Conflitos resolvidos e registrados + build de integração aprovado + Release Notes geradas
+## Exit Criteria (Gate)
+- Conflicts resolved and recorded + integration build approved + Release Notes generated
 
 ## Quality Gate
-**[Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)** — conflitos identificados, resolvidos colaborativamente, com causas, decisões e histórico registrados antes de avançar para Release/Deploy.
+**[Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)** — conflicts identified, resolved collaboratively, with causes, decisions, and history recorded before advancing to Release/Deploy.
 
 ## Checklist
 <Checklist
@@ -48,30 +48,30 @@ Integrar a branch aprovada à principal de forma controlada e auditável, resolv
   sections={[
     {
       id: 'entradas',
-      title: 'Pré-condições (Entradas)',
+      title: 'Pre-conditions (Inputs)',
       items: [
-        { id: 'pr-aprovado', label: 'PR aprovado e Relatório de QA disponível' },
-        { id: 'branch-sync', label: 'Branch atualizada imediatamente antes do merge' },
-        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+        { id: 'pr-aprovado', label: 'PR approved and QA Report available' },
+        { id: 'branch-sync', label: 'Branch updated immediately before merge' },
+        { id: 'cicd-ok', label: 'CI/CD pipeline approved' },
       ],
     },
     {
       id: 'execucao',
-      title: 'Execução',
+      title: 'Execution',
       items: [
-        { id: 'conflicts', label: 'Conflitos identificados e resolvidos colaborativamente' },
-        { id: 'historico', label: 'Causas, decisões e histórico de resolução registrados' },
-        { id: 'build', label: 'Build de integração executado' },
-        { id: 'release-notes', label: 'Release Notes geradas' },
-        { id: 'trace', label: 'Rastreabilidade ticket ↔ PR ↔ merge garantida' },
+        { id: 'conflicts', label: 'Conflicts identified and resolved collaboratively' },
+        { id: 'historico', label: 'Causes, decisions, and resolution history recorded' },
+        { id: 'build', label: 'Integration build run' },
+        { id: 'release-notes', label: 'Release Notes generated' },
+        { id: 'trace', label: 'Traceability ticket ↔ PR ↔ merge ensured' },
       ],
     },
     {
       id: 'gate',
-      title: 'Quality Gate (Bloqueante)',
+      title: 'Quality Gate (Blocking)',
       items: [
-        { id: 'conflicts-ok', label: 'Todos os conflitos resolvidos e registrados antes de avançar' },
-        { id: 'build-ok', label: 'Build de integração aprovado' },
+        { id: 'conflicts-ok', label: 'All conflicts resolved and recorded before advancing' },
+        { id: 'build-ok', label: 'Integration build approved' },
       ],
     },
   ]}

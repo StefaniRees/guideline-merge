@@ -6,38 +6,38 @@ sidebar_position: 8
 
 import Checklist from '@site/src/components/Checklist';
 
-## Objetivo
-Reverter rapidamente a integração quando necessário, preservando rastreabilidade e registrando o incidente para aprendizado organizacional.
+## Objective
+Quickly revert the integration when necessary, preserving traceability and recording the incident for organizational learning.
 
-## Entradas (Required Artifacts)
-- Plano de rollback disponível
-- Commit ou versão anterior identificada
+## Inputs (Required Artifacts)
+- Rollback plan available
+- Previous commit or version identified
 
-## Saídas (Produced Artifacts)
-- Integração revertida
-- [Registro de Incidente](/docs/artifacts/historico-conflitos)
+## Outputs (Produced Artifacts)
+- Integration reverted
+- [Incident Record](/docs/artifacts/historico-conflitos)
 
-## Papéis
-- **[Developer A](/docs/roles/developer-principal)** — executa a reversão e registra o incidente
-- **[Developer B](/docs/roles/developer-integrador)** — apoia a execução da reversão
-- **[Mediador](/docs/roles/mediador)** — coordena o processo de reversão e garante rastreabilidade
+## Roles
+- **[Developer A](/docs/roles/developer-principal)** — executes the reversion and records the incident
+- **[Developer B](/docs/roles/developer-integrador)** — supports the reversion execution
+- **[Mediator](/docs/roles/mediador)** — coordinates the reversion process and ensures traceability
 
-## Atividades
-1. Executar reversão de forma controlada e auditável
-2. Registrar incidente com causas, impacto e decisões adotadas
-3. Realizar análise pós-falha
+## Activities
+1. Execute reversion in a controlled and auditable manner
+2. Record incident with causes, impact, and decisions made
+3. Perform post-failure analysis
 
-## Critérios de Entrada
-- Incidente ou risco identificado que justifique a reversão
+## Entry Criteria
+- Incident or risk identified that justifies the reversion
 
-## Critérios de Saída (Gate)
-- Reversão executada + registro de incidente concluído
+## Exit Criteria (Gate)
+- Reversion executed + incident record completed
 
 ## Quality Gate
-**[Rollback Strategy](/docs/guidelines/rollback-strategy)** — reversão executada de forma controlada com registro de incidente e análise pós-falha antes de encerrar o ciclo.
+**[Rollback Strategy](/docs/guidelines/rollback-strategy)** — reversion executed in a controlled manner with incident record and post-failure analysis before closing the cycle.
 
-## Ferramentas
-- [Controle de Versão](/docs/tools)
+## Tools
+- [Version Control](/docs/tools)
 
 ## Checklist
 <Checklist
@@ -45,27 +45,27 @@ Reverter rapidamente a integração quando necessário, preservando rastreabilid
   sections={[
     {
       id: 'entradas',
-      title: 'Pré-condições (Entradas)',
+      title: 'Pre-conditions (Inputs)',
       items: [
-        { id: 'plano', label: 'Plano de rollback disponível' },
-        { id: 'versao', label: 'Commit ou versão anterior identificada' },
+        { id: 'plano', label: 'Rollback plan available' },
+        { id: 'versao', label: 'Previous commit or version identified' },
       ],
     },
     {
       id: 'execucao',
-      title: 'Execução',
+      title: 'Execution',
       items: [
-        { id: 'rollback', label: 'Reversão executada de forma controlada e auditável' },
-        { id: 'incidente', label: 'Registro de incidente concluído (causas, impacto, decisões)' },
-        { id: 'pos-falha', label: 'Análise pós-falha realizada' },
+        { id: 'rollback', label: 'Reversion executed in a controlled and auditable manner' },
+        { id: 'incidente', label: 'Incident record completed (causes, impact, decisions)' },
+        { id: 'pos-falha', label: 'Post-failure analysis performed' },
       ],
     },
     {
       id: 'gate',
-      title: 'Quality Gate (Bloqueante)',
+      title: 'Quality Gate (Blocking)',
       items: [
-        { id: 'rollback-ok', label: 'Reversão executada e rastreabilidade preservada' },
-        { id: 'registro-ok', label: 'Registro de incidente concluído antes de encerrar o ciclo' },
+        { id: 'rollback-ok', label: 'Reversion executed and traceability preserved' },
+        { id: 'registro-ok', label: 'Incident record completed before closing the cycle' },
       ],
     },
   ]}

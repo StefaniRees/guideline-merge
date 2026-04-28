@@ -1,0 +1,302 @@
+﻿---
+id: approval
+title: Approval â€“ Checklist
+slug: /templates/approval
+sidebar_position: 23
+description: Checklist para formalizar critÃ©rios de aprovaÃ§Ã£o do PR no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Approval â€“ Checklist
+
+> **PropÃ³sito:** Formalizar critÃ©rios de aprovaÃ§Ã£o do PR.
+>
+> **Entradas (Required Artifacts):** PR revisado; Checklist de revisÃ£o concluÃ­do; ComentÃ¡rios resolvidos
+>
+> **SaÃ­das (Produced Artifacts):** Registro de aprovaÃ§Ã£o; PR em estado aprovado
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] Checklist de revisÃ£o concluÃ­do
+- [ ] Todos os comentÃ¡rios resolvidos
+- [ ] Pipeline CI/CD aprovado
+
+## ExecuÃ§Ã£o
+- [ ] AprovaÃ§Ã£o mÃ­nima atingida conforme polÃ­tica da equipe
+- [ ] Ticket/issue vinculado ao PR
+- [ ] Registro de aprovaÃ§Ã£o gerado
+
+## Quality Gate (Bloqueante)
+- [ ] Approval Policy satisfeita: critÃ©rios mÃ­nimos, papÃ©is e exceÃ§Ãµes verificados
+- [ ] PR em estado aprovado e pronto para merge
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/approval-checklist.docx" label="BAIXAR CHECKLIST â€” APPROVAL" />
+---
+id: code-review
+title: Code Review â€“ Checklist
+slug: /templates/code-review
+sidebar_position: 22
+description: Checklist para estabelecer critÃ©rios objetivos de revisÃ£o tÃ©cnica no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Code Review â€“ Checklist
+
+> **PropÃ³sito:** Estabelecer critÃ©rios objetivos de revisÃ£o tÃ©cnica.
+>
+> **Entradas (Required Artifacts):** PR aberto com template preenchido; Pipeline CI/CD aprovado
+>
+> **SaÃ­das (Produced Artifacts):** ComentÃ¡rios de revisÃ£o; Checklist de revisÃ£o concluÃ­do; Registros de decisÃµes tÃ©cnicas
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] PR aberto com template preenchido
+- [ ] Pipeline CI/CD aprovado
+
+## ExecuÃ§Ã£o
+- [ ] Estilo e convenÃ§Ãµes de cÃ³digo avaliados
+- [ ] Impacto das mudanÃ§as analisado
+- [ ] Cobertura e qualidade dos testes verificadas
+- [ ] Riscos tÃ©cnicos identificados e registrados
+- [ ] Aspectos de seguranÃ§a verificados
+- [ ] DecisÃµes tÃ©cnicas registradas
+
+## Quality Gate (Bloqueante)
+- [ ] Todos os critÃ©rios do Code Review Checklist atendidos
+- [ ] Todos os comentÃ¡rios resolvidos antes da aprovaÃ§Ã£o
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/code-review-checklist.docx" label="BAIXAR CHECKLIST â€” CODE REVIEW" />
+---
+id: desenvolvimento
+title: Desenvolvimento â€“ Checklist
+slug: /templates/desenvolvimento
+sidebar_position: 20
+description: Checklist de desenvolvimento para orientar boas prÃ¡ticas de implementaÃ§Ã£o e testes locais no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Desenvolvimento â€“ Checklist
+
+> **PropÃ³sito:** Orientar boas prÃ¡ticas de implementaÃ§Ã£o e testes locais.
+>
+> **Entradas (Required Artifacts):** Branch de Atividade ativa; ConvenÃ§Ã£o de mensagens de commit estabelecida
+>
+> **SaÃ­das (Produced Artifacts):** HistÃ³rico de commits padronizados; Branch atualizada; EvidÃªncias de testes locais
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] Branch de atividade ativa e atualizada
+- [ ] ConvenÃ§Ã£o de mensagens de commit jÃ¡ estabelecida
+
+## ExecuÃ§Ã£o
+- [ ] Commits pequenos e atÃ´micos (1 mudanÃ§a lÃ³gica por commit)
+- [ ] Mensagens de commit seguem Conventional Commits + ID do ticket
+- [ ] Branch sincronizada com main regularmente (merge/rebase periÃ³dico)
+- [ ] Testes locais executados
+- [ ] EvidÃªncias de testes locais registradas
+
+## Quality Gate (Bloqueante)
+- [ ] Todas as mensagens de commit seguem Conventional Commits + ID do ticket antes de avanÃ§ar para Pull Request
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/desenvolvimento-checklist.docx" label="BAIXAR CHECKLIST â€” DESENVOLVIMENTO" />
+---
+id: index
+title: Templates
+---
+import TemplatesOverview from '@site/src/components/TemplatesOverview';
+
+# Templates
+
+<TemplatesOverview />
+
+---
+id: merge
+title: Merge â€“ Checklist
+slug: /templates/merge
+sidebar_position: 24
+description: Checklist para garantir integraÃ§Ã£o segura e rastreÃ¡vel na branch principal no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Merge â€“ Checklist
+
+> **PropÃ³sito:** Garantir integraÃ§Ã£o segura e rastreÃ¡vel na branch principal.
+>
+> **Entradas (Required Artifacts):** PR aprovado; RelatÃ³rio de QA; Branch sincronizada
+>
+> **SaÃ­das (Produced Artifacts):** Merge commit ou squash; Build de integraÃ§Ã£o; HistÃ³rico de conflitos; Release Notes
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] PR aprovado e RelatÃ³rio de QA disponÃ­vel
+- [ ] Branch atualizada imediatamente antes do merge
+- [ ] Pipeline CI/CD aprovado
+
+## ExecuÃ§Ã£o
+- [ ] Conflitos identificados e resolvidos colaborativamente
+- [ ] Causas, decisÃµes e histÃ³rico de resoluÃ§Ã£o registrados
+- [ ] Build de integraÃ§Ã£o executado
+- [ ] Release Notes geradas
+- [ ] Rastreabilidade ticket â†” PR â†” merge garantida
+
+## Quality Gate (Bloqueante)
+- [ ] Todos os conflitos resolvidos e registrados antes de avanÃ§ar
+- [ ] Build de integraÃ§Ã£o aprovado
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/merge-checklist.docx" label="BAIXAR CHECKLIST â€” MERGE" />
+---
+id: planejamento
+title: Planejamento â€“ Checklist
+slug: /templates/planejamento
+sidebar_position: 19
+description: Checklist de planejamento para preparar merges seguros no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Planejamento â€“ Checklist
+
+> **PropÃ³sito:** Alinhar escopo, riscos e dependÃªncias antes do desenvolvimento.
+>
+> **Entradas (Required Artifacts):** Ticket/issue definido e priorizado; ConvenÃ§Ã£o de branch e commits estabelecida
+>
+> **SaÃ­das (Produced Artifacts):** Branch de Atividade criada e rastreada; Riscos mapeados; Plano de sincronizaÃ§Ã£o definido
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] Ticket/issue priorizado e vinculado Ã  branch
+- [ ] ConvenÃ§Ã£o de mensagens de commit jÃ¡ estabelecida
+
+## ExecuÃ§Ã£o
+- [ ] Branch criada com prefixo correto e ID do ticket (`feature/`, `bugfix/`, `hotfix/`)
+- [ ] Escopo coeso definido (um objetivo claro por branch)
+- [ ] Plano de sincronizaÃ§Ã£o frequente com `main` definido (merge/rebase periÃ³dico)
+- [ ] Riscos de conflito e Ã¡reas/mÃ³dulos sensÃ­veis mapeados
+
+## Quality Gate (Bloqueante)
+- [ ] Branch vÃ¡lida com prefixo correto e ID do ticket antes de avanÃ§ar para Desenvolvimento
+- [ ] ConvenÃ§Ãµes validadas pelo Mediador
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/planejamento-checklist.docx" label="BAIXAR CHECKLIST â€” PLANEJAMENTO" />
+---
+id: pull-request
+title: Pull Request â€“ Checklist
+slug: /templates/pull-request
+sidebar_position: 21
+description: Checklist para estruturar a descriÃ§Ã£o do PR com contexto e evidÃªncias no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Pull Request â€“ Checklist
+
+> **PropÃ³sito:** Estruturar descriÃ§Ã£o do PR com contexto e evidÃªncias.
+>
+> **Entradas (Required Artifacts):** Branch com commits padronizados; Testes locais aprovados
+>
+> **SaÃ­das (Produced Artifacts):** PR aberto com template; Checklist preenchido; Ticket vinculado; Diffs; RelatÃ³rio de Build/CI; RelatÃ³rio de Qualidade
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] Branch atualizada com main e commits padronizados
+- [ ] Testes locais aprovados
+
+## ExecuÃ§Ã£o
+- [ ] PR aberto com template preenchido (contexto, impacto, riscos, evidÃªncias)
+- [ ] Checklist de PR preenchido
+- [ ] Ticket/issue vinculado ao PR
+- [ ] Diffs de cÃ³digo disponÃ­veis para revisÃ£o
+- [ ] Pipeline CI/CD executado (build, testes, anÃ¡lise estÃ¡tica, cobertura)
+
+## Quality Gates (Bloqueantes)
+- [ ] Template do PR preenchido completamente antes de solicitar revisÃ£o
+- [ ] Pipeline CI/CD aprovado sem falhas bloqueantes
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/pull-request-checklist.docx" label="BAIXAR CHECKLIST â€” PULL REQUEST" />
+---
+id: release-deploy
+title: Release/Deploy â€“ Checklist
+slug: /templates/release-deploy
+sidebar_position: 25
+description: Checklist para padronizar liberaÃ§Ã£o e registro de evidÃªncias de build no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Release/Deploy â€“ Checklist
+
+> **PropÃ³sito:** Padronizar liberaÃ§Ã£o e registro de evidÃªncias de build.
+>
+> **Entradas (Required Artifacts):** Merge concluÃ­do; Release Notes geradas
+>
+> **SaÃ­das (Produced Artifacts):** Release implantada; Release Notes publicadas; Logs de deploy e monitoramento
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] Merge concluÃ­do com build de integraÃ§Ã£o aprovado
+- [ ] Release Notes geradas
+
+## ExecuÃ§Ã£o
+- [ ] Release Notes publicadas
+- [ ] Deploy realizado via pipeline
+- [ ] Logs de deploy registrados
+- [ ] Monitoramento pÃ³s-deploy executado
+
+## Quality Gate (Bloqueante)
+- [ ] Release Notes padronizadas publicadas conforme Release Notes Standard
+- [ ] Release implantada e logs de monitoramento registrados
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/release-deploy-checklist.docx" label="BAIXAR CHECKLIST â€” RELEASE/DEPLOY" />
+---
+id: rollback
+title: Rollback â€“ Checklist
+slug: /templates/rollback
+sidebar_position: 27
+description: Checklist para orientar reversÃµes preservando histÃ³rico e contexto no MergeTrace.
+---
+
+import DownloadButton from '@site/src/components/DownloadButton';
+
+# Rollback â€“ Checklist
+
+> **PropÃ³sito:** Orientar reversÃµes preservando histÃ³rico e contexto.
+>
+> **Entradas (Required Artifacts):** Plano de rollback; Commit ou versÃ£o anterior identificada
+>
+> **SaÃ­das (Produced Artifacts):** IntegraÃ§Ã£o revertida; Registro de incidente
+
+## PrÃ©-condiÃ§Ãµes (Entradas)
+- [ ] Plano de rollback disponÃ­vel
+- [ ] Commit ou versÃ£o anterior identificada
+
+## ExecuÃ§Ã£o
+- [ ] ReversÃ£o executada de forma controlada e auditÃ¡vel
+- [ ] Registro de incidente concluÃ­do (causas, impacto e decisÃµes)
+- [ ] AnÃ¡lise pÃ³s-falha realizada
+
+## Quality Gate (Bloqueante)
+- [ ] ReversÃ£o executada e rastreabilidade preservada
+- [ ] Registro de incidente concluÃ­do antes de encerrar o ciclo
+
+---
+
+<DownloadButton href="/guideline-merge/downloads/template/rollback-checklist.docx" label="BAIXAR CHECKLIST â€” ROLLBACK" />
+{
+  "label": "Templates",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "index"
+  }
+}

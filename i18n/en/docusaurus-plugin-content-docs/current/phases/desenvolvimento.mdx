@@ -1,40 +1,40 @@
 ---
 id: desenvolvimento
-title: Desenvolvimento
+title: Development
 sidebar_position: 2
 ---
 
 import Checklist from '@site/src/components/Checklist';
 
-## Objetivo
-Implementar mudanças de forma incremental e sincronizada, reduzindo conflitos acumulados por meio de commits atômicos, sincronização frequente e validações locais.
+## Objective
+Implement changes incrementally and in sync, reducing accumulated conflicts through atomic commits, frequent synchronization, and local validations.
 
-## Entradas (Required Artifacts)
-- [Branch de Atividade](/docs/artifacts/branch-atividade)
-- Convenção de mensagens de commit estabelecida
+## Inputs (Required Artifacts)
+- [Activity Branch](/docs/artifacts/branch-atividade)
+- Established commit message convention
 
-## Saídas (Produced Artifacts)
-- [Commits Padronizados](/docs/artifacts/commits-padronizados)
-- Branch atualizada
-- Evidências de testes locais
+## Outputs (Produced Artifacts)
+- [Standardized Commits](/docs/artifacts/commits-padronizados)
+- Updated branch
+- Local test evidence
 
-## Papéis
-- **[Developer A](/docs/roles/developer-principal)** — implementa mudanças, realiza commits atômicos e sincroniza branch
-- **[Developer B](/docs/roles/developer-integrador)** — co-responsável pela implementação e sincronização
+## Roles
+- **[Developer A](/docs/roles/developer-principal)** — implements changes, makes atomic commits, and syncs branch
+- **[Developer B](/docs/roles/developer-integrador)** — co-responsible for implementation and synchronization
 
-## Atividades
-1. [Implementar Mudanças](/docs/activities/implementar-mudancas) com commits atômicos (1 mudança lógica por commit)
-2. Sincronizar branch com `main` regularmente (merge/rebase periódico)
-3. Executar testes locais
+## Activities
+1. [Implement Changes](/docs/activities/implementar-mudancas) with atomic commits (1 logical change per commit)
+2. Sync branch with `main` regularly (periodic merge/rebase)
+3. Run local tests
 
-## Critérios de Entrada
-- Branch criada, escopo definido e convenção de commits estabelecida
+## Entry Criteria
+- Branch created, scope defined, and commit convention established
 
-## Critérios de Saída (Gate)
-- Testes locais aprovados; branch atualizada; commits padronizados
+## Exit Criteria (Gate)
+- Local tests approved; branch updated; standardized commits
 
 ## Quality Gate
-**[Commit Message Convention](/docs/guidelines/commit-message-convention)** — todas as mensagens de commit seguem o padrão definido antes de avançar para a fase de Pull Request.
+**[Commit Message Convention](/docs/guidelines/commit-message-convention)** — all commit messages follow the defined standard before advancing to the Pull Request phase.
 
 ## Checklist
 <Checklist
@@ -42,27 +42,27 @@ Implementar mudanças de forma incremental e sincronizada, reduzindo conflitos a
   sections={[
     {
       id: 'entradas',
-      title: 'Pré-condições (Entradas)',
+      title: 'Pre-conditions (Inputs)',
       items: [
-        { id: 'branch-ativa', label: 'Branch de atividade ativa e atualizada' },
-        { id: 'commit-conv', label: 'Convenção de mensagens de commit já estabelecida' },
+        { id: 'branch-ativa', label: 'Activity branch active and updated' },
+        { id: 'commit-conv', label: 'Commit message convention already established' },
       ],
     },
     {
       id: 'execucao',
-      title: 'Execução',
+      title: 'Execution',
       items: [
-        { id: 'atomic', label: 'Commits pequenos e atômicos (1 mudança lógica)' },
-        { id: 'sync', label: 'Branch sincronizada com main (merge/rebase)' },
-        { id: 'testes', label: 'Testes locais executados' },
-        { id: 'evidencias', label: 'Evidências de testes locais registradas' },
+        { id: 'atomic', label: 'Small and atomic commits (1 logical change)' },
+        { id: 'sync', label: 'Branch synced with main (merge/rebase)' },
+        { id: 'testes', label: 'Local tests run' },
+        { id: 'evidencias', label: 'Local test evidence recorded' },
       ],
     },
     {
       id: 'gate',
-      title: 'Quality Gate (Bloqueante)',
+      title: 'Quality Gate (Blocking)',
       items: [
-        { id: 'conv-commits', label: 'Mensagens de commit seguem Conventional Commits + ID do ticket' },
+        { id: 'conv-commits', label: 'Commit messages follow Conventional Commits + ticket ID' },
       ],
     },
   ]}

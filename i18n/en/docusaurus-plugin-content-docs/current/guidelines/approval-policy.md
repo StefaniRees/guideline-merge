@@ -1,23 +1,23 @@
 ---
 id: approval-policy
 title: Approval Policy
-description: Define critérios mínimos de aprovação de Pull Requests, incluindo número de revisores, papéis envolvidos e exceções permitidas.
+description: Defines minimum criteria for Pull Request approval, including number of reviewers, roles involved, and permitted exceptions.
 ---
 
-## Descrição
-Define critérios mínimos de aprovação de Pull Requests, incluindo número de revisores, papéis envolvidos e exceções permitidas. A aprovação final do merge atua como um gate de confiança, associado ao Mediador após revisão cruzada e validação de QA.
+## Description
+Defines minimum criteria for Pull Request approval, including number of reviewers, roles involved, and permitted exceptions. The final merge approval acts as a trust gate, associated with the Mediator after cross-review and QA validation.
 
-## Artefatos Relacionados
+## Related Artifacts
 - [Pull Request](/docs/artifacts/pull-request)
-- [Checklist de Revisão](/docs/artifacts/checklist-revisao)
-- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
+- [Review Checklist](/docs/artifacts/checklist-revisao)
+- [Build/CI Report](/docs/artifacts/relatorio-build-ci)
 
-## Atividades Relacionadas
+## Related Activities
 - [Code Review](/docs/activities/code-review)
-- [Merge Final](/docs/activities/merge-final)
+- [Final Merge](/docs/activities/merge-final)
 
-## Papéis Envolvidos
-- [Mediador](/docs/roles/mediador)
+## Roles Involved
+- [Mediator](/docs/roles/mediador)
 
-## Ferramentas
-- [Ferramentas de Controle de Versão](/docs/tools)
+## Tools
+- [Version Control Tools](/docs/tools)

@@ -5,36 +5,36 @@ sidebar_position: 7
 
 import Checklist from '@site/src/components/Checklist';
 
-## Objetivo
-Disponibilizar a versão integrada e monitorar seu comportamento em produção, garantindo rastreabilidade da liberação.
+## Objective
+Make the integrated version available and monitor its behavior in production, ensuring release traceability.
 
-## Entradas (Required Artifacts)
-- Merge concluído
-- Release Notes geradas
+## Inputs (Required Artifacts)
+- Merge completed
+- Release Notes generated
 
-## Saídas (Produced Artifacts)
-- Release implantada
-- Release Notes publicadas
-- Logs de deploy e monitoramento
+## Outputs (Produced Artifacts)
+- Release deployed
+- Release Notes published
+- Deploy and monitoring logs
 
-## Papéis
-- **Developer A** — responsável pelo deploy e geração de evidências
-- **Developer B** — co-responsável pelo deploy e monitoramento
-- **Mediador** — valida evidências e garante rastreabilidade da liberação
+## Roles
+- **Developer A** — responsible for deploy and generating evidence
+- **Developer B** — co-responsible for deploy and monitoring
+- **Mediator** — validates evidence and ensures release traceability
 
-## Atividades
-1. Gerar e publicar Release Notes.
-2. Realizar deploy via pipeline.
-3. Monitorar comportamento pós-deploy e registrar logs.
+## Activities
+1. Generate and publish Release Notes.
+2. Deploy via pipeline.
+3. Monitor post-deploy behavior and record logs.
 
-## Critérios de Entrada
-- Merge concluído; Release Notes disponíveis
+## Entry Criteria
+- Merge completed; Release Notes available
 
-## Critérios de Saída (Gate)
-- Release implantada + logs de deploy registrados + Release Notes publicadas
+## Exit Criteria (Gate)
+- Release deployed + deploy logs recorded + Release Notes published
 
 ## Quality Gate
-**Release Notes Standard** — Release Notes padronizadas geradas e publicadas, comunicando mudanças, riscos e componentes afetados antes de avançar para encerramento ou Rollback.
+**Release Notes Standard** — standardized Release Notes generated and published, communicating changes, risks, and affected components before advancing to closure or Rollback.
 
 ## Checklist
 <Checklist
@@ -42,28 +42,28 @@ Disponibilizar a versão integrada e monitorar seu comportamento em produção, 
   sections={[
     {
       id: 'entradas',
-      title: 'Pré-condições (Entradas)',
+      title: 'Pre-conditions (Inputs)',
       items: [
-        { id: 'merge-ok', label: 'Merge concluído com build de integração aprovado' },
-        { id: 'notes-prontas', label: 'Release Notes geradas' },
+        { id: 'merge-ok', label: 'Merge completed with approved integration build' },
+        { id: 'notes-prontas', label: 'Release Notes generated' },
       ],
     },
     {
       id: 'execucao',
-      title: 'Execução',
+      title: 'Execution',
       items: [
-        { id: 'notes', label: 'Release Notes publicadas' },
-        { id: 'pipeline', label: 'Deploy realizado via pipeline' },
-        { id: 'logs', label: 'Logs de deploy registrados' },
-        { id: 'monitor', label: 'Monitoramento pós-deploy executado' },
+        { id: 'notes', label: 'Release Notes published' },
+        { id: 'pipeline', label: 'Deploy performed via pipeline' },
+        { id: 'logs', label: 'Deploy logs recorded' },
+        { id: 'monitor', label: 'Post-deploy monitoring executed' },
       ],
     },
     {
       id: 'gate',
-      title: 'Quality Gate (Bloqueante)',
+      title: 'Quality Gate (Blocking)',
       items: [
-        { id: 'notes-ok', label: 'Release Notes padronizadas publicadas conforme Release Notes Standard' },
-        { id: 'deploy-ok', label: 'Release implantada e logs de monitoramento registrados' },
+        { id: 'notes-ok', label: 'Standardized Release Notes published per Release Notes Standard' },
+        { id: 'deploy-ok', label: 'Release deployed and monitoring logs recorded' },
       ],
     },
   ]}

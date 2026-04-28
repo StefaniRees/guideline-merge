@@ -1,0 +1,289 @@
+﻿---
+id: approval-policy
+title: Approval Policy
+description: Define critÃ©rios mÃ­nimos de aprovaÃ§Ã£o de Pull Requests, incluindo nÃºmero de revisores, papÃ©is envolvidos e exceÃ§Ãµes permitidas.
+---
+
+## DescriÃ§Ã£o
+Define critÃ©rios mÃ­nimos de aprovaÃ§Ã£o de Pull Requests, incluindo nÃºmero de revisores, papÃ©is envolvidos e exceÃ§Ãµes permitidas. A aprovaÃ§Ã£o final do merge atua como um gate de confianÃ§a, associado ao Mediador apÃ³s revisÃ£o cruzada e validaÃ§Ã£o de QA.
+
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao)
+- [RelatÃ³rio de Build/CI](/docs/artifacts/relatorio-build-ci)
+
+## Atividades Relacionadas
+- [Code Review](/docs/activities/code-review)
+- [Merge Final](/docs/activities/merge-final)
+
+## PapÃ©is Envolvidos
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Controle de VersÃ£o](/docs/tools)
+---
+id: branch-naming-convention
+title: Branch Naming Convention
+description: Estabelece padrÃµes de nomeaÃ§Ã£o de branches, favorecendo organizaÃ§Ã£o e rastreabilidade.
+---
+
+## DescriÃ§Ã£o
+Estabelece padrÃµes de nomeaÃ§Ã£o de branches, favorecendo organizaÃ§Ã£o e rastreabilidade em alinhamento com histÃ³rias e tarefas de negÃ³cio.
+
+PadrÃ£o: `type/descriÃ§Ã£o-curta` (ex.: `feature/login-form`, `bugfix/null-pointer`, `hotfix/limit-check`). Incluir ID do ticket ou squad quando aplicÃ¡vel (ex.: `feature/APP-123-login`). Evitar branches longas â€” integrar com main frequentemente.
+
+## Artefatos Relacionados
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
+
+## Atividades Relacionadas
+- [Criar Branch](/docs/activities/criar-branch)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+
+## Ferramentas
+- [Ferramentas de Controle de VersÃ£o](/docs/tools)
+---
+id: cicd-quality-gates
+title: CI/CD Quality Gates
+description: Define gates obrigatÃ³rios no pipeline, garantindo validaÃ§Ãµes automÃ¡ticas antes da integraÃ§Ã£o.
+---
+
+## DescriÃ§Ã£o
+Define gates obrigatÃ³rios no pipeline â€” build, testes automatizados, anÃ¡lise estÃ¡tica e cobertura mÃ­nima â€” garantindo validaÃ§Ãµes automÃ¡ticas antes da integraÃ§Ã£o. EstÃ¡ alinhado Ã s evidÃªncias sobre automaÃ§Ã£o supervisionada.
+
+## Artefatos Relacionados
+- [RelatÃ³rio de Build/CI](/docs/artifacts/relatorio-build-ci)
+- [Pull Request](/docs/artifacts/pull-request)
+
+## Atividades Relacionadas
+- [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+
+## Ferramentas
+- [Ferramentas de CI/CD](/docs/tools)
+---
+id: code-review-checklist
+title: Code Review Checklist
+description: Fornece critÃ©rios mÃ­nimos para revisÃ£o tÃ©cnica, contemplando estilo, impacto, testes, riscos e seguranÃ§a.
+---
+
+## DescriÃ§Ã£o
+Fornece critÃ©rios mÃ­nimos para revisÃ£o tÃ©cnica, contemplando estilo, impacto, testes, riscos e seguranÃ§a. EndereÃ§a a centralidade da revisÃ£o humana como principal barreira de qualidade e reforÃ§a a coordenaÃ§Ã£o entre papÃ©is.
+
+Itens mÃ­nimos: corretude, testes incluÃ­dos ou atualizados, seguranÃ§a, estilo e convenÃ§Ãµes, impacto em outros mÃ³dulos.
+
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao)
+- [RelatÃ³rio de Build/CI](/docs/artifacts/relatorio-build-ci)
+
+## Atividades Relacionadas
+- [Code Review](/docs/activities/code-review)
+
+## PapÃ©is Envolvidos
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de AnÃ¡lise de CÃ³digo](/docs/tools)
+---
+id: commit-message-convention
+title: Commit Message Convention
+description: Padroniza mensagens de commit, permitindo rastreamento semÃ¢ntico e associaÃ§Ã£o clara entre mudanÃ§as, tickets e issues.
+---
+
+## DescriÃ§Ã£o
+Padroniza mensagens de commit, permitindo rastreamento semÃ¢ntico e associaÃ§Ã£o clara entre mudanÃ§as, tickets e issues.
+
+Seguir Conventional Commits: `feat:`, `fix:`, `docs:`, `refactor:`, `chore:` etc. Uma mudanÃ§a lÃ³gica por commit â€” commits pequenos e frequentes. Incluir ID do ticket na mensagem (ex.: `feat(orders): APP-321 calcula frete`).
+
+## Artefatos Relacionados
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- [Release Notes](/docs/artifacts/release-notes)
+
+## Atividades Relacionadas
+- [Implementar MudanÃ§as](/docs/activities/implementar-mudancas)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+
+## Ferramentas
+- [Ferramentas de Controle de VersÃ£o](/docs/tools)
+---
+id: conflict-resolution-procedure
+title: Conflict Resolution Procedure
+description: Descreve prÃ¡ticas recomendadas para resoluÃ§Ã£o colaborativa de conflitos, incluindo registro de decisÃµes e aprendizado organizacional.
+---
+
+## DescriÃ§Ã£o
+Descreve prÃ¡ticas recomendadas para resoluÃ§Ã£o colaborativa de conflitos, incluindo registro de decisÃµes e aprendizado organizacional. Reflete evidÃªncias sobre resoluÃ§Ã£o em pares e coordenaÃ§Ã£o entre squads.
+
+Atualizar a branch com main antes de pedir aprovaÃ§Ã£o. Resolver conflitos usando ferramentas visuais. Registrar decisÃµes importantes no histÃ³rico. Conflitos crÃ­ticos: realizar merge colaborativo com os envolvidos.
+
+## Artefatos Relacionados
+- [HistÃ³rico de Conflitos](/docs/artifacts/historico-conflitos)
+- [Pull Request](/docs/artifacts/pull-request)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+
+## Atividades Relacionadas
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de ResoluÃ§Ã£o de Conflitos](/docs/tools)
+---
+id: feature-flags-management
+title: Feature Flags Management
+description: Normatiza a criaÃ§Ã£o, uso e remoÃ§Ã£o de feature flags, permitindo isolamento de impactos e reversÃµes controladas.
+---
+
+## DescriÃ§Ã£o
+Normatiza a criaÃ§Ã£o, uso e remoÃ§Ã£o de feature flags, permitindo isolamento de impactos e reversÃµes controladas. Cada flag deve ter owner, escopo, plano de remoÃ§Ã£o e prazo. Auditar flags antigas para evitar dÃ­vida de configuraÃ§Ã£o.
+
+## Artefatos Relacionados
+- [Feature Flag](/docs/artifacts/feature-flag)
+- [Release Notes](/docs/artifacts/release-notes)
+
+## Atividades Relacionadas
+- [Merge Final](/docs/activities/merge-final)
+
+## PapÃ©is Envolvidos
+- [Mediador](/docs/roles/mediador)
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+
+## Ferramentas
+- [Ferramentas de CI/CD](/docs/tools)
+---
+id: guidelines
+title: Guidelines
+slug: /guidelines
+sidebar_position: 6
+description: Quality gates e diretrizes de governanÃ§a do processo de merge no MergeTrace.
+---
+
+import GuidelinesOverview from '@site/src/components/GuidelinesOverview';
+
+# Guidelines
+
+<GuidelinesOverview />
+---
+id: pull-request-template
+title: Pull Request Template
+description: Disponibiliza um template estruturado para descriÃ§Ã£o de contexto, escopo, riscos, testes e artefatos vinculados.
+---
+
+## DescriÃ§Ã£o
+Disponibiliza um template estruturado para descriÃ§Ã£o de contexto, escopo, riscos, testes e artefatos vinculados. Desenvolvido a partir de evidÃªncias de baixa rastreabilidade e PRs incompletos.
+
+Campos obrigatÃ³rios: contexto, mudanÃ§as, impacto e risco, testes realizados e checklist. Vincular ticket ao PR.
+
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao)
+
+## Atividades Relacionadas
+- [Abrir Pull Request](/docs/activities/abrir-pr)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Controle de VersÃ£o](/docs/tools)
+---
+id: qa-in-homolog
+title: QA in Homolog (PrÃ©-merge Validation)
+description: Diretriz para validaÃ§Ã£o das alteraÃ§Ãµes em ambiente de homologaÃ§Ã£o antes do merge final.
+---
+
+## DescriÃ§Ã£o
+Diretriz para validaÃ§Ã£o das alteraÃ§Ãµes em ambiente de homologaÃ§Ã£o antes do merge final, incluindo testes funcionais e de integraÃ§Ã£o. Relaciona-se Ã s atividades de teste, papÃ©is colaborativos e coordenaÃ§Ã£o entre papÃ©is.
+
+Executar testes funcionais e regressÃ£o em homologaÃ§Ã£o antes de aprovar o merge final. Registrar evidÃªncias no PR.
+
+## Artefatos Relacionados
+- [RelatÃ³rio de QA](/docs/artifacts/relatorio-qa)
+- [Pull Request](/docs/artifacts/pull-request)
+
+## Atividades Relacionadas
+- [Validar em HomologaÃ§Ã£o (QA)](/docs/activities/qa-homologacao)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de CI/CD](/docs/tools)
+---
+id: release-notes-standard
+title: Release Notes Standard
+description: Padroniza a geraÃ§Ã£o de notas de versÃ£o, promovendo comunicaÃ§Ã£o clara sobre mudanÃ§as, riscos e componentes afetados.
+---
+
+## DescriÃ§Ã£o
+Padroniza a geraÃ§Ã£o de notas de versÃ£o, promovendo comunicaÃ§Ã£o clara sobre mudanÃ§as, riscos e componentes afetados. Ancora-se nas evidÃªncias sobre artefatos de comunicaÃ§Ã£o e coordenaÃ§Ã£o entre equipes.
+
+Gerar notas a partir de commits e PRs seguindo Conventional Commits. Estrutura: Features, Fixes, Breaking Changes. Publicar junto com o deploy e arquivar para auditoria.
+
+## Artefatos Relacionados
+- [Release Notes](/docs/artifacts/release-notes)
+- [Pull Request](/docs/artifacts/pull-request)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+
+## Atividades Relacionadas
+- [Merge Final](/docs/activities/merge-final)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Controle de VersÃ£o](/docs/tools)
+---
+id: rollback-strategy
+title: Rollback Strategy
+description: Estabelece estratÃ©gias e critÃ©rios para reversÃ£o controlada de merges ou releases, incluindo registro de incidentes e anÃ¡lise pÃ³s-falha.
+---
+
+## DescriÃ§Ã£o
+Estabelece estratÃ©gias e critÃ©rios para reversÃ£o controlada de merges ou releases, incluindo registro de incidentes e anÃ¡lise pÃ³s-falha. Relaciona-se Ã s fases do processo, Ã s ferramentas de suporte e Ã  coordenaÃ§Ã£o entre papÃ©is.
+
+Ter caminho claro de reversÃ£o. Executar rollback e verificar estabilidade. Registrar incidente com causas, impacto e decisÃµes. Realizar anÃ¡lise pÃ³s-falha.
+
+## Artefatos Relacionados
+- [Release Notes](/docs/artifacts/release-notes)
+- [HistÃ³rico de Conflitos](/docs/artifacts/historico-conflitos)
+- [Registro de DecisÃ£o](/docs/artifacts/registro-decisao)
+
+## Atividades Relacionadas
+- [Merge Final](/docs/activities/merge-final)
+
+## PapÃ©is Envolvidos
+- [Developer A](/docs/roles/developer-principal)
+- [Developer B](/docs/roles/developer-integrador)
+- [Mediador](/docs/roles/mediador)
+
+## Ferramentas
+- [Ferramentas de Controle de VersÃ£o](/docs/tools)
+- [Ferramentas de CI/CD](/docs/tools)
+{
+  "label": "Guidelines",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "guidelines"
+  }
+}

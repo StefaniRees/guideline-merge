@@ -1,0 +1,122 @@
+﻿{
+  "footer.link.title.Guideline": {
+    "message": "Guideline",
+    "description": "Footer column title"
+  },
+  "footer.link.item.Welcome": {
+    "message": "Welcome",
+    "description": "Footer link"
+  },
+  "footer.link.item.Fases": {
+    "message": "Phases",
+    "description": "Footer link"
+  },
+  "footer.link.item.PapÃ©is": {
+    "message": "Roles",
+    "description": "Footer link"
+  },
+  "footer.link.item.Atividades": {
+    "message": "Activities",
+    "description": "Footer link"
+  },
+  "footer.link.title.ReferÃªncias": {
+    "message": "References",
+    "description": "Footer column title"
+  },
+  "footer.link.item.Artefatos": {
+    "message": "Artifacts",
+    "description": "Footer link"
+  },
+  "footer.link.item.Guidelines": {
+    "message": "Guidelines",
+    "description": "Footer link"
+  },
+  "footer.link.item.Templates": {
+    "message": "Templates",
+    "description": "Footer link"
+  },
+  "footer.link.item.Ferramentas": {
+    "message": "Tools",
+    "description": "Footer link"
+  },
+  "footer.link.title.Pesquisa": {
+    "message": "Research",
+    "description": "Footer column title"
+  },
+  "footer.link.item.Comunidade de Especialistas": {
+    "message": "Specialist Community",
+    "description": "Footer link"
+  },
+  "footer.link.item.RepositÃ³rio GitHub": {
+    "message": "GitHub Repository",
+    "description": "Footer link"
+  },
+  "footer.link.item.UNISINOS â€” PPG ComputaÃ§Ã£o Aplicada": {
+    "message": "UNISINOS â€” Graduate Program in Applied Computing",
+    "description": "Footer link"
+  },
+  "footer.copyright": {
+    "message": "Â© 2026 MergeTrace Â· StÃ©fani Celestino Rees Â· UNISINOS Â· Graduate Program in Applied Computing",
+    "description": "Footer copyright"
+  },
+  "link.title.Guideline": {
+    "message": "Guideline",
+    "description": "The title of the footer links column with title=Guideline in the footer"
+  },
+  "link.title.ReferÃªncias": {
+    "message": "ReferÃªncias",
+    "description": "The title of the footer links column with title=ReferÃªncias in the footer"
+  },
+  "link.title.Pesquisa": {
+    "message": "Pesquisa",
+    "description": "The title of the footer links column with title=Pesquisa in the footer"
+  },
+  "link.item.label.Welcome": {
+    "message": "Welcome",
+    "description": "The label of footer link with label=Welcome linking to /docs/welcome"
+  },
+  "link.item.label.Fases": {
+    "message": "Fases",
+    "description": "The label of footer link with label=Fases linking to /docs/phases"
+  },
+  "link.item.label.PapÃ©is": {
+    "message": "PapÃ©is",
+    "description": "The label of footer link with label=PapÃ©is linking to /docs/roles"
+  },
+  "link.item.label.Atividades": {
+    "message": "Atividades",
+    "description": "The label of footer link with label=Atividades linking to /docs/activities"
+  },
+  "link.item.label.Artefatos": {
+    "message": "Artefatos",
+    "description": "The label of footer link with label=Artefatos linking to /docs/artifacts"
+  },
+  "link.item.label.Guidelines": {
+    "message": "Guidelines",
+    "description": "The label of footer link with label=Guidelines linking to /docs/guidelines"
+  },
+  "link.item.label.Templates": {
+    "message": "Templates",
+    "description": "The label of footer link with label=Templates linking to /docs/templates"
+  },
+  "link.item.label.Ferramentas": {
+    "message": "Ferramentas",
+    "description": "The label of footer link with label=Ferramentas linking to /docs/tools"
+  },
+  "link.item.label.Comunidade de Especialistas": {
+    "message": "Comunidade de Especialistas",
+    "description": "The label of footer link with label=Comunidade de Especialistas linking to /docs/ia"
+  },
+  "link.item.label.RepositÃ³rio GitHub": {
+    "message": "RepositÃ³rio GitHub",
+    "description": "The label of footer link with label=RepositÃ³rio GitHub linking to https://github.com/StefaniRees/mergetrace"
+  },
+  "link.item.label.UNISINOS â€” PPG ComputaÃ§Ã£o Aplicada": {
+    "message": "UNISINOS â€” PPG ComputaÃ§Ã£o Aplicada",
+    "description": "The label of footer link with label=UNISINOS â€” PPG ComputaÃ§Ã£o Aplicada linking to https://www.unisinos.br"
+  },
+  "copyright": {
+    "message": "Â© 2026 MergeTrace Â· StÃ©fani Celestino Rees Â· UNISINOS Â· PPG ComputaÃ§Ã£o Aplicada",
+    "description": "The footer copyright"
+  }
+}

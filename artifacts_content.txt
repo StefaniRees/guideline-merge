@@ -1,0 +1,256 @@
+﻿---
+id: branch-atividade
+title: Branch de Atividade
+description: Branch criada a partir da main ou homologaÃ§Ã£o para desenvolver uma tarefa especÃ­fica.
+---
+
+## DescriÃ§Ã£o
+Branch criada a partir da *main* (ou homologaÃ§Ã£o) para implementar uma mudanÃ§a especÃ­fica de forma isolada e rastreÃ¡vel.
+
+## Boas PrÃ¡ticas
+- Manter branches **curtas** e **frequentemente integradas** com a branch principal.  
+- Adotar **convenÃ§Ã£o de nomes** clara (ex.: `feature/`, `bugfix/`, `hotfix/`), preferencialmente com ID do ticket/squad.
+
+## Justificativa
+Reduz riscos de conflitos tardios, melhora rastreabilidade e facilita auditoria.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Guideline:** [Branch Naming Convention](/docs/guidelines/branch-naming-convention)
+- **Activity:** [Criar Branch](/docs/activities/criar-branch)
+---
+id: checklist-revisao
+title: Checklist de RevisÃ£o
+description: Lista de verificaÃ§Ã£o aplicada em PRs para verificar critÃ©rios mÃ­nimos de qualidade.
+---
+
+## DescriÃ§Ã£o
+Checklist que orienta a revisÃ£o por pares, cobrindo estilo, corretude, testes, seguranÃ§a e documentaÃ§Ã£o.
+
+## Boas PrÃ¡ticas
+- Garantir pontos mÃ­nimos: **compila e testa**, **cobertura mÃ­nima**, **linters/Sonar**, **seguranÃ§a (secrets/deps)**, **docs atualizados**.  
+- ComentÃ¡rios devem ser **tratados e resolvidos** antes da aprovaÃ§Ã£o final.
+
+## Justificativa
+Padroniza a inspeÃ§Ã£o de qualidade, reduz variabilidade e falhas humanas.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Template:** [Code Review â€“ Checklist](/docs/templates/code-review)
+- **Guideline:** [Code Review Checklist](/docs/guidelines/code-review-checklist)
+- **Activity:** [Code Review](/docs/activities/code-review)
+---
+id: commits-padronizados
+title: Commits Padronizados
+description: Commits que representam mudanÃ§as incrementais com semÃ¢ntica consistente.
+---
+
+## DescriÃ§Ã£o
+Commits devem representar **mudanÃ§as atÃ´micas** e conter mensagens padronizadas que expressem claramente a intenÃ§Ã£o e o escopo.
+
+## Boas PrÃ¡ticas
+- Usar **Conventional Commits** (`feat:`, `fix:`, `docs:`, `refactor:` etc.).  
+- Incluir **ID da issue** (ex.: Jira/GitHub).  
+- Evitar mensagens genÃ©ricas (â€œajustesâ€, â€œ mudanÃ§as â€).
+
+## Justificativa
+Facilita **rastreamento**, **auditoria**, **geraÃ§Ã£o de release notes** e **rollback**.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Guideline:** [Commit Message Convention](/docs/guidelines/commit-message-convention)
+- **Activities:** [Realizar Commits](/docs/activities/abrir-pr) *(pendente ediÃ§Ã£o)*  
+---
+id: feature-flag
+title: Feature Flag
+description: Mecanismo para ativar/desativar comportamento sem branches longas.
+---
+
+## DescriÃ§Ã£o
+Feature Flags permitem **liberar funcionalidades de forma incremental** e segura, sem depender de longas branches.
+
+## Boas PrÃ¡ticas
+- Cada flag deve ter **owner**, **escopo**, **prazo de remoÃ§Ã£o** e **rastreabilidade** no backlog.
+- Auditoria periÃ³dica de flags antigas.
+
+## Justificativa
+Essencial para **trunk-based development**, reduzindo risco de integraÃ§Ãµes complexas.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Guideline:** [Feature Flags Management](/docs/guidelines/feature-flags-management)
+---
+id: historico-conflitos
+title: HistÃ³rico de Conflitos
+description: Registro estruturado de conflitos, incluindo causas, decisÃµes adotadas e liÃ§Ãµes aprendidas.
+---
+
+## DescriÃ§Ã£o
+Registro estruturado de conflitos de merge, incluindo causas, decisÃµes adotadas e liÃ§Ãµes aprendidas, apoiando aprendizado organizacional.
+
+## Quando Ã© produzido
+Gerado durante e apÃ³s a resoluÃ§Ã£o de conflitos entre branches, registrando o contexto tÃ©cnico e as decisÃµes tomadas.
+
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+
+## Atividades Relacionadas
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+
+## Guidelines Relacionadas
+- [Conflict Resolution Procedure](/docs/guidelines/conflict-resolution-procedure)
+
+## ObrigatÃ³rio?
+**Sim**
+---
+id: artifacts
+title: Artefatos
+slug: /artifacts
+sidebar_position: 5
+description: Artefatos do processo de merge no MergeTrace.
+---
+
+import ArtifactsOverview from '@site/src/components/ArtifactsOverview';
+
+# Artefatos
+
+<ArtifactsOverview />
+---
+id: pull-request
+title: Pull Request (PR)
+description: SolicitaÃ§Ã£o formal de merge da branch de atividade para a branch principal.
+---
+
+## DescriÃ§Ã£o
+O **Pull Request** (PR) Ã© a solicitaÃ§Ã£o formal para integrar uma branch de atividade Ã  branch principal, permitindo revisÃ£o e automaÃ§Ãµes (CI/CD).
+
+## Boas PrÃ¡ticas
+- **PRs pequenos** (â‰ˆ atÃ© 400 LOC) e com escopo coeso.
+- **MÃºltiplos revisores** conforme criticidade.
+- **Template padronizado** (contexto, mudanÃ§as, risco/impacto, testes).
+- **CI/CD** como *gate* obrigatÃ³rio (build, testes, anÃ¡lise estÃ¡tica e seguranÃ§a).
+
+## Justificativa
+Elemento central de controle de qualidade, colaboraÃ§Ã£o e governanÃ§a de mudanÃ§as.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Template:** [Pull Request Template](/docs/templates/pull-request)
+- **Guideline:** [Approval Policy](/docs/guidelines/approval-policy)
+- **Activity:** [Abrir PR](/docs/activities/abrir-pr)
+---
+id: registro-decisao
+title: Registro de DecisÃ£o
+description: Justificativas tÃ©cnicas documentadas em PRs, revisÃµes ou discussÃµes, apoiando governanÃ§a e auditoria.
+---
+
+## DescriÃ§Ã£o
+Justificativas tÃ©cnicas documentadas em PRs, revisÃµes ou discussÃµes, apoiando governanÃ§a e auditoria. Permite recuperar o raciocÃ­nio por trÃ¡s de decisÃµes crÃ­ticas tomadas durante o processo de merge.
+
+## Quando Ã© produzido
+Gerado durante Code Review, Merge e discussÃµes tÃ©cnicas relevantes.
+
+## Artefatos Relacionados
+- [Pull Request](/docs/artifacts/pull-request)
+- [HistÃ³rico de Conflitos](/docs/artifacts/historico-conflitos)
+
+## Atividades Relacionadas
+- [Code Review](/docs/activities/code-review)
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+- [Merge Final](/docs/activities/merge-final)
+
+## Guidelines Relacionadas
+- [Rollback Strategy](/docs/guidelines/rollback-strategy)
+
+## ObrigatÃ³rio?
+**NÃ£o**
+---
+id: relatorio-build-ci
+title: RelatÃ³rio de Build/CI
+description: EvidÃªncia gerada automaticamente pela pipeline (build, testes, anÃ¡lise estÃ¡tica e seguranÃ§a).
+---
+
+## DescriÃ§Ã£o
+RelatÃ³rio produzido por **CI** com resultados de compilaÃ§Ã£o, testes (unit/integration), linters, cobertura e checagens de seguranÃ§a.
+
+## Boas PrÃ¡ticas
+- Executar **para todo PR** com **feedback rÃ¡pido** (< 10 min).  
+- Tornar o relatÃ³rio **gate**: PR nÃ£o avanÃ§a se falhar.  
+- Publicar mÃ©tricas de **cobertura mÃ­nima** acordada (ex.: 70â€“80%).
+
+## Justificativa
+Funciona como **controle automÃ¡tico de qualidade** e reduz risco de regressÃµes.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Template:** [CI/CD Pipeline Report](/docs/templates/ci-cd-pipeline-report) *(pendente ediÃ§Ã£o)*
+- **Guideline:** [CI/CD Quality Gates](/docs/guidelines/cicd-quality-gates) *(pendente ediÃ§Ã£o)*
+- **Activity:** [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd)
+---
+id: relatorio-qa
+title: RelatÃ³rio de QA
+description: EvidÃªncia de testes funcionais/regressÃ£o executados em homologaÃ§Ã£o antes do merge final.
+---
+
+## DescriÃ§Ã£o
+Relato consolidado de testes realizados em **ambiente de homologaÃ§Ã£o**, incluindo regressÃµes automatizadas e testes exploratÃ³rios.
+
+## Boas PrÃ¡ticas
+- Produzir **antes** do merge final.  
+- Incluir evidÃªncias (prints, logs ou arquivos).  
+- Acompanhar riscos e casos limites.
+
+## Justificativa
+Confirma estabilidade funcional antes da promoÃ§Ã£o a produÃ§Ã£o.
+
+## ObrigatÃ³rio?
+**Sim**
+
+## Templates / Guidelines relacionados
+- **Template:** [QA Test Report](/docs/templates/qa-test-report) *(pendente ediÃ§Ã£o)*
+- **Activity:** [Validar em HomologaÃ§Ã£o (QA)](/docs/activities/qa-homologacao)
+---
+id: release-notes
+title: Release Notes
+description: Resumo das alteraÃ§Ãµes aprovadas apÃ³s o merge, para comunicaÃ§Ã£o e governanÃ§a do release.
+---
+
+## DescriÃ§Ã£o
+Notas que sintetizam o que foi entregue em um release: novas funcionalidades, correÃ§Ãµes, mudanÃ§as estruturais e riscos.
+
+## Boas PrÃ¡ticas
+- Gerar **automaticamente** a partir de commits/PRs (Conventional Commits).  
+- Estruturar por **Features**, **Fixes**, **Chores** e **Breaking Changes**.  
+- Publicar e arquivar como evidÃªncia de governanÃ§a.
+
+## Justificativa
+Facilita comunicaÃ§Ã£o com stakeholders e auditoria de mudanÃ§as.
+
+## ObrigatÃ³rio?
+**NÃ£o**, mas recomendado.
+
+## Templates / Guidelines relacionados
+- **Template:** [Release Notes Template](/docs/templates/release-notes)
+- **Guideline:** [Release Notes Standard](/docs/guidelines/release-notes-standard)
+- **Activity:** [Release/Deploy](/docs/activities/release-deploy)
+{
+  "label": "Artefatos",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "artifacts"
+  }
+}

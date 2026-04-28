@@ -1,13 +1,13 @@
 ---
 id: phases
-title: Fases
+title: Phases
 slug: /phases
 sidebar_position: 4
-description: Fases operacionais do fluxo de merge no MergeTrace.
+description: Operational phases of the merge flow in MergeTrace.
 ---
 
 import PhasesOverview from '@site/src/components/PhasesOverview';
 
-# Fases
+# Phases
 
 <PhasesOverview />

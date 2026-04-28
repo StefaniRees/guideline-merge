@@ -1,26 +1,26 @@
 ---
 id: release-notes-standard
 title: Release Notes Standard
-description: Padroniza a geração de notas de versão, promovendo comunicação clara sobre mudanças, riscos e componentes afetados.
+description: Standardizes the generation of release notes, promoting clear communication about changes, risks, and affected components.
 ---
 
-## Descrição
-Padroniza a geração de notas de versão, promovendo comunicação clara sobre mudanças, riscos e componentes afetados. Ancora-se nas evidências sobre artefatos de comunicação e coordenação entre equipes.
+## Description
+Standardizes the generation of release notes, promoting clear communication about changes, risks, and affected components. Grounded in evidence on communication artifacts and coordination between teams.
 
-Gerar notas a partir de commits e PRs seguindo Conventional Commits. Estrutura: Features, Fixes, Breaking Changes. Publicar junto com o deploy e arquivar para auditoria.
+Generate notes from commits and PRs following Conventional Commits. Structure: Features, Fixes, Breaking Changes. Publish alongside the deploy and archive for auditing.
 
-## Artefatos Relacionados
+## Related Artifacts
 - [Release Notes](/docs/artifacts/release-notes)
 - [Pull Request](/docs/artifacts/pull-request)
-- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- [Standardized Commits](/docs/artifacts/commits-padronizados)
 
-## Atividades Relacionadas
-- [Merge Final](/docs/activities/merge-final)
+## Related Activities
+- [Final Merge](/docs/activities/merge-final)
 
-## Papéis Envolvidos
+## Roles Involved
 - [Developer A](/docs/roles/developer-principal)
 - [Developer B](/docs/roles/developer-integrador)
-- [Mediador](/docs/roles/mediador)
+- [Mediator](/docs/roles/mediador)
 
-## Ferramentas
-- [Ferramentas de Controle de Versão](/docs/tools)
+## Tools
+- [Version Control Tools](/docs/tools)

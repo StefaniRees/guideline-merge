@@ -1,8 +1,1 @@
-{
-  "label": "Artefatos",
-  "position": 5,
-  "link": {
-    "type": "doc",
-    "id": "artifacts"
-  }
-}
+﻿{"label": "Artifacts","position": 5,"link": {"type": "doc","id": "artifacts"}}

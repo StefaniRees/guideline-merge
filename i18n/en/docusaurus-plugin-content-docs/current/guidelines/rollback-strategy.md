@@ -1,27 +1,27 @@
 ---
 id: rollback-strategy
 title: Rollback Strategy
-description: Estabelece estratégias e critérios para reversão controlada de merges ou releases, incluindo registro de incidentes e análise pós-falha.
+description: Establishes strategies and criteria for controlled rollback of merges or releases, including incident recording and post-failure analysis.
 ---
 
-## Descrição
-Estabelece estratégias e critérios para reversão controlada de merges ou releases, incluindo registro de incidentes e análise pós-falha. Relaciona-se às fases do processo, às ferramentas de suporte e à coordenação entre papéis.
+## Description
+Establishes strategies and criteria for controlled rollback of merges or releases, including incident recording and post-failure analysis. Related to process phases, support tools, and coordination between roles.
 
-Ter caminho claro de reversão. Executar rollback e verificar estabilidade. Registrar incidente com causas, impacto e decisões. Realizar análise pós-falha.
+Have a clear rollback path. Execute rollback and verify stability. Record the incident with causes, impact, and decisions. Perform post-failure analysis.
 
-## Artefatos Relacionados
+## Related Artifacts
 - [Release Notes](/docs/artifacts/release-notes)
-- [Histórico de Conflitos](/docs/artifacts/historico-conflitos)
-- [Registro de Decisão](/docs/artifacts/registro-decisao)
+- [Conflict History](/docs/artifacts/historico-conflitos)
+- [Decision Record](/docs/artifacts/registro-decisao)
 
-## Atividades Relacionadas
-- [Merge Final](/docs/activities/merge-final)
+## Related Activities
+- [Final Merge](/docs/activities/merge-final)
 
-## Papéis Envolvidos
+## Roles Involved
 - [Developer A](/docs/roles/developer-principal)
 - [Developer B](/docs/roles/developer-integrador)
-- [Mediador](/docs/roles/mediador)
+- [Mediator](/docs/roles/mediador)
 
-## Ferramentas
-- [Ferramentas de Controle de Versão](/docs/tools)
-- [Ferramentas de CI/CD](/docs/tools)
+## Tools
+- [Version Control Tools](/docs/tools)
+- [CI/CD Tools](/docs/tools)

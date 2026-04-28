@@ -6,33 +6,33 @@ sidebar_position: 5
 
 import Checklist from '@site/src/components/Checklist';
 
-## Objetivo
-Autorizar formalmente a integração conforme políticas da equipe, consolidando o registro de aprovação antes do merge.
+## Objective
+Formally authorize integration according to team policies, consolidating the approval record before the merge.
 
-## Entradas (Required Artifacts)
-- [Pull Request](/docs/artifacts/pull-request) revisado com [Checklist de Revisão](/docs/artifacts/checklist-revisao) concluído
-- Comentários resolvidos
-- [Relatório de QA](/docs/artifacts/relatorio-qa) disponível
+## Inputs (Required Artifacts)
+- [Pull Request](/docs/artifacts/pull-request) reviewed with completed [Review Checklist](/docs/artifacts/checklist-revisao)
+- Resolved comments
+- [QA Report](/docs/artifacts/relatorio-qa) available
 
-## Saídas (Produced Artifacts)
-- Registro de aprovação
-- PR em estado aprovado
+## Outputs (Produced Artifacts)
+- Approval record
+- PR in approved state
 
-## Papéis
-- **[Mediador](/docs/roles/mediador)** — autoriza formalmente a integração e garante cumprimento das políticas de aprovação
+## Roles
+- **[Mediator](/docs/roles/mediador)** — formally authorizes integration and ensures compliance with approval policies
 
-## Atividades
-1. Verificar que todos os critérios de revisão foram atendidos
-2. Autorizar formalmente a integração conforme políticas da equipe
+## Activities
+1. Verify that all review criteria have been met
+2. Formally authorize integration according to team policies
 
-## Critérios de Entrada
-- Checklist de revisão concluído; comentários resolvidos; pipeline CI/CD aprovado
+## Entry Criteria
+- Review checklist completed; comments resolved; CI/CD pipeline approved
 
-## Critérios de Saída (Gate)
-- Registro de aprovação registrado + PR em estado aprovado
+## Exit Criteria (Gate)
+- Approval record registered + PR in approved state
 
 ## Quality Gate
-**[Approval Policy](/docs/guidelines/approval-policy)** — critérios mínimos de aprovação atendidos, incluindo número de revisores, papéis envolvidos e exceções permitidas, antes de avançar para a fase de Merge.
+**[Approval Policy](/docs/guidelines/approval-policy)** — minimum approval criteria met, including number of reviewers, roles involved, and permitted exceptions, before advancing to the Merge phase.
 
 ## Checklist
 <Checklist
@@ -40,26 +40,26 @@ Autorizar formalmente a integração conforme políticas da equipe, consolidando
   sections={[
     {
       id: 'entradas',
-      title: 'Pré-condições (Entradas)',
+      title: 'Pre-conditions (Inputs)',
       items: [
-        { id: 'checklist-ok', label: 'Checklist de revisão concluído' },
-        { id: 'comments-ok', label: 'Todos os comentários resolvidos' },
-        { id: 'cicd-ok', label: 'Pipeline CI/CD aprovado' },
+        { id: 'checklist-ok', label: 'Review checklist completed' },
+        { id: 'comments-ok', label: 'All comments resolved' },
+        { id: 'cicd-ok', label: 'CI/CD pipeline approved' },
       ],
     },
     {
       id: 'execucao',
-      title: 'Execução',
+      title: 'Execution',
       items: [
-        { id: 'aprovacao-minima', label: 'Aprovação mínima atingida conforme política da equipe' },
+        { id: 'aprovacao-minima', label: 'Minimum approval reached according to team policy' },
       ],
     },
     {
       id: 'gate',
-      title: 'Quality Gate (Bloqueante)',
+      title: 'Quality Gate (Blocking)',
       items: [
-        { id: 'approval-policy', label: 'Approval Policy satisfeita: critérios mínimos, papéis e exceções verificados' },
-        { id: 'pr-aprovado', label: 'PR em estado aprovado e pronto para merge' },
+        { id: 'approval-policy', label: 'Approval Policy satisfied: minimum criteria, roles, and exceptions verified' },
+        { id: 'pr-aprovado', label: 'PR in approved state and ready for merge' },
       ],
     },
   ]}

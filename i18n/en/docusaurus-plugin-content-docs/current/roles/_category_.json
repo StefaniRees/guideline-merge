@@ -1,8 +1,1 @@
-{
-  "label": "Papéis",
-  "position": 3,
-  "link": {
-    "type": "doc",
-    "id": "roles"
-  }
-}
+﻿{"label": "Roles","position": 3,"link": {"type": "doc","id": "roles"}}

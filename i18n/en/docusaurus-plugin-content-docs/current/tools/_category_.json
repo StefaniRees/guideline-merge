@@ -1,10 +1,1 @@
-{
-  "label": "Ferramentas",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "title": "Ferramentas utilizadas no processo de merge",
-    "description": "Conjunto de ferramentas técnicas que dão suporte operacional e analítico ao processo de merge de software. Incluem ambientes de controle de versão, plataformas de integração contínua, mecanismos de revisão de código e recursos de automação, possibilitando rastreabilidade, qualidade e governança das atividades de integração.",
-    "slug": "/tools"
-  }
-}
+﻿{"label": "Tools","position": 5,"link": {"type": "generated-index","title": "Tools used in the merge process","slug": "/tools"}}

@@ -1,22 +1,22 @@
 ---
-id: cicd-quality-gates
+id: ci-cd-quality-gates
 title: CI/CD Quality Gates
-description: Define gates obrigatórios no pipeline, garantindo validações automáticas antes da integração.
+description: Defines mandatory pipeline gates, ensuring automatic validations before integration.
 ---
 
-## Descrição
-Define gates obrigatórios no pipeline — build, testes automatizados, análise estática e cobertura mínima — garantindo validações automáticas antes da integração. Está alinhado às evidências sobre automação supervisionada.
+## Description
+Defines mandatory pipeline gates — build, automated tests, static analysis, and minimum coverage — ensuring automatic validations before integration. Aligned with evidence on supervised automation.
 
-## Artefatos Relacionados
-- [Relatório de Build/CI](/docs/artifacts/relatorio-build-ci)
+## Related Artifacts
+- [Build/CI Report](/docs/artifacts/relatorio-build-ci)
 - [Pull Request](/docs/artifacts/pull-request)
 
-## Atividades Relacionadas
-- [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd)
+## Related Activities
+- [Run Build and Tests (CI/CD)](/docs/activities/build-ci-cd)
 
-## Papéis Envolvidos
+## Roles Involved
 - [Developer A](/docs/roles/developer-principal)
 - [Developer B](/docs/roles/developer-integrador)
 
-## Ferramentas
-- [Ferramentas de CI/CD](/docs/tools)
+## Tools
+- [CI/CD Tools](/docs/tools)

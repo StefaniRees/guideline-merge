@@ -1,13 +1,13 @@
 ---
 id: ia
-title: IA no MergeTrace
+title: AI in MergeTrace
 slug: /ia
 sidebar_position: 7
-description: Inteligência Artificial como apoio transversal ao processo de merge.
+description: Artificial Intelligence as cross-cutting support for the merge process.
 ---
 
 import IASection from '@site/src/components/IASection';
 
-# IA no MergeTrace
+# AI in MergeTrace
 
 <IASection />

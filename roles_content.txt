@@ -1,0 +1,105 @@
+﻿---
+id: developer-principal
+title: Developer (A)
+description: Implementa a tarefa, cria branch, faz commits, abre PR e resolve conflitos.
+---
+
+## DescriÃ§Ã£o
+Atua como **autor inicial da mudanÃ§a**. Ã‰ responsÃ¡vel por conduzir a implementaÃ§Ã£o de uma tarefa prioritÃ¡ria ou mais complexa, criando a branch de atividade de referÃªncia.  
+AlÃ©m de implementar, testa localmente e abre o **Pull Request inicial**, que servirÃ¡ como base para integraÃ§Ãµes posteriores. Assume papel ativo na **resoluÃ§Ã£o de conflitos**, pois sua branch tende a gerar o impacto principal no merge.
+
+## Atividades
+- [Criar Branch](/docs/activities/criar-branch)
+- [Implementar MudanÃ§as](/docs/activities/implementar-mudancas)
+- [Abrir Pull Request](/docs/activities/abrir-pr)
+- [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd)
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+- [Validar em HomologaÃ§Ã£o (QA)](/docs/activities/qa-homologacao)
+
+## Artefatos Produzidos
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- [Pull Request](/docs/artifacts/pull-request)
+
+## Responsabilidades
+- Implementar tarefas principais ou crÃ­ticas
+- Criar e manter a branch de referÃªncia
+- Garantir rastreabilidade (ticket â†” commits â†” PR)
+- Resolver conflitos que envolvem seu cÃ³digo como base
+---
+id: developer-integrador
+title: Developer (B)
+description: Integra alteraÃ§Ãµes adicionais sobre a base criada pelo Developer A, colaborando na resoluÃ§Ã£o de conflitos e validaÃ§Ã£o.
+---
+
+## DescriÃ§Ã£o
+Atua como **autor subsequente da mudanÃ§a**, implementando ajustes complementares ou de menor complexidade em relaÃ§Ã£o ao Developer A.
+
+Sua principal caracterÃ­stica Ã© **integrar seu trabalho sobre a branch de referÃªncia jÃ¡ existente**, o que aumenta a probabilidade de lidar com conflitos de integraÃ§Ã£o. Atua em colaboraÃ§Ã£o com o Developer A e o Mediador na resoluÃ§Ã£o de inconsistÃªncias.
+
+## Atividades
+- [Criar Branch](/docs/activities/criar-branch)
+- [Implementar MudanÃ§as](/docs/activities/implementar-mudancas)
+- [Abrir Pull Request](/docs/activities/abrir-pr)
+- [Executar Build e Testes (CI/CD)](/docs/activities/build-ci-cd)
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+- [Validar em HomologaÃ§Ã£o (QA)](/docs/activities/qa-homologacao)
+
+## Artefatos Produzidos
+- [Branch de Atividade](/docs/artifacts/branch-atividade)
+- [Commits Padronizados](/docs/artifacts/commits-padronizados)
+- [Pull Request](/docs/artifacts/pull-request)
+
+## Responsabilidades
+- Implementar tarefas complementares ou secundÃ¡rias
+- Sincronizar constantemente sua branch com a branch de referÃªncia
+- Apoiar na resoluÃ§Ã£o de conflitos colaborativos
+- Documentar impactos adicionais ao cÃ³digo existente
+---
+id: roles
+title: Roles
+slug: /roles
+sidebar_position: 3
+description: PapÃ©is envolvidos no processo de merge no MergeTrace.
+---
+
+import RolesOverview from '@site/src/components/RolesOverview';
+
+# Roles
+
+<RolesOverview />
+---
+id: mediador
+title: Mediador
+description: Papel neutro responsÃ¡vel por supervisionar o fluxo de merge, facilitar resoluÃ§Ãµes e garantir os Quality Gates.
+---
+
+## DescriÃ§Ã£o
+Papel neutro responsÃ¡vel por **supervisionar o fluxo de merge**, facilitar resoluÃ§Ãµes e garantir que os Quality Gates sejam seguidos.
+
+Corresponde ao papel **OpenUP Integrator** â€” responsÃ¡vel pela integraÃ§Ã£o de artefatos, coordenaÃ§Ã£o do fluxo e mitigaÃ§Ã£o de riscos. Torna explÃ­cita a funÃ§Ã£o de integrador especializado, garantindo que decisÃµes crÃ­ticas sejam registradas e comunicadas.
+
+## Atividades
+- [Code Review](/docs/activities/code-review)
+- [Resolver Conflitos de Merge](/docs/activities/resolver-conflitos)
+- [Merge Final](/docs/activities/merge-final)
+
+## Artefatos Produzidos
+- [Checklist de RevisÃ£o](/docs/artifacts/checklist-revisao)
+- [HistÃ³rico de Conflitos](/docs/artifacts/historico-conflitos)
+- [Registro de DecisÃ£o](/docs/artifacts/registro-decisao)
+
+## Responsabilidades
+- Supervisionar o fluxo de merge
+- Conduzir o Code Review com checklist tÃ©cnico
+- Autorizar formalmente a integraÃ§Ã£o conforme polÃ­ticas da equipe
+- Apoiar resoluÃ§Ãµes nÃ£o triviais de conflitos
+- Garantir que decisÃµes crÃ­ticas sejam registradas e comunicadas
+{
+  "label": "PapÃ©is",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "roles"
+  }
+}

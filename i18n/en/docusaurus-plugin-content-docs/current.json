@@ -1,4 +1,4 @@
-{
+﻿{
   "version.label": {
     "message": "Next",
     "description": "The label for version current"
@@ -7,32 +7,32 @@
     "message": "Welcome",
     "description": "The label for category Welcome in sidebar welcomeSidebar"
   },
-  "sidebar.welcomeSidebar.category.Papéis": {
-    "message": "Papéis",
-    "description": "The label for category Papéis in sidebar welcomeSidebar"
+  "sidebar.welcomeSidebar.category.PapÃ©is": {
+    "message": "Roles",
+    "description": "The label for category PapÃ©is in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Atividades": {
-    "message": "Atividades",
+    "message": "Activities",
     "description": "The label for category Atividades in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Fases": {
-    "message": "Fases",
+    "message": "Phases",
     "description": "The label for category Fases in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Ferramentas": {
-    "message": "Ferramentas",
+    "message": "Tools",
     "description": "The label for category Ferramentas in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Ferramentas.link.generated-index.title": {
-    "message": "Ferramentas utilizadas no processo de merge",
+    "message": "Tools used in the merge process",
     "description": "The generated-index page title for category Ferramentas in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Ferramentas.link.generated-index.description": {
-    "message": "Conjunto de ferramentas técnicas que dão suporte operacional e analítico ao processo de merge de software. Incluem ambientes de controle de versão, plataformas de integração contínua, mecanismos de revisão de código e recursos de automação, possibilitando rastreabilidade, qualidade e governança das atividades de integração.",
+    "message": "Conjunto de ferramentas tÃ©cnicas que dÃ£o suporte operacional e analÃ­tico ao processo de merge de software. Incluem ambientes de controle de versÃ£o, plataformas de integraÃ§Ã£o contÃ­nua, mecanismos de revisÃ£o de cÃ³digo e recursos de automaÃ§Ã£o, possibilitando rastreabilidade, qualidade e governanÃ§a das atividades de integraÃ§Ã£o.",
     "description": "The generated-index page description for category Ferramentas in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Artefatos": {
-    "message": "Artefatos",
+    "message": "Artifacts",
     "description": "The label for category Artefatos in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Guidelines": {
@@ -44,15 +44,17 @@
     "description": "The label for category Templates in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Comunidade de Especialistas": {
-    "message": "Comunidade de Especialistas",
+    "message": "Specialist Community",
     "description": "The label for category Comunidade de Especialistas in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Comunidade de Especialistas.link.generated-index.title": {
-    "message": "Aplicações de Boas Práticas para o Fluxo de Merge",
+    "message": "AI Best Practices for the Merge Flow",
     "description": "The generated-index page title for category Comunidade de Especialistas in sidebar welcomeSidebar"
   },
   "sidebar.welcomeSidebar.category.Comunidade de Especialistas.link.generated-index.description": {
-    "message": "Propostas de técnicas utilizando Inteligência Artificial para apoiar, de forma responsável e fundamentada, atividades de integração e resolução de conflitos em fluxos de desenvolvimento de software.",
+    "message": "Propostas de tÃ©cnicas utilizando InteligÃªncia Artificial para apoiar, de forma responsÃ¡vel e fundamentada, atividades de integraÃ§Ã£o e resoluÃ§Ã£o de conflitos em fluxos de desenvolvimento de software.",
     "description": "The generated-index page description for category Comunidade de Especialistas in sidebar welcomeSidebar"
   }
 }
+
+

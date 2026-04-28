@@ -1,23 +1,23 @@
 ---
 id: feature-flags-management
 title: Feature Flags Management
-description: Normatiza a criação, uso e remoção de feature flags, permitindo isolamento de impactos e reversões controladas.
+description: Standardizes the creation, use, and removal of feature flags, allowing impact isolation and controlled rollbacks.
 ---
 
-## Descrição
-Normatiza a criação, uso e remoção de feature flags, permitindo isolamento de impactos e reversões controladas. Cada flag deve ter owner, escopo, plano de remoção e prazo. Auditar flags antigas para evitar dívida de configuração.
+## Description
+Standardizes the creation, use, and removal of feature flags, allowing impact isolation and controlled rollbacks. Each flag must have an owner, scope, removal plan, and deadline. Audit old flags regularly to avoid configuration debt.
 
-## Artefatos Relacionados
+## Related Artifacts
 - [Feature Flag](/docs/artifacts/feature-flag)
 - [Release Notes](/docs/artifacts/release-notes)
 
-## Atividades Relacionadas
-- [Merge Final](/docs/activities/merge-final)
+## Related Activities
+- [Final Merge](/docs/activities/merge-final)
 
-## Papéis Envolvidos
-- [Mediador](/docs/roles/mediador)
+## Roles Involved
+- [Mediator](/docs/roles/mediador)
 - [Developer A](/docs/roles/developer-principal)
 - [Developer B](/docs/roles/developer-integrador)
 
-## Ferramentas
-- [Ferramentas de CI/CD](/docs/tools)
+## Tools
+- [CI/CD Tools](/docs/tools)
