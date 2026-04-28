@@ -32,9 +32,9 @@ export default function IterationLifecycle() {
   ];
 
   const roles = [
-    { initials: 'DA', name: 'Developer A', bg: '#E1F5EE', color: '#0F6E56', href: '/guideline-merge/docs/roles/developer-principal', resp: isEN ? 'Implements, opens PR with context, and tests locally.' : 'Implementa, abre PR com contexto e testa localmente.' },
-    { initials: 'DB', name: 'Developer B', bg: '#E6F1FB', color: '#185FA5', href: '/guideline-merge/docs/roles/developer-integrador', resp: isEN ? 'Reviews technically, integrates dependencies, and resolves medium-complexity conflicts.' : 'Revisa tecnicamente, integra dependências e resolve conflitos de média complexidade.' },
-    { initials: 'MD', name: isEN ? 'Mediator' : 'Mediador', bg: '#EEEDFE', color: '#534AB7', href: '/guideline-merge/docs/roles/mediador', resp: isEN ? 'Facilitates decisions, arbitrates complex conflicts, and ensures adherence to guidelines.' : 'Facilita decisões, arbitra conflitos complexos e garante aderência às guidelines.' },
+    { initials: 'DA', name: 'Developer A', bg: '#E1F5EE', color: '#0F6E56', href: '/docs/roles/developer-principal', resp: isEN ? 'Implements, opens PR with context, and tests locally.' : 'Implementa, abre PR com contexto e testa localmente.' },
+    { initials: 'DB', name: 'Developer B', bg: '#E6F1FB', color: '#185FA5', href: '/docs/roles/developer-integrador', resp: isEN ? 'Reviews technically, integrates dependencies, and resolves medium-complexity conflicts.' : 'Revisa tecnicamente, integra dependências e resolve conflitos de média complexidade.' },
+    { initials: 'MD', name: isEN ? 'Mediator' : 'Mediador', bg: '#EEEDFE', color: '#534AB7', href: '/docs/roles/mediador', resp: isEN ? 'Facilitates decisions, arbitrates complex conflicts, and ensures adherence to guidelines.' : 'Facilita decisões, arbitra conflitos complexos e garante aderência às guidelines.' },
   ];
 
   const SectionHeader = ({ id, label, color }) => (

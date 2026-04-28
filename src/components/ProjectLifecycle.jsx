@@ -20,14 +20,14 @@ export default function ProjectLifecycle() {
   const [selected, setSelected] = useState('inception');
 
   const mergePhaseMeta = {
-    'P1': { label: isEN ? 'P1 — Planning' : 'P1 — Planejamento', color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/guideline-merge/docs/phases/planejamento' },
-    'P2': { label: isEN ? 'P2 — Development' : 'P2 — Desenvolvimento', color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/guideline-merge/docs/phases/desenvolvimento' },
-    'P3': { label: 'P3 — Pull Request', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB', href: '/guideline-merge/docs/phases/pull-request' },
-    'P4': { label: 'P4 — Code Review', color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/guideline-merge/docs/phases/code-review' },
-    'P5': { label: 'P5 — Approval', color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/guideline-merge/docs/phases/approval' },
-    'P6': { label: 'P6 — Merge', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC', href: '/guideline-merge/docs/phases/merge' },
-    'P7': { label: 'P7 — Release / Deploy', color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/guideline-merge/docs/phases/release-deploy' },
-    'P8': { label: 'P8 — Rollback', color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/guideline-merge/docs/phases/rollback' },
+    'P1': { label: isEN ? 'P1 — Planning' : 'P1 — Planejamento', color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/docs/phases/planejamento' },
+    'P2': { label: isEN ? 'P2 — Development' : 'P2 — Desenvolvimento', color: '#639922', bg: '#EAF3DE', border: '#97C459', href: '/docs/phases/desenvolvimento' },
+    'P3': { label: 'P3 — Pull Request', color: '#378ADD', bg: '#E6F1FB', border: '#85B7EB', href: '/docs/phases/pull-request' },
+    'P4': { label: 'P4 — Code Review', color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/docs/phases/code-review' },
+    'P5': { label: 'P5 — Approval', color: '#BA7517', bg: '#FAEEDA', border: '#EF9F27', href: '/docs/phases/approval' },
+    'P6': { label: 'P6 — Merge', color: '#7F77DD', bg: '#EEEDFE', border: '#AFA9EC', href: '/docs/phases/merge' },
+    'P7': { label: 'P7 — Release / Deploy', color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/docs/phases/release-deploy' },
+    'P8': { label: 'P8 — Rollback', color: '#993556', bg: '#FBEAF0', border: '#ED93B1', href: '/docs/phases/rollback' },
   };
 
   const phases = [
@@ -82,8 +82,8 @@ export default function ProjectLifecycle() {
         </div>
         <p style={{ fontSize: '13px', color: '#854F0B', lineHeight: 1.6, margin: 0 }}>
           {isEN
-            ? <><strong>Project Lifecycle ≠ MergeTrace Phases.</strong> The Project Lifecycle (Inception, Elaboration, Construction, Transition) represents the <strong>macro project cycle</strong> — inspired by OpenUP — and defines how the team organizes work over time. The <Link to="/guideline-merge/docs/phases" style={{ color: '#854F0B', fontWeight: 600 }}>MergeTrace operational phases (P1–P8)</Link> are the technical flow of each code integration, which occurs <strong>within</strong> these larger phases.</>
-            : <><strong>Project Lifecycle ≠ Fases do MergeTrace.</strong> O Project Lifecycle (Inception, Elaboration, Construction, Transition) representa o <strong>macro ciclo do projeto</strong> — inspirado no OpenUP — e define como o time organiza o trabalho ao longo do tempo. As <Link to="/guideline-merge/docs/phases" style={{ color: '#854F0B', fontWeight: 600 }}>Fases operacionais do MergeTrace (P1–P8)</Link> são o fluxo técnico de cada integração de código, que ocorre <strong>dentro</strong> dessas fases maiores.</>}
+            ? <><strong>Project Lifecycle ≠ MergeTrace Phases.</strong> The Project Lifecycle (Inception, Elaboration, Construction, Transition) represents the <strong>macro project cycle</strong> — inspired by OpenUP — and defines how the team organizes work over time. The <Link to="/docs/phases" style={{ color: '#854F0B', fontWeight: 600 }}>MergeTrace operational phases (P1–P8)</Link> are the technical flow of each code integration, which occurs <strong>within</strong> these larger phases.</>
+            : <><strong>Project Lifecycle ≠ Fases do MergeTrace.</strong> O Project Lifecycle (Inception, Elaboration, Construction, Transition) representa o <strong>macro ciclo do projeto</strong> — inspirado no OpenUP — e define como o time organiza o trabalho ao longo do tempo. As <Link to="/docs/phases" style={{ color: '#854F0B', fontWeight: 600 }}>Fases operacionais do MergeTrace (P1–P8)</Link> são o fluxo técnico de cada integração de código, que ocorre <strong>dentro</strong> dessas fases maiores.</>}
         </p>
       </div>
 
