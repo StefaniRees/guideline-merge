@@ -114,15 +114,15 @@ export default function Home(): ReactNode {
         <div style={{ background: '#fff', borderBottom: '1px solid #e5e7eb', padding: '32px 24px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '0' }}>
             {(isEN ? [
-              { n: '31', label: 'Studies analyzed', sub: 'Systematic mapping' },
-              { n: '36', label: 'Developers', sub: 'Quantitative survey' },
-              { n: '8',  label: 'Specialists', sub: 'Interviews P1–P8' },
-              { n: '8',  label: 'Operational phases', sub: 'MergeTrace guideline' },
+              { n: '1 in 5', label: 'merges cause conflicts', sub: 'Almost 20% of integrations · Brindescu et al., 2020' },
+              { n: '26×', label: 'more bugs after manual conflict', sub: 'Post-merge risk · Brindescu et al., 2020' },
+              { n: '68.8%', label: 'of teams with no branch policy', sub: 'Absence of standardization · Moraes et al., 2023' },
+              { n: '78.7%', label: 'fail on first conflict resolution attempt', sub: 'Additional effort required · Accioly et al., 2018' },
             ] : [
-              { n: '31', label: 'Estudos analisados', sub: 'Mapeamento sistemático' },
-              { n: '36', label: 'Desenvolvedores', sub: 'Survey quantitativo' },
-              { n: '8',  label: 'Especialistas', sub: 'Entrevistas P1–P8' },
-              { n: '8',  label: 'Fases operacionais', sub: 'Guideline MergeTrace' },
+              { n: '1 em 5', label: 'merges causam conflitos', sub: 'Quase 20% das integrações · Brindescu et al., 2020' },
+              { n: '26×', label: 'mais bugs após conflito manual', sub: 'Risco pós-merge · Brindescu et al., 2020' },
+              { n: '68,8%', label: 'dos times sem política de branch', sub: 'Ausência de padronização · Moraes et al., 2023' },
+              { n: '78,7%', label: 'falham na 1ª tentativa de resolver conflitos', sub: 'Esforço adicional necessário · Accioly et al., 2018' },
             ]).map((s, i) => (
               <div key={i} style={{ textAlign: 'center', padding: '16px', borderRight: i < 3 ? '1px solid #e5e7eb' : 'none' }}>
                 <div style={{ fontSize: '40px', fontWeight: 800, color: '#1D9E75', lineHeight: 1 }}>{s.n}</div>
